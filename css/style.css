@@ -471,6 +471,29 @@
     margin: 0 auto;
     display: flex;
 }
+.ck_left{
+    width: 45%;
+    background-color: #b1a2a2;
+}
+.candong{
+    display: flex;
+    height: 30px;
+    width: 90%;
+    margin-left: 10%;
+    background-color: aqua;
+}
+.candong>h3{
+    margin: 5px 0 0 10px;
+}
+
+
+
+
+
+
+
+
+
 /* dkdn */
 .container1 {
     background-color: #fff;

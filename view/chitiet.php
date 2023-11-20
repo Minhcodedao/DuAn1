@@ -44,7 +44,7 @@
               <button class="addtocart">Thêm Vào Giỏ Hàng</button>
             </div>
             <div class="chat">
-              <img src="../image/icon-chat-voi-tu-van-vien.png" alt="">
+              <img src="./image/icon-chat-voi-tu-van-vien.png" alt="">
               <h3>Liên Hệ Với Tư Vấn Viên</h3>
             </div>
           </div>
@@ -53,8 +53,10 @@
       </div>
       <div class="camket">
         <div class="ck_left">
-          <img src="./image/icvtitlth3.png" alt="">
-          <h3>CAM KẾT CHẤT LƯỢNG</h3>
+          <div class="candong">
+            <img src="./image/icv-titleh3.png" alt="">
+            <h3>CAM KẾT CHẤT LƯỢNG</h3>
+          </div>
         </div>
       </div>
     </div>
