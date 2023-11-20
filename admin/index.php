@@ -67,6 +67,35 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdanhmuc = loadall_danhmuc();
             include "sanpham/add.php";
             break;
+        case "addimage":
+            if (isset($_POST['themmoianh']) && ($_POST['themmoianh'])) {
+                $idpro = $_POST['idpro'];
+                $image1 = $_FILES['img1']['name'];
+                $image2 = $_FILES['img2']['name'];
+                $image3 = $_FILES['img3']['name'];
+                $target_dir = "../upload/";
+                $target_file1 = $target_dir . basename($_FILES['img1']['name']);
+                $target_file2 = $target_dir . basename($_FILES['img2']['name']);
+                $target_file3 = $target_dir . basename($_FILES['img3']['name']);
+                if (move_uploaded_file($_FILES["img1"]["tmp_name"], $target_file1)) {
+                } else {
+                    echo "Sorry, there was an error uploading your file1.";
+                }
+                if (move_uploaded_file($_FILES["img2"]["tmp_name"], $target_file2)) {
+                } else {
+                    echo "Sorry, there was an error uploading your file2.";
+                }
+                if (move_uploaded_file($_FILES["img3"]["tmp_name"], $target_file3)) {
+                } else {
+                    echo "Sorry, there was an error uploading your file3.";
+                }
+                insert_image($image1, $image2, $image3, $idpro);
+                $thongbao = "Thêm thành công";
+            }
+          
+            $listsp = loadall_sanpham();
+            include "sanpham/addimage.php";
+            break;
         case "listsp":
             $listsanpham = loadall_sanpham();
             include "sanpham/list.php";

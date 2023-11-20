@@ -43,16 +43,19 @@ function insert_sanpham($name,$price,$img,$mota,$iddm){
     $sql="insert into sanpham(name,price,img,mota,iddm) values('$name','$price','$img','$mota','$iddm')";
     pdo_execute($sql);
 }
+// insert ảnh 
+function insert_image($image1,$image2,$image3,$idpro){
+    $sql="insert into image(image1,image2,image3,idpro ) values('$image1','$image2','$image3','$idpro')"; 
+    pdo_execute($sql);
+}
+
 // xóa cứng 
 function delete_sanpham($id){
     $sql="delete from sanpham where id=".$id;
     pdo_execute($sql);
 }
 // xóa mềm
-function soft_delete($id){
-    $sql = "UPDATE `sanpham` SET `trangthai` = 1 WHERE `id` = $id";
-    pdo_execute($sql);
-}
+
 
 function update_sanpham($id,$iddm,$name,$price,$mota,$img){
     if($img!=""){
