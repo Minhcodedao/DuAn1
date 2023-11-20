@@ -6,6 +6,17 @@
     <title>Document</title>
   </head>
   <link rel="stylesheet" href="./css/sto.css" />
+
+  <script src="script.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  />
+
   <body>
 
     <!------------------Footer-->
