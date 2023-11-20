@@ -42,7 +42,7 @@
     <div class="form1">
         <form action="index.php?act=addimage" method="post" enctype="multipart/form-data" name="#">
             <!-- form add sản phẩm -->
-            <h2>Thêm Ảnh</h2>
+            <h2>Thêm ảnh sản phẩm</h2>
             <table class="add">
                 <td><select name="idpro" id="">
                         <?php
@@ -68,10 +68,8 @@
             </table>
 
             <input class="sb" type="submit" name="themmoianh" value="Thêm">
-
-
+            <a href="index.php?act=listsp"> Danh Sách</a>
         </form>
-        <a href="index.php?act=listsp"> Danh Sách</a>
     </div>
 
 </body>
