@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/cssQ.css">
+    <link rel="stylesheet" href="./css/sto.css">
+    <script src="script.js"></script>
+   
+    <!-- //header -->
+    <br>
+    <br>
+    <div class="container3">
+      <div class="center">
+        <div class="image">
+          <img src="./image/daychuyen2.png" alt="Product Image">
+        </div>
+        <hr>
+
+        <div class="thongtin">
+          <h2>Mặt dây chuyền ngọc trai</h2>
+          <h3 class="gia">600.000 vnds</h3>
+          <p>
+            Giá có thể tùy thuộc vào kích thước và trọng lượng thực tế của sản phẩm.
+          </p>
+          <p>Vui lòng gọi <strong>TIẾN ĐẠT</strong> để được hỗ trợ thêm.</p>
+          <hr>
+          <div class="nut">
+            <div class="soluong">
+              <h2>
+                Số Lượng: <button type="button" class="bt1" onclick="changeQuantity(-1)"> - </button>
+
+                <span class="bt1" id="quantity" name="quantity">1</span>
+
+                <button class="bt1" type="button" onclick="changeQuantity(1)"> + </button>
+            </h2>
+            </div>
+            <hr>
+            <div class="input1">
+              <a href="cart.html">
+                <input class="input" type="button" value="Mua Ngay" name="muangay" />                  
+              </a>
+
+            <a href="cart.html">
+              <input class="input" type="button" value="Thêm vào giỏ hàng" name="themvaogiohang" />
+            </a>  
+            </div>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <hr>
+      <!-- thông tin -->
+      <div class="chitiet">
+        <h2>Thông tin :</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, exercitationem? Praesentium, porro doloremque eaque sint harum vero nihil officiis ex voluptas nesciunt error odit, nam eum voluptatem odio. Debitis, officiis.</p>
+      </div>
+      <div class="text">
+        <div class="tex1">
+          <div class="t1">
+            <h2><i class="bi bi-check-circle-fill custom-icon"></i>CAM KẾT VỀ CHẤT LƯỢNG </h2>
+            <p>
+              <i class="bi bi-check custom-icon"></i> 100% chuẩn xác về hàm lượng vàng. Tất cả các sản phẩm trang sức của DOJI được kiểm định chặt chẽ với máy quang phổ, cam kết chuẩn xác hàm lượng vàng.
+            </p>
+            <p>
+              <i class="bi bi-check custom-icon"></i> 100% chuẩn xác về trọng lượng vàng.
+            </p>
+            <p>
+              <i class="bi bi-check custom-icon"></i> 100% sản phẩm trang sức kim cương đều có đầy đủ kiểm định uy tín.
+            </p>
+            <p>
+              <i class="bi bi-check custom-icon"></i> Mọi sản phẩm trang sức do DOJI bán ra đều có hóa đơn (đã bao gồm các loại thuế), ghi đầy đủ thông tin về hàm lượng, trọng lượng vàng cũng như và điều kiện bảo hành trang sức và chính sách thu đổi.
+            </p>
+          </div>
+          <div class="t2">
+            <h2><i class="bi bi-check-circle-fill custom-icon"></i> HƯỚNG DẪN MUA HÀNG ONLINE</h2>
+            <p> <i class="bi bi-check custom-icon"></i> Lựa chọn sản phẩm tại website</p>
+            <p> <i class="bi bi-check custom-icon"></i>Thêm vào giỏ hàng.</p>
+            <p> <i class="bi bi-check custom-icon"></i>Kiểm tra thông tin đơn hàng và đặt hàng</p>
+            <p>
+              <i class="bi bi-check custom-icon"></i>Chọn hình thức thanh toán và điền thông tin người nhận hàng.
+            </p>
+            <p>
+              <i class="bi bi-check custom-icon"></i>Hoàn tất đơn hàng.
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <!-- bình luận -->
+      <div class="comment-form">
+        <h2>BÌNH LUẬN</h2>
+        <hr>
+        <!-- hiển thị bình luận -->
+        <div class="comment-show">
+          <div class="comment-item">
+            <div class="comment-item-info">
+              <div class="comment-item-info-name">
+                <h3>Nguyễn Văn A</h3>
+                <p>12/12/2021</p>
+              </div>
+              <div class="comment-item-info-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- end -->
+        <hr>
+        <form action="" name="binhluan" enctype="multipart/form-data" >
+          <div class="mb-3">
+            <label for="name" class="form-label"> Họ Và Tên :</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="comment" class="form-label">Nội dung</label>
+            <textarea class="form-control" id="comment" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <hr>
+      </div>
+
+    </div>
+    </div>
+    <h2> Sản Phẩm Cùng Loại</h2>
+    <div class="cartegory-right-content-item">
+      <img src="image/daychuyen4.png" alt="" />
+      <div class="product-info">
+        <h1>Vòng bạc trang sức đá quý đính kim cương</h1>
+        <p>7.900.000<sup>đ</sup></p>
+      </div>
+      <div class="detail-info">
+        <p style="color: white"><a href="chitietdonhang.html">CHi tiết</a> <span>&#187;</span></p>
+      </div>
+    </div>
+      
+  </div>
+   
+    <hr>
+    
+   
+
+
+    <!-- footer -->
+    <br>
+    <br>
+    <br>
+    <footer class="bg-dark text-white py-3 mt-auto">
+      <div class="row text-center text-md-start">
+        <div class="col-md-3">
+          <h5>Về Chúng Tôi</h5>
+          <p>Nhà kim hoàn hàng đầu từ năm 1985, cung cấp sự lựa chọn tinh tế nhất của vàng và đá quý cho mọi dịp.</p>
+        </div>
+        <div class="col-md-3">
+          <h5>Liên Kết Nhanh</h5>
+          <ul class="list-unstyled">
+            <li><a href="/products" class="link-light">Sản Phẩm</a></li>
+            <li><a href="/about" class="link-light">Về Chúng Tôi</a></li>
+            <li><a href="/contact" class="link-light">Liên Hệ</a></li>
+            <li><a href="/faq" class="link-light">Câu Hỏi Thường Gặp</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Thông Tin Liên Hệ</h5>
+          <p>16 Trịnh Văn Bô, Nam Từ Liêm, Hà Nội<br>Điện thoại: (123) 642487282<br>Email: tiemvangso6@fpt.edu.vn</p>
+        </div>
+        <div class="col-md-3">
+          <h5>Theo Dõi Chúng Tôi</h5>
+          <a href="#" class="text-light"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-light ms-2"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-light ms-2"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-light ms-2"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="text-center py-3 border-top">
+        <p>&copy; 2023 GoldStore. Tất Cả Quyền Được Bảo Lưu.</p>
+      </div>
+    </footer>
+    
+  
+    <!--  JS-->
+    <script>
+      function changeQuantity(amount) {
+          var quantityElement = document.getElementById('quantity');
+          var currentQuantity = parseInt(quantityElement.innerHTML, 10);
+          
+          // Đảm bảo số lượng không nhỏ hơn 1 khi giảm
+          if (currentQuantity + amount >= 1) {
+              var newQuantity = currentQuantity + amount;
+              quantityElement.innerHTML = newQuantity;
+          }
+      }
+  </script>
+    
+  </body>
+</html>

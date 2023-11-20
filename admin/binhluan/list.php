@@ -1,0 +1,40 @@
+<div class="tb">
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nội Dung</th>
+            <th>
+                ID User
+            </th>
+
+            <th>
+                ID Pro
+            </th>
+            <th>
+                Ngày Bình Luận
+            </th>
+            <th>
+                Chức Năng
+            </th>
+        </tr>
+        <?php
+        foreach ($listbl as $binhluan) {
+            extract($binhluan);
+
+            $xoabl = "index.php?act=xoabl&id=" . $id;
+            echo '
+                    <tr>
+                    <td>' . $id . '</td>
+                    <td>' . $noidung . '</td>
+                    <td>' . $iduser . '</td>
+                    <td>' . $idpro . '</td>
+                    <td>' . $ngaybinhluan . '</td>
+                    <td>
+                      <a href="' . $xoabl . '"><input  class="custom-icons1 type="button" value="Xóa"></a></td>
+                </tr>
+                    ';
+        }
+        ?>
+
+    </table>
+</div>
