@@ -18,17 +18,15 @@
             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
           </div>
+          <hr>
             <!-- form đăng nhập -->
         
-          <input type="text" placeholder="User" name="userdk"/>
-          <input type="password" placeholder="Password" name="passdk"/>
-          <input type="text" name="Email" id="" placeholder="Email">
-          <input type="number" name="Sdt" id="" placeholder="Số Điện Thoại">
-          <input type="text" name="Adrees" id="" placeholder="Địa chỉ">
+          <input type="text" placeholder="User" name="userdk"/><br>
+          <input type="password" placeholder="Password" name="passdk"/><br>
+          <input type="text" name="Email" id="" placeholder="Email"><br>
+          <input type="number" name="Sdt" id="" placeholder="Số Điện Thoại"><br>
+          <input type="text" name="Adrees" id="" placeholder="Địa chỉ"><br>
 
-
-
-          
           <a href="index.php?act=dangky"><button>Sign Up</button></a>
         </form>
         

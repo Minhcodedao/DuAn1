@@ -11,18 +11,19 @@
       
       <div class="form-container sign-in-container">
         <form action="" name="dangnhap" class="">
-          <h1>Sign in</h1>
+          <h1>Sign out</h1>
           <div class="social-container">
             <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
           </div>
             <!-- form đăng nhập -->
-          <span>or use your account</span>
-          <input type="user" placeholder="User" name="userdn"/>
-          <input type="password" placeholder="Password" name="passdn"/>
-          <a href="#">Forgot your password?</a>
+          <span>or use your account</span><br>
+          <input type="user" placeholder="User" name="userdn"/><br>
+          <input type="password" placeholder="Password" name="passdn"/><br>
+          <a href="#">Forgot your password?</a><br>
           <a href="index.php?act=dangnhap"><button>Sign In</button></a>
+          <br>
         </form>
         
       </div>

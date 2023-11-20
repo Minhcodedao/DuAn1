@@ -51,8 +51,11 @@
           
         </div>
       </div>
-      <div class="article">
-        <hr>
+      <div class="camket">
+        <div class="ck_left">
+          <img src="./image/icvtitlth3.png" alt="">
+          <h3>CAM KẾT CHẤT LƯỢNG</h3>
+        </div>
       </div>
     </div>
   </body>

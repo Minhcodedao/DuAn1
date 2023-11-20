@@ -464,6 +464,13 @@
 .chat h3{
     margin-top: 17px;
 }
+.camket{
+    background-color: red;
+    height: 100px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
 /* dkdn */
 .container1 {
     background-color: #fff;
@@ -473,7 +480,7 @@
     overflow: hidden;
     width: 768px;
     max-width: 100%;
-    min-height: 480px;
+    min-height: 480px; margin: 0 auto;
   }
   
   .form-container {
