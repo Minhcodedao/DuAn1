@@ -32,7 +32,7 @@
                             <a class="center tk" href=""> <img src="image/a1.png">Tài khoản</a>
                             <ul class="sub_menu2">
                                 <li><a href="index.php?act=dangnhap"><h5>Đăng nhập</h5></a></li>
-                                <li><a href="index.php?act=dangky"><h5>Đăng xuất</h5></a></li>
+                                <li><a href="index.php?act=thoat"><h5>Đăng xuất</h5></a></li>
                             </ul>
                         </li>
                         <li>
@@ -49,6 +49,7 @@
             <hr class="mt10" style="width: 90%; margin: 0 auto; height: 0.5px; margin-top: 15px;">
             <div class="nav" id="myNav">
                 <ul>
+                    <li><a href="index.php"><h5>TRANG CHỦ</h5></a></li>
                     <li><a href="#"><h5>BỘ SƯU TẬP</h5></a></li>
                     <li><a href="#"><h5>TRANG SỨC KIM CƯƠNG</h5></a>
                         <ul class="sub_menu">
@@ -93,7 +94,6 @@
                         </ul>
                     </li>
                     <li><a href="#"><h5>QUÀ TẶNG</h5></a></li>
-                    <li><a href="#"><h5>SALE</h5></a></li>
                 </ul>
             </div>
         </div>
