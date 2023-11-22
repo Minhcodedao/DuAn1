@@ -1,6 +1,6 @@
 <?php
 function loadsp_kc(){
-    $sql="select * from sanpham where iddm=37 order by luotxem desc limit 0,5";
+    $sql="select * from sanpham where name like '%kc%' order by luotxem desc limit 0,5";
     $listsanpham=pdo_query($sql);
     return  $listsanpham;
 }
