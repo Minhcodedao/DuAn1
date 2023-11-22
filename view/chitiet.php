@@ -59,7 +59,7 @@
           </div>
           <div class="candong">
             <img src="./image/icv-titleh3.png" alt="">
-            <p>::before Thương hiệu trang sức cưới thuộc Tập đoàn Vàng bạc đá quý DOJI</p>
+            <p>Thương hiệu trang sức cưới thuộc Tập đoàn Vàng bạc đá quý DOJI</p>
           </div>
           <div class="candong">
             <img src="./image/icv-titleh3.png" alt="">
@@ -74,7 +74,7 @@
             <p>CAM KẾT CHẤT LƯỢNG</p>
           </div>
         </div>
-        <div class="ck_left">
+        <div class="ck_right">
           <div class="candong">
             <img src="./image/icv-titleh3.png" alt="">
             <h3>CAM KẾT CHẤT LƯỢNG</h3>
