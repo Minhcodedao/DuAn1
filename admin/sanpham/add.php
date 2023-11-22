@@ -35,6 +35,10 @@
             background-color: #4CAF50;
 
         }
+        .fl{
+            margin-top: 20px;
+            margin-left: 60px;
+        }
     </style>
 </head>
 
@@ -76,10 +80,12 @@
             </table>
 
             <input class="sb" type="submit" name="themmoi" value="Thêm">
-
+            <div class="fl">
+                <a href="index.php?act=listsp"> Danh Sách</a>
+                <a href=" index.php?act=addimage"> Thêm Ảnh</a>
+            </div>
 
         </form>
-        <a href="index.php?act=listsp"> Danh Sách</a>
     </div>
 
 </body>
