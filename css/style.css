@@ -501,10 +501,13 @@
     line-height: 20px;
 }
 .candong>h3{
-    margin-left: 25px;
-    margin-top: 15px;
+    margin-left: 20px;
+    margin-top: 5px;
 }
-
+.img_ck img{
+    width: 60px;
+    height: 60px;
+}
 
 
 
