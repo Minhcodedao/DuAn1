@@ -121,10 +121,11 @@
                             <a href="'.$linksp.'"><img src="'.$hinh.'" alt=""></a>
                             <div class="tt">
                                 <h5>'.$name.'</h5>
-                                <p>'.$mota.'</p>
+                                
                                 <p>Giá gốc: <del>'.$sale.'</del></p>
                                 <h3>'.$price.'</h3>
                             </div>
+                            <input type="button" value="Chi tiết">
                         </div>';
                     }
 
