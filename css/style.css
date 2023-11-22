@@ -469,6 +469,7 @@
     width: 90%;
     margin: 0 auto;
     display: flex;
+    margin-top: 60px;
 }
 .ck_right{
     width: 50%;
