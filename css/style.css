@@ -470,17 +470,39 @@
     margin: 0 auto;
     display: flex;
 }
-.ck_left{
+.ck_right{
     width: 50%;
+    background-color: #b1a2a2;
 }
-.candong{
+.ck_right>.candong{
     display: flex;
-    height: 30px;
+    height: 50px;
     width: 70%;
-    margin-left: 15%;
+    margin-left: 5%;
+    background-color: aqua;
     margin-top: 20px;
 }
 
+.ck_left{
+    width: 50%;
+    background-color: #b1a2a2;
+}
+.candong{
+    display: flex;
+    height: 50px;
+    width: 70%;
+    margin-left: 22%;
+    background-color: aqua;
+    margin-top: 20px;
+}
+.candong>p{
+    margin-left: 15px;
+    line-height: 20px;
+}
+.candong>h3{
+    margin-left: 25px;
+    margin-top: 15px;
+}
 
 
 
