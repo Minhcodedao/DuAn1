@@ -51,10 +51,14 @@ function insert_image($image1,$image2,$image3,$idpro){
 
 // xóa cứng 
 function delete_sanpham($id){
-    $sql="delete from sanpham where id=".$id;
+    $sql="delete from sanpham.id join binhluan.id  where id=".$id;
+
     pdo_execute($sql);
 }
-// xóa mềm
+// xóa sản phẩm xóa luôn cả bình luận thông qua idpro
+
+
+
 
 
 function update_sanpham($id,$iddm,$name,$price,$mota,$img){
