@@ -52,6 +52,7 @@ function insert_image($image1,$image2,$image3,$idpro){
 // xóa cứng 
 function delete_sanpham($id){
     $sql="delete from sanpham where id=".$id;
+    delete_binhluan2($id); 
     pdo_execute($sql);
 }
 // xóa mềm

@@ -56,7 +56,22 @@
           <div class="candong">
             <img src="./image/icv-titleh3.png" alt="">
             <h3>CAM KẾT CHẤT LƯỢNG</h3>
-            <h1>hehe</h1>
+          </div>
+          <div class="candong">
+            <img src="./image/icv-titleh3.png" alt="">
+            <h3>CAM KẾT CHẤT LƯỢNG</h3>
+          </div>
+          <div class="candong">
+            <img src="./image/icv-titleh3.png" alt="">
+            <h3>CAM KẾT CHẤT LƯỢNG</h3>
+          </div>
+          <div class="candong">
+            <img src="./image/icv-titleh3.png" alt="">
+            <h3>CAM KẾT CHẤT LƯỢNG</h3>
+          </div>
+          <div class="candong">
+            <img src="./image/icv-titleh3.png" alt="">
+            <h3>CAM KẾT CHẤT LƯỢNG</h3>
           </div>
         </div>
       </div>

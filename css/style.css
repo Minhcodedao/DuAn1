@@ -466,7 +466,6 @@
 }
 .camket{
     background-color: red;
-    height: 100px;
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -481,10 +480,9 @@
     width: 90%;
     margin-left: 10%;
     background-color: aqua;
+    margin-top: 20px;
 }
-.candong>h3{
-    margin: 5px 0 0 10px;
-}
+
 
 
 
