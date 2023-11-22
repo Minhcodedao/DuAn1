@@ -59,19 +59,19 @@
           </div>
           <div class="candong">
             <img src="./image/icv-titleh3.png" alt="">
-            <h3>CAM KẾT CHẤT LƯỢNG</h3>
+            <p>::before Thương hiệu trang sức cưới thuộc Tập đoàn Vàng bạc đá quý DOJI</p>
           </div>
           <div class="candong">
             <img src="./image/icv-titleh3.png" alt="">
-            <h3>CAM KẾT CHẤT LƯỢNG</h3>
+            <p>CAM KẾT CHẤT LƯỢNG</p>
           </div>
           <div class="candong">
             <img src="./image/icv-titleh3.png" alt="">
-            <h3>CAM KẾT CHẤT LƯỢNG</h3>
+            <p>CAM KẾT CHẤT LƯỢNG</p>
           </div>
           <div class="candong">
             <img src="./image/icv-titleh3.png" alt="">
-            <h3>CAM KẾT CHẤT LƯỢNG</h3>
+            <p>CAM KẾT CHẤT LƯỢNG</p>
           </div>
         </div>
       </div>

@@ -18,5 +18,9 @@
         $sql="delete from binhluan where id=".$id;
         pdo_execute($sql);
     }
+    function delete_binhluan2($id){
+        $sql="delete from binhluan where idpro=".$id;
+        pdo_execute($sql);
+    }
 
 ?>

@@ -464,6 +464,7 @@
 .chat h3{
     margin-top: 17px;
 }
+
 .camket{
     background-color: red;
     width: 90%;
@@ -478,7 +479,7 @@
     display: flex;
     height: 30px;
     width: 90%;
-    margin-left: 10%;
+    margin-left: 5%;
     background-color: aqua;
     margin-top: 20px;
 }
