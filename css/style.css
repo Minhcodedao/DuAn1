@@ -470,30 +470,28 @@
     margin: 0 auto;
     display: flex;
     margin-top: 60px;
+    height: 380px;
 }
 .ck_right{
     width: 50%;
-    background-color: #b1a2a2;
 }
 .ck_right>.candong{
     display: flex;
     height: 50px;
     width: 70%;
     margin-left: 5%;
-    background-color: aqua;
     margin-top: 20px;
 }
 
 .ck_left{
     width: 50%;
-    background-color: #b1a2a2;
+    border-right: 1px solid rgb(123, 117, 117);
 }
-.candong{
+.ck_left>.candong{
     display: flex;
     height: 50px;
     width: 70%;
     margin-left: 22%;
-    background-color: aqua;
     margin-top: 20px;
 }
 .candong>p{
@@ -502,11 +500,12 @@
 }
 .candong>h3{
     margin-left: 20px;
-    margin-top: 5px;
+    margin-top: 15px;
 }
-.img_ck img{
-    width: 60px;
-    height: 60px;
+.candong>img{
+    margin: 5px 0 0 20px;
+    width: 15px;
+    height: 15px;
 }
 
 
