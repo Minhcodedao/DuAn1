@@ -50,50 +50,33 @@
             <div class="nav" id="myNav">
                 <ul>
                     <li><a href="index.php"><h5>TRANG CHỦ</h5></a></li>
-                    <li><a href="#"><h5>BỘ SƯU TẬP</h5></a></li>
-                    <li><a href="#"><h5>TRANG SỨC KIM CƯƠNG</h5></a>
+                    <li><a href="#"><h5>Nhẫn </h5></a>
                         <ul class="sub_menu">
-                            <li><a href="#"><h5>BỘ SƯU TẬP</h5></a></li>
-                            <li><a href="#"><h5>TRANG SỨC KIM CƯƠNG</h5></a></li>
-                            <li><a href="#">TRANG SỨC ĐÁ MÀU</a></li>
+                            <li><a href="#"><h5>Nam</h5></a></li>
+                            <li><a href="#"><h5>Nữ</h5></a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><h5>TRANG SỨC ĐÁ MÀU</h5></a>
+                    <li><a href="#"><h5>Dây chuyền </h5></a>
                         <ul class="sub_menu">
-                            <li><a href="#"><h5>BỘ SƯU TẬP</h5></a></li>
-                            <li><a href="#"><h5>TRANG SỨC KIM CƯƠNG</h5></a></li>
-                            <li><a href="#"><h5>TRANG SỨC ĐÁ MÀU</h5></a></li>
+                        <li><a href="#"><h5>Nam</h5></a></li>
+                            <li><a href="#"><h5>Nữ</h5></a></li>
+                           
                         </ul>
                     </li>
-                    <li><a href="#"><h5>TRANG SỨC NGỌC TRAI</h5></a>
+                    <li><a href="#"><h5>Bông tai</h5></a>
                         <ul class="sub_menu">
-                            <li><a href="#"><h5>BỘ SƯU TẬP</h5></a></li>
-                            <li><a href="#"><h5>TRANG SỨC KIM CƯƠNG</h5></a></li>
-                            <li><a href="#"><h5>TRANG SỨC ĐÁ MÀU</h5></a></li>
+                        <li><a href="#"><h5>Nam</h5></a></li>
+                            <li><a href="#"><h5>Nữ</h5></a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><h5>TRANG SỨC CƯỚI</h5></a>
+                    <li><a href="#"><h5>Vòng tay</h5></a>
                         <ul class="sub_menu">
-                            <li><a href="#"><h5>BỘ SƯU TẬP</h5></a></li>
-                            <li><a href="#"><h5>TRANG SỨC KIM CƯƠNG</h5></a></li>
-                            <li><a href="#"><h5>TRANG SỨC ĐÁ MÀU</h5></a></li>
+                        <li><a href="#"><h5>Nam</h5></a></li>
+                            <li><a href="#"><h5>Nữ</h5></a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><h5>ĐỒNG HỒ</h5></a>
-                        <ul class="sub_menu">
-                            <li><a href="#"><h5>BỘ SƯU TẬP</h5></a></li>
-                            <li><a href="#"><h5>TRANG SỨC KIM CƯƠNG</h5></a></li>
-                            <li><a href="#"><h5>TRANG SỨC ĐÁ MÀU</h5></a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><h5>TRANG SỨC VÀNG 24K</h5></a>
-                        <ul class="sub_menu">
-                            <li><a href="#"><h5>BỘ SƯU TẬP</h5></a></li>
-                            <li><a href="#"><h5>TRANG SỨC KIM CƯƠNG</h5></a></li>
-                            <li><a href="#"><h5>TRANG SỨC ĐÁ MÀU</h5></a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><h5>QUÀ TẶNG</h5></a></li>
+                    <li><a href="#"><h5>Liên Hệ</h5></a></li>
+                
                 </ul>
             </div>
         </div>

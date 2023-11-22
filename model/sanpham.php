@@ -55,7 +55,10 @@ function delete_sanpham($id){
     delete_binhluan2($id);
     pdo_execute($sql);
 }
-// xóa mềm
+// xóa sản phẩm xóa luôn cả bình luận thông qua idpro
+
+
+
 
 
 function update_sanpham($id,$iddm,$name,$price,$mota,$img){
