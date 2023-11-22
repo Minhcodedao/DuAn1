@@ -21,28 +21,29 @@
                     <button class="custom-button" type="submit" name="listok">Tìm kiếm</button>
                 </div>
             </form>
-                <div class="profile">
-                    <ul> <i class="bi bi-person-fill custom-icon1"></i>
+            <div class="profile">
+                <ul> <i class="bi bi-person-fill custom-icon1"></i>
 
-                        <li>
-                            <a href="index.php">Đăng xuất</a>
-                        </li>
+                    <li>
+                        <a href="index.php">Đăng xuất</a>
+                    </li>
 
-                    </ul>
-                </div>
+                </ul>
+            </div>
         </div>
-
-
-
-
     </header>
     <!-- end header -->
     <!--  box left-->
     <header class="header" role="banner">
         <div class="nav-wrap">
             <nav class="main-nav" role="navigation">
+                <!-- tên user -->
+                <div class="user">
+                    <div class="user-info">
+                        <span class="user-name">Nguyễn Hải Quân</span>
+                    </div>
                 <ul class="unstyled list-hover-slide">
-                    <li><a href="#">Trang chủ</a></li>
+                 
                     <li><a href="index.php?act=listdm"> Danh Mục</a></li>
                     <li><a href="index.php?act=listsp">Sản Phẩm</a></li>
                     <li><a href="index.php?act=dsbl">Bình luận</a></li>

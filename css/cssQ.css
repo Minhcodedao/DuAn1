@@ -356,16 +356,14 @@ input {
 
 /* Box left */
 .header {
-  width: 248px;
+  width: 255px;
   height: 50%;
-
   background-color: #fff;
   box-shadow: 0 0 10px 0 rgb(174, 185, 191);
   position: fixed;
   top: 135px;
   left: 20px;
   overflow-y: auto;
-  /* Cho phép cuộn nếu nội dung quá dài */
   box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.5);
   border: 1px solid #fff;
 }
