@@ -49,6 +49,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "./view/sanpham.php";
             
             break;
+        case 'daychuyennam':
+            $listsanpham = loadall_sanpham_dcn();
+            include "./view/daychuyennam.php";
+            break;
         case 'lienhe':
             include "view/lienhe.php";
             break; 

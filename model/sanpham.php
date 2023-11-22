@@ -39,6 +39,12 @@ function load_sanpham_cungloai($id, $iddm){
     $result = pdo_query($sql);
     return $result;
 }
+// các sản phẩm có danh mục là nhẫn nam
+function loadall_sanpham_dcn(){
+    $sql="select * from sanpham where iddm=40";
+    $listsanpham=pdo_query($sql);
+    return $listsanpham;
+}
 function insert_sanpham($name,$price,$img,$mota,$iddm){
     $sql="insert into sanpham(name,price,img,mota,iddm) values('$name','$price','$img','$mota','$iddm')";
     pdo_execute($sql);

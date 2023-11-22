@@ -52,7 +52,7 @@
             </table>
 
             <input class="sb" type="submit" name="themmoi" value="Thêm">
-            <button>  <a  href="index.php?act=listdm">Danh Sách</a></button>
+              <a  href="index.php?act=listdm">Danh Sách</a>
            
 
         </form>

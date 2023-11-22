@@ -58,7 +58,7 @@
                     </li>
                     <li><a href="#"><h5>Dây chuyền </h5></a>
                         <ul class="sub_menu">
-                        <li><a href="#"><h5>Nam</h5></a></li>
+                        <li><a href="index.php?act=daychuyennam"><h5>Nam</h5></a></li>
                             <li><a href="#"><h5>Nữ</h5></a></li>
                            
                         </ul>
