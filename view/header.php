@@ -63,6 +63,20 @@
                            
                         </ul>
                     </li>
+                    <li><a href="#"><h5>Mặt dây</h5></a>
+                        <ul class="sub_menu">
+                        <li><a href="index.php?act=daychuyennam"><h5>Nam</h5></a></li>
+                            <li><a href="#"><h5>Nữ</h5></a></li>
+                           
+                        </ul>
+                    </li>
+                    <li><a href="#"><h5>Đồng hồ</h5></a>
+                        <ul class="sub_menu">
+                        <li><a href="index.php?act=daychuyennam"><h5>Nam</h5></a></li>
+                            <li><a href="#"><h5>Nữ</h5></a></li>
+                           
+                        </ul>
+                    </li>
                     <li><a href="#"><h5>Bông tai</h5></a>
                         <ul class="sub_menu">
                         <li><a href="#"><h5>Nam</h5></a></li>
