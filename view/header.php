@@ -50,10 +50,10 @@
             <div class="nav" id="myNav">
                 <ul>
                     <li><a href="index.php"><h5>TRANG CHỦ</h5></a></li>
-                    <li><a href="#"><h5>NHẪN </h5></a>
+                    <li><a href=""><h5>NHẪN </h5></a>
                         <ul class="sub_menu">
-                            <li><a href="#"><h5>NAM</h5></a></li>
-                            <li><a href="#"><h5>Nu</h5></a></li>
+                            <li><a href=""><h5>NAM</h5></a></li>
+                            <li><a href=""><h5>Nu</h5></a></li>
                         </ul>
                     </li>
                     <li><a href="#"><h5>DÂY CHUYỀN </h5></a>

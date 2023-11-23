@@ -20,7 +20,7 @@
                 Phone
             </th>
             <th>
-                Mã sản phẩm
+                ROLE
             </th>
             <th>
             <a href="index.php?act=addtk"><input  class="custom-icons1" type="button" value="Thêm "></a>
