@@ -176,6 +176,7 @@
 }
 .nav>ul>li>a{
     text-decoration: none;
+    font-size: large;
     font-family: 'Times New Roman';
     color: black;
     
@@ -185,7 +186,7 @@
 }
 .sub_menu{
     position: absolute;
-    background-color: rgb(213, 213, 213);
+    background-color:rgb(255, 255, 255);
     width: 170px;
     display: none;
     z-index: 1000;
@@ -193,11 +194,12 @@
 .sub_menu>li{
     list-style-type: none;
     padding: 10px;
-    border-bottom: 1px rgb(183, 178, 178) solid;
+    border-bottom: 2px rgb(183, 178, 178) solid;
 }
 .sub_menu>li>a{
     text-decoration: none;
     font-size: 1vw;
+    font-weight: 300;
     color: black;
 }
 .sub_menu>li>a:hover{
