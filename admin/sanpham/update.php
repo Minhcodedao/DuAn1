@@ -84,7 +84,7 @@
                 </tr>
                 <tr>
                     <td>Mô tả sản phẩm</td>
-                    <td><textarea name="mota" id="" cols="30" rows="10" value="<?php echo $mota ?>"></textarea></td>
+                    <td><textarea name="mota" id="" cols="30" rows="10"><?php echo $mota ?></textarea></td>
                 </tr>
             </table>
 

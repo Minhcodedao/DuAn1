@@ -24,9 +24,7 @@
             <div class="more_img">
               <img src="../image/daychuyen2.png" alt="">
             </div>
-            <div class="more_img">
-              <img src="../image/daychuyen2.png" alt="">
-            </div>
+            
           </div>
         </div>
         <div class="ct_tt">
@@ -53,7 +51,7 @@
         <hr>
       </div>
       <hr style="width: 80%; margin: 0 auto; margin-top: 30px;">
-      <div class="camket">
+      <div class="camket mb">
         <div class="ck_left">
           <div class="candong">
             <img src="./image/icv-titleh3.png" style="height: 50px; width: 50px;">
@@ -117,7 +115,7 @@
                             </a>
                             <div class="tt">
                                 <h5>'.$name.'</h5>
-                                <p>'.$mota.'</p>
+
                                 <p>Giá gốc: <del>'.$sale.'</del></p>
                                 <h3>'.$price.'</h3>
                             </div>
@@ -138,7 +136,6 @@
                             <a href="'.$linksp.'"><img src="'.$hinh.'" alt=""></a>
                             <div class="tt">
                                 <h5>'.$name.'</h5>
-                                <p>'.$mota.'</p>
                                 <p>Giá gốc: <del>'.$sale.'</del></p>
                                 <h3>'.$price.'</h3>
                             </div>
