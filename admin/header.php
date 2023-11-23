@@ -4,54 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/cssQ.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/sto.css">
 </head>
+<body >
 
-<body class="admin-header">
+    <div class="header2">
+        <div class="header1">
+            <div class="logo">
+                <img src="../image/nhancuoi_kc1.jpg" alt="" >
 
-    <!-- header -->
-    <header class="header1">
-        <img class="image" src="../image/logotachnen.png" alt="" width="150px" height="120px">
-        <div class="tk" style="margin-top: 10px;">
-            <form action="index.php?act=listsp" method="post">
+            </div>
+            <div class="right">
                 <div class="timkiem">
-                    <!-- tao ô tìm kiếm -->
-                    <input class="custom-input" name="kyw" type="text" placeholder="Tìm kiếm">
-                    <button class="custom-button" type="submit" name="listok">Tìm kiếm</button>
+                    <!-- ô tìm kiếm -->
+                    <form action="index.php?quanly=timkiem" method="post">
+                        <input type="text" name="search" placeholder="Tìm kiếm sản phẩm">
+                        <input type="submit" name="timkiem" value="Tìm kiếm">
+                    </form>
                 </div>
-            </form>
-            <div class="profile">
-                <ul> <i class="bi bi-person-fill custom-icon1"></i>
-
-                    <li>
-                        <a href="index.php">Đăng xuất</a>
-                    </li>
-
-                </ul>
+                <div class="user">
+                    <i class="fa-solid fa-right-from-bracket fa-2xl" style="color: #cbddfb;"></i>
             </div>
         </div>
-    </header>
-    <!-- end header -->
-    <!--  box left-->
-    <header class="header" role="banner">
-        <div class="nav-wrap">
-            <nav class="main-nav" role="navigation">
-                <!-- tên user -->
-                <div class="user">
-                    <div class="user-info">
-                        <span class="user-name">Xin chao: Nguyễn Hải Quân</span>
-                    </div>
-                <ul class="unstyled list-hover-slide">
-                 
-                    <li><a href="index.php?act=listdm"> Danh Mục</a></li>
-                    <li><a href="index.php?act=listsp">Sản Phẩm</a></li>
-                    <li><a href="index.php?act=dsbl">Bình luận</a></li>
-                    <li> <a href="index.php?act=dstk">Tài khoản</a></li>
-                    <li><a href="#">Thống kê</a></li>
-                    <li><a href="#">Đơn hàng</a></li>
-                </ul>
-            </nav>
-
+        <div class="menu">
+            <ul>
+                <li><a href="index.php">Trang chủ</a></li>
+                <li><a href="index.php?act=listdm">Danh Mục</a></li>
+                <li><a href=" index.php?act=listsp">Sản Phẩm</a></li>
+                <li><a href="index.php?act=dstk">Tài Khoản</a></li>
+                <li><a href="index.php?act=dsbl">Bình Luận</a></li>
+                <li><a href="">Đơn Hàng</a></li>
+                <li><a href="">Thống Kê</a></li>
+                
+              
+            </ul>
         </div>
-    </header>
+    </div>
+ 
+</body>
+
+
+   
+   

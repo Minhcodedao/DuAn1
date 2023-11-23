@@ -23,8 +23,8 @@
                     <td><input type="checkbox" name="" id=""></td>
                     <td>'.$id.'</td>
                     <td>'.$name.'</td>
-                    <td><a href="'.$suadm.'"><input  class="custom-icons1 type="button" value="Sửa"></a>
-                      <a href="'.$xoadm.'"><input  class="custom-icons1 type="button" value="Xóa"></a></td>
+                    <td><a href="'.$suadm.'"><input  class="custom-icons2 type="button" value="Sửa"></a>
+                      <a href="'.$xoadm.'"><input  class="custom-icons3 type="button" value="Xóa"></a></td>
                 </tr>
                     ';
                 }

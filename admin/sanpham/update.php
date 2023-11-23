@@ -18,11 +18,17 @@
     <title>Document</title>
     <style>
         .form1 {
-            width: 900px;
-            height: 800px;
-            margin-top: -23px;
-
-
+            width: 500px;
+            height: auto;
+            /* Change height to auto for dynamic content */
+            margin-top: 50px;
+            margin-left: 33%;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+            padding: 20px;
+            /* Add padding for better spacing */
+            box-sizing: border-box;
+            /* Include padding in the total width/height */
         }
 
         .form1 h2 {
@@ -31,19 +37,48 @@
         }
 
         .form1 table {
-            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            /* Adjusted margin-top for better spacing */
         }
 
-        .add {
-            margin-top: -50px;
+        .form1 table tr {
+            margin-bottom: 20px;
+            /* Add margin between table rows for better spacing */
+        }
+
+        .form1 table td {
+            padding: 10px;
+            /* Add padding for better spacing */
         }
 
         .sb {
-            margin-top: 30px;
-            width: 300px;
-            margin-left: 60px;
+            margin-top: 20px;
+            /* Adjusted margin-top for better spacing */
+            margin-left: 40%;
+            height: 40px;
+            width: 120px;
             background-color: #4CAF50;
+            color: #fff;
+            /* Set text color to white for better visibility */
+            border: none;
+            cursor: pointer;
+        }
 
+       
+
+        /* Add some styles to the input fields for better appearance */
+        .form1 input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 4px 0;
+            box-sizing: border-box;
+        }
+
+        /* Add hover effect for better interactivity */
+        .sb:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -52,7 +87,7 @@
     <div class="form1">
         <form action="index.php?act=updatesp" method="post" enctype="multipart/form-data" name="#">
             <!-- form add sản phẩm -->
-            <h2>Thêm sản phẩm</h2>
+            <h2>Sửa Sản Phẩm</h2>
             <table class="add">
                 <input type="hidden" name="id" value="<?php echo $id ?>">
                 <tr>

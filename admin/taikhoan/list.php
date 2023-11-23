@@ -23,7 +23,7 @@
                 ROLE
             </th>
             <th>
-            <a href="index.php?act=addtk"><input  class="custom-icons1" type="button" value="Thêm "></a>
+            <a href="index.php?act=addtk"><input  class="custom-icons2" type="button" value="Thêm "></a>
             </th>
 
 
@@ -46,8 +46,8 @@
                     <td>' . $role . '</td>
                    
                     <td>
-                      <a href="' . $xoatk . '"><input  class="custom-icons1" type="button" value="Xóa"></a>
-                      <a href="' . $suatk . '"><input  class="custom-icons1" type="button" value="Sửa"></a></td>
+                      <a href="' . $xoatk . '"><input  class="custom-icons3" type="button" value="Xóa"></a>
+                      <a href="' . $suatk . '"><input  class="custom-icons2" type="button" value="Sửa" ></a></td>
                 </tr>
                     ';
         }
