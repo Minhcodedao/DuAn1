@@ -53,6 +53,10 @@
                     <td><input type="text" name="name" id=""></td>
                 </tr>
                 <tr>
+                    <td>Mã sản phẩm</td>
+                    <td><input type="text" name="masp" id=""></td>
+                </tr>
+                <tr>
                     <td>Ảnh sản phẩm</td>
                     <td><input type="file" name="img" id=""></td>
                 </tr>

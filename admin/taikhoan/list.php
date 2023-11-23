@@ -20,14 +20,12 @@
                 Phone
             </th>
             <th>
-                Role (1:admin, 0: user)
-            </th>
-            <th>
-                Hành Động
+                Mã sản phẩm
             </th>
             <th>
             <a href="index.php?act=addtk"><input  class="custom-icons1" type="button" value="Thêm "></a>
             </th>
+
 
             
         </tr>

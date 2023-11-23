@@ -45,13 +45,13 @@ function loadall_sanpham_dcn(){
     $listsanpham=pdo_query($sql);
     return $listsanpham;
 }
-function insert_sanpham($name,$price,$img,$mota,$iddm){
-    $sql="insert into sanpham(name,price,img,mota,iddm) values('$name','$price','$img','$mota','$iddm')";
+function insert_sanpham($name, $masp, $price,$img,$mota,$iddm){
+    $sql="insert into sanpham(name,masp,price,img,mota,iddm) values('$name','$masp','$price','$img','$mota','$iddm')";
     pdo_execute($sql);
 }
 // insert ảnh 
-function insert_image($image1,$image2,$image3,$idpro){
-    $sql="insert into image(image1,image2,image3,idpro ) values('$image1','$image2','$image3','$idpro')"; 
+function insert_image($image1,$image2,$idpro){
+    $sql="insert into image(image1,image2,image3,idpro ) values('$image1','$image2','$idpro')"; 
     pdo_execute($sql);
 }
 
@@ -67,12 +67,12 @@ function delete_sanpham($id){
 
 
 
-function update_sanpham($id,$iddm,$name,$price,$mota,$img){
+function update_sanpham($id,$iddm,$name, $masp,$price,$mota,$img){
     if($img!=""){
-        $sql="update sanpham set iddm='".$iddm."', name='".$name."',price='".$price."',mota='".$mota."',img='".$img."' where id=".$id;
+        $sql="update sanpham set iddm='".$iddm."', name='".$name."', masp='".$masp."',price='".$price."',mota='".$mota."',img='".$img."' where id=".$id;
     }
     else
-    $sql="update sanpham set iddm='".$iddm."',name='".$name."',price='".$price."',mota='".$mota."' where id=".$id;
+    $sql="update sanpham set iddm='".$iddm."',name='".$name."', masp='".$masp."',price='".$price."',mota='".$mota."' where id=".$id;
     
     pdo_execute($sql);
     }

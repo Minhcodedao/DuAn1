@@ -5,7 +5,7 @@
             <th>TÊN SẢN PHẨM</th>
             <th>HÌNH</th>
             <th>GIÁ</th>
-            <th>LƯỢT XEM</th>
+            <th>Mã sản phẩm</th>
             <th>Mô Tả</th>
             <th>
                 <!--chèn luôn id vào act  -->
@@ -35,10 +35,10 @@
                     <td>' . $name . '</td>
                     <td>' . $hinh . '</td>
                     <td>' . $price . '</td>
-                    <td>' . $luotxem . '</td>
+                    <td>' . $masp . '</td>
                     <td>' . $mota . '</td>
                     <td><a href="' . $suasp . '"><input class="custom-icons2" type="button" value="Sửa"></a>  
-                   <td>   <a href="' . $xoasp . '"><input class="custom-icons2" type="button" value="Xóa Cứng" onclick="return confirm (\'Bạn có muốn xóa sản phẩm không ? \')"></a>
+                   <td>   <a href="' . $xoasp . '"><input class="custom-icons2" type="button" value="Xóa" onclick="return confirm (\'Bạn có muốn xóa sản phẩm không ? \')"></a>
                        <a href="' . $addimage . '"><input class="custom-icons2" type="button" value="Thêm Ảnh"></a>
                   
                   </td>

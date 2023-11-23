@@ -52,6 +52,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $iddm = $_POST['iddm'];
                 $name = $_POST['name'];
+                $masp = $_POST['masp'];
                 $price = $_POST['price'];
                 $mota = $_POST['mota'];
                 $img = $_FILES['img']['name'];
@@ -61,7 +62,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 } else {
                     echo "Sorry, there was an error uploading your file.";
                 }
-                insert_sanpham($name, $price, $img, $mota, $iddm);
+                insert_sanpham($name, $masp, $price, $img, $mota, $iddm);
                 $thongbao = "Thêm thành công";
             }
             $listdanhmuc = loadall_danhmuc();
@@ -72,7 +73,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $idpro = $_POST['idpro'];
                 $image1 = $_FILES['img1']['name'];
                 $image2 = $_FILES['img2']['name'];
-                $image3 = $_FILES['img3']['name'];
                 $target_dir = "../upload/";
                 $target_file1 = $target_dir . basename($_FILES['img1']['name']);
                 $target_file2 = $target_dir . basename($_FILES['img2']['name']);
@@ -85,11 +85,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 } else {
                     echo "Sorry, there was an error uploading your file2.";
                 }
-                if (move_uploaded_file($_FILES["img3"]["tmp_name"], $target_file3)) {
-                } else {
-                    echo "Sorry, there was an error uploading your file3.";
-                }
-                insert_image($image1, $image2, $image3, $idpro);
+                insert_image($image1, $image2, $idpro);
                 $thongbao = "Thêm thành công";
             }
           
@@ -121,6 +117,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $id = $_POST['id'];
                 $iddm = $_POST['iddm'];
                 $name = $_POST['name'];
+                $masp = $_POST['masp'];
                 $price = $_POST['price'];
                 $mota = $_POST['mota'];
                 $img = $_FILES['img']['name'];
@@ -129,7 +126,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
                 } else {
                 }
-                update_sanpham($id, $iddm, $name, $price, $mota, $img);
+                update_sanpham($id, $iddm, $name,$masp, $price, $mota, $img);
                 $thongbao = "thêm thành công";
             }
             $listdanhmuc = loadall_danhmuc();

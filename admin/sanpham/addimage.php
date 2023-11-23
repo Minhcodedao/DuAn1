@@ -62,8 +62,6 @@
                     <td>Ảnh 2</td>
                     <td><input type="file" name="img2" id=""></td>
                 </tr>
-                <td>Ảnh 3</td>
-                <td><input type="file" name="img3" id=""></td>
 
             </table>
 

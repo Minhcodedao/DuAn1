@@ -60,6 +60,10 @@
                     <td><input type="text" name="name" id="" value="<?php echo $name ?>"></td>
                 </tr>
                 <tr>
+                    <td>Mã sản phẩm</td>
+                    <td><input type="text" name="masp" id="" value="<?php echo $masp ?>"></td>
+                </tr>
+                <tr>
                     <td>Ảnh sản phẩm</td>
                     <td><input type="file" name="img" id="">
                         <?php echo $img ?>
