@@ -13,7 +13,7 @@
     <!-- header -->
     <header class="header1">
         <img class="image" src="../image/logotachnen.png" alt="" width="150px" height="120px">
-        <div class="tk">
+        <div class="tk" style="margin-top: 10px;">
             <form action="index.php?act=listsp" method="post">
                 <div class="timkiem">
                     <!-- tao ô tìm kiếm -->
@@ -40,7 +40,7 @@
                 <!-- tên user -->
                 <div class="user">
                     <div class="user-info">
-                        <span class="user-name">Nguyễn Hải Quân</span>
+                        <span class="user-name">Xin chao: Nguyễn Hải Quân</span>
                     </div>
                 <ul class="unstyled list-hover-slide">
                  

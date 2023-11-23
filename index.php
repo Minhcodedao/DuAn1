@@ -87,7 +87,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             header('location: index.php');
             break; 
         case "giohang":
-            include"./view/cart/cart.php";
+            include "./view/cart/cart.php";
             break;
         default:
             include "./view/home.php";

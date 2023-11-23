@@ -257,7 +257,7 @@ input {
 }
 .header1 {
   display: flex;
-
+  
   padding: 0 10px;
   height: 120px;
   background-color: #fff;
