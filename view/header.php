@@ -50,47 +50,47 @@
             <div class="nav" id="myNav">
                 <ul>
                     <li><a href="index.php"><h5>TRANG CHỦ</h5></a></li>
-                    <li><a href="#"><h5>Nhẫn </h5></a>
+                    <li><a href="#"><h5>NHẪN </h5></a>
                         <ul class="sub_menu">
-                            <li><a href="#"><h5>Nam</h5></a></li>
-                            <li><a href="#"><h5>Nữ</h5></a></li>
+                            <li><a href="#"><h5>NAM</h5></a></li>
+                            <li><a href="#"><h5>Nu</h5></a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><h5>Dây chuyền </h5></a>
-                        <ul class="sub_menu">
-                        <li><a href="index.php?act=daychuyennam"><h5>Nam</h5></a></li>
-                            <li><a href="#"><h5>Nữ</h5></a></li>
-                           
-                        </ul>
-                    </li>
-                    <li><a href="#"><h5>Mặt dây</h5></a>
+                    <li><a href="#"><h5>DÂY CHUYỀN </h5></a>
                         <ul class="sub_menu">
                         <li><a href="index.php?act=daychuyennam"><h5>Nam</h5></a></li>
                             <li><a href="#"><h5>Nữ</h5></a></li>
                            
                         </ul>
                     </li>
-                    <li><a href="#"><h5>Đồng hồ</h5></a>
+                    <li><a href="#"><h5>MẶT DÂY</h5></a>
                         <ul class="sub_menu">
                         <li><a href="index.php?act=daychuyennam"><h5>Nam</h5></a></li>
                             <li><a href="#"><h5>Nữ</h5></a></li>
                            
                         </ul>
                     </li>
-                    <li><a href="#"><h5>Bông tai</h5></a>
+                    <li><a href="#"><h5>ĐỒNG HỒ</h5></a>
+                        <ul class="sub_menu">
+                        <li><a href="index.php?act=daychuyennam"><h5>Nam</h5></a></li>
+                            <li><a href="#"><h5>Nữ</h5></a></li>
+                           
+                        </ul>
+                    </li>
+                    <li><a href="#"><h5>BÔNG TAI</h5></a>
                         <ul class="sub_menu">
                         <li><a href="#"><h5>Nam</h5></a></li>
                             <li><a href="#"><h5>Nữ</h5></a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><h5>Vòng tay</h5></a>
+                    <li><a href="#"><h5>VÒNG TAY</h5></a>
                         <ul class="sub_menu">
                         <li><a href="#"><h5>Nam</h5></a></li>
                             <li><a href="#"><h5>Nữ</h5></a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><h5>Liên Hệ</h5></a></li>
-                    <li><a href="#"><h5>Giới thiệu</h5></a></li>
+                    <li><a href="#"><h5>LIÊN HỆ</h5></a></li>
+                    <li><a href="#"><h5>GIỚI THIỆU</h5></a></li>
                 
                 </ul>
             </div>
