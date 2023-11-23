@@ -14,6 +14,11 @@ function loadall_sanpham_top5(){
     $listsanpham=pdo_query($sql);
     return $listsanpham;
 }
+function select_nhan(){
+    $sql = "SELECT * FROM sanpham WHERE name like '%nhan%'";
+    $nhan = pdo_query($sql);
+    return $nhan;
+}
 function loadall_sanpham($keyw="",$iddm=0){
     $sql="select * from sanpham where trangthai = 0 ";
     // where 1 tức là nó đúng

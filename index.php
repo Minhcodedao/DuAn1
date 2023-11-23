@@ -12,6 +12,7 @@ $spkc = loadsp_kc();
 $dsdm = loadall_danhmuc();
 $dstop10 =loadall_sanpham_top10();
 $dstop5 =loadall_sanpham_top5();
+$nhan = select_nhan();
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
@@ -88,6 +89,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break; 
         case "giohang":
             include "./view/cart/cart.php";
+            break;
+        case "nhanbig":
+            include "./view/menu/nhan/nhanbig.php";
             break;
         default:
             include "./view/home.php";
