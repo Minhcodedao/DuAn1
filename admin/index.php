@@ -37,6 +37,12 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             include "danhmuc/update.php";
             break;
+        case "suaimg":
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $img = load_image($_GET['id']);
+            }
+            include "sanpham/updateimg.php";
+            break;
         case "updatedm":
             if (isset($_POST['capnhap']) && ($_POST['capnhap'])) {
                 $id = $_POST['id'];
@@ -46,6 +52,16 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             $listdanhmuc = loadall_danhmuc();
             include "danhmuc/list.php";
+            break;
+        case "updateimg":
+            if (isset($_POST['upimg']) && ($_POST['upimg'])) {
+                $id = $_POST['id'];
+                $name = $_POST['name'];
+                update_danhmuc($id, $name);
+                $thongbao = "cập nhật thành công";
+            }
+            $listdanhmuc = loadall_danhmuc();
+            include "sanpham/listimg.php";
             break;
 
         case "addsp":

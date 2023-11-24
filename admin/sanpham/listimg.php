@@ -15,8 +15,7 @@
             foreach($listimage as $img){
                 extract($img);
                 $img_path = "../upload/";
-                $suadm="index.php?act=suadm&id=".$id;
-                $xoadm="index.php?act=xoadm&id=".$id;
+                $suaimg="index.php?act=suaimg&id=".$id;
                 $hinh1 = '<img src="'.$img_path.''.$image1 .'?> " width="100px" height="80px">';
                 $hinh2 = '<img src="'.$img_path.''.$image2 .'?> " width="100px" height="80px" >';
                 echo '
@@ -26,8 +25,7 @@
                     <td>'.$hinh1.'</td>
                     <td>'.$hinh2.'</td>
                     <td>
-                        <a href="'.$suadm.'"><input  class="custom-icons2" type="button" value="Sửa"></a>
-                        <a href="'.$xoadm.'"><input  class="custom-icons3" type="button" value="Xóa"></a>
+                        <a href="'.$suaimg.'"><input  class="custom-icons2" type="button" value="Sửa"></a>
                     </td>
                 </tr>';
             }
