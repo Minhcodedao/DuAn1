@@ -87,7 +87,7 @@ function load_image($id){
     $listimg  = pdo_query_one($sql);
     return $listimg;
 }
-function loadall_image($id){
+function loadall_image(){
     $sql= "SELECT * FROM image";
     $listimg  = pdo_query($sql);
     return $listimg;

@@ -91,6 +91,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listsp = loadall_sanpham();
             include "sanpham/addimage.php";
             break;
+        case "listimg":
+            $listimage = loadall_image();
+            include "sanpham/listimg.php";
+            break;
         case "listsp":
             $listsanpham = loadall_sanpham();
             include "sanpham/list.php";
