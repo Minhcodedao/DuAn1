@@ -33,6 +33,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 include "./view/home.php";
             }
             
+            
             break;
         case 'sanpham':
             if(isset($_POST['kyw']) && ($_POST['kyw']!="")){

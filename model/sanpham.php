@@ -56,7 +56,7 @@ function insert_sanpham($name, $masp, $price,$img,$mota,$iddm){
 }
 // insert ảnh 
 function insert_image($image1,$image2,$idpro){
-    $sql="insert into image(image1,image2,image3,idpro ) values('$image1','$image2','$idpro')"; 
+    $sql="insert into image(image1,image2,idpro ) values('$image1','$image2','$idpro')"; 
     pdo_execute($sql);
 }
 
@@ -78,7 +78,18 @@ function update_sanpham($id,$iddm,$name, $masp,$price,$mota,$img){
     }
     else
     $sql="update sanpham set iddm='".$iddm."',name='".$name."', masp='".$masp."',price='".$price."',mota='".$mota."' where id=".$id;
-    
+
     pdo_execute($sql);
-    }
-    ?>
+}
+
+function load_image($id){
+    $sql= "SELECT * FROM image WHERE idpro=".$id;
+    $listimg  = pdo_query_one($sql);
+    return $listimg;
+}
+function loadall_image($id){
+    $sql= "SELECT * FROM image";
+    $listimg  = pdo_query($sql);
+    return $listimg;
+}
+?>

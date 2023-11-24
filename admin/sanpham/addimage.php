@@ -44,7 +44,7 @@
             <!-- form add sản phẩm -->
             <h2>Thêm ảnh sản phẩm</h2>
             <table class="add">
-                <td><select name="idpro" id="">
+                <td><select name="idpro">
                         <?php
                         foreach ($listsp as $sp) {
                             extract($sp);
@@ -65,7 +65,7 @@
 
             </table>
 
-            <input class="sb" type="submit" name="themmoianh" value="Thêm">
+            <input class="sb" type="submit" name="addanh" value="Thêm">
             <a href="index.php?act=listsp"> Danh Sách</a>
         </form>
     </div>

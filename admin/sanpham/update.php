@@ -26,6 +26,7 @@
             background-color: rgb(255, 255, 255);
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
             padding: 20px;
+            border: 1px solid black;
             /* Add padding for better spacing */
             box-sizing: border-box;
             /* Include padding in the total width/height */

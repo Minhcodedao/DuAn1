@@ -18,11 +18,19 @@
             <img src="<?= $img ?>" alt="">
           </div>
           <div class="more">
+            <?php
+              $imgsp = load_image($id);
+              
+              $hinh1 = $img_path.$imgsp['image1'];
+              $hinh2 = $img_path.$imgsp['image2'];
+
+
+            ?>
             <div class="more_img">
-              <img src="../image/daychuyen1.png" alt="">
+              <img src="<?= $hinh1 ?>" alt="">
             </div>
             <div class="more_img">
-              <img src="../image/daychuyen2.png" alt="">
+              <img src="<?= $hinh2 ?>" alt="">
             </div>
             
           </div>
