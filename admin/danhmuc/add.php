@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .form1 {
+.form1 {
     width: 500px;
     height: auto; /* Change height to auto for dynamic content */
     margin-top: 50px;
     margin-left: 33%;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+    border: 1px solid red;
     padding: 20px; /* Add padding for better spacing */
     box-sizing: border-box; /* Include padding in the total width/height */
 }
