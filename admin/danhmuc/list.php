@@ -4,7 +4,6 @@
             <tr>
                 <th>ID</th>
                 <th>Tên DANH MUC</th>
-               
                 <th>
                 Hành động
                 </th>
@@ -20,7 +19,6 @@
                     $xoadm="index.php?act=xoadm&id=".$id;
                     echo '
                     <tr>
-                    <td><input type="checkbox" name="" id=""></td>
                     <td>'.$id.'</td>
                     <td>'.$name.'</td>
                     <td><a href="'.$suadm.'"><input  class="custom-icons2 type="button" value="Sửa"></a>
