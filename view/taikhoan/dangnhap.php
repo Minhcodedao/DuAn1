@@ -6,25 +6,16 @@
   <title>Trang Sức XYZ</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
     .login-container {
       background-color: #ffffff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 20px;
       border-radius: 10px;
-      width: 300px;
+      width: 600px;
       text-align: center;
+      margin-left: 29%;
       transition: margin-top 0.3s ease; /* Thêm hiệu ứng transition */
+      border: 10px solid whitesmoke;
     }
 
     .login-container.hide {
@@ -103,15 +94,21 @@
     <h2>Đăng Nhập</h2>
     <form class="login-form">
       <div class="form-group">
-        <label for="username">Tên đăng nhập:</label>
-        <input type="text" id="username" name="username" required>
+        <label for="user">Tên đăng nhập:</label>
+        <input type="text" name="user" required>
       </div>
+    <br>
       <div class="form-group">
-        <label for="password">Mật khẩu:</label>
-        <input type="password" id="password" name="password" required>
+        <label for="pass">Mật khẩu:</label>
+        <input type="password" name="pass" required>
       </div>
+      <br>
+      <a href="" style="color: red; text-decoration: none;">
+        Quên mật khẩu?
+      </a>
+      <hr class="mb" style="margin-top: 15px;">
       <div class="form-group">
-        <button type="submit">Đăng Nhập</button>
+        <button type="submit" name="dangnhap">Đăng Nhập</button>
       </div>
     </form>
     <div class="social-icons">
@@ -119,7 +116,7 @@
       <a href="#" title="Đăng nhập bằng Google"><i class="fab fa-google"></i></a>
     </div>
     <div class="signup-link">
-      <p>Chưa có tài khoản? <a href="dangky.php">Đăng ký ngay</a></p>
+      <p>Chưa có tài khoản? <a href="index.php?act=dangky">Đăng ký ngay</a></p>
     </div>
   </div>
 

@@ -5,17 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Đăng Ký - Trang Sức XYZ</title>
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
     .signup-container {
       background-color: #ffffff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -23,6 +12,7 @@
       border-radius: 10px;
       width: 50%;
       text-align: center;
+      margin-left: 25%;
     }
 
     .signup-container h2 {
@@ -123,23 +113,23 @@
     <form class="signup-form">
       <div class="form-group">
         <label for="fullname">Tên đăng nhập:</label>
-        <input type="text" id="fullname" name="fullname" required placeholder="VD: khanhhoangtran123">
+        <input type="text" name="user" required placeholder="VD: khanhhoangtran123">
       </div>
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required placeholder="VD: tranhuong@gmail.com">
+        <input type="email" name="email" required placeholder="VD: tranhuong@gmail.com">
       </div>
       <div class="form-group">
         <label for="phone">Số điện thoại:</label>
-        <input type="tel" id="phone" name="phone" required placeholder="VD: 0377865746">
+        <input type="tel" name="tel" required placeholder="VD: 0377865746">
       </div>
       <div class="form-group">
         <label for="address">Địa chỉ:</label>
-        <textarea name="address" id="" cols="103" rows="4" required></textarea>
+        <textarea name="address" cols="103" rows="4" required></textarea>
       </div>
       <div class="form-group">
         <label for="password">Mật khẩu:</label>
-        <input type="password" id="password" name="password" required placeholder="VD: hoang1234">
+        <input type="password" name="password" required placeholder="VD: hoang1234">
       </div>
       <div class="form-group">
         <button type="submit">Đăng Ký</button>
