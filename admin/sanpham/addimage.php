@@ -6,36 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .form1 {
-            width: 900px;
-            height: 800px;
-            margin-top: -23px;
-
-
-        }
-
-        .form1 h2 {
-            text-align: center;
-            font-size: 30px;
-        }
-
-        .form1 table {
-            margin-top: 10px;
-        }
-
-        .add {
-            margin-top: -50px;
-        }
-
-        .sb {
-            margin-top: 30px;
-            width: 300px;
-            margin-left: 60px;
-            background-color: #4CAF50;
-
-        }
-    </style>
 </head>
 
 <body>
@@ -65,8 +35,8 @@
 
             </table>
 
-            <input class="sb" type="submit" name="addanh" value="Thêm">
-            <a href="index.php?act=listsp"> Danh Sách</a>
+            <input class="sb" type="submit" name="addanh" value="Thêm"><br><br>
+            <a href="index.php?act=listimg" style="margin-left: 210px; text-decoration: none;"> Danh Sách</a>
         </form>
     </div>
 

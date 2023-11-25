@@ -81,11 +81,23 @@ function update_sanpham($id,$iddm,$name, $masp,$price,$mota,$img){
 
     pdo_execute($sql);
 }
+function update_image($id,$image1,$image2){
+    if($image1!=""){
+        $sql="update image set image1='".$image1."' where id=".$id;
+    }
+    if($image2!=""){
+        $sql="update image set image2='".$image2."' where id=".$id;
+    }
+    else{
+        $sql ="";
+    }
+    pdo_execute($sql);
+}
 
 function load_image($id){
-    $sql= "SELECT * FROM image WHERE idpro=".$id;
-    $listimg  = pdo_query_one($sql);
-    return $listimg;
+    $sql= "SELECT * FROM image WHERE id=".$id;
+    $img  = pdo_query_one($sql);
+    return $img;
 }
 function loadall_image(){
     $sql= "SELECT * FROM image";
