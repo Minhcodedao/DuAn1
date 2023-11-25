@@ -82,7 +82,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 }
                 $thongbao = "Đã đăng ký thành công! Vui lòng đăng nhập để thực hiện các chức năng khác!";
             }
-            include "./view/taikhoan/dangnhap.php";
+            include "./view/taikhoan/dangky.php";
             break; 
         case 'thoat':
             session_unset();
