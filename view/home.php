@@ -1,5 +1,5 @@
 <?php
-    echo $_SESSION['user'];
+    // echo $_SESSION['user'];
 ?>
 <div class="banner mb">
             <!-- Slideshow container -->

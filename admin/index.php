@@ -116,7 +116,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 insert_image($image1, $image2, $idpro);
                 $thongbao = "Thêm thành công";
             }
-          
+
             $listsp = loadall_sanpham();
             include "sanpham/addimage.php";
             break;
@@ -158,7 +158,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
                 } else {
                 }
-                update_sanpham($id, $iddm, $name,$masp, $price, $mota, $img);
+                update_sanpham($id, $iddm, $name, $masp, $price, $mota, $img);
             }
             $listdanhmuc = loadall_danhmuc();
             $listsanpham = loadall_sanpham();
@@ -183,6 +183,24 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listtk = loadall_taikhoan();
             include "taikhoan/list.php";
             break;
+        case "addtk":
+            // Kiểm tra xem nút submit đã được nhấn chưa
+            if (isset($_POST['themmoitk']) && ($_POST['themmoitk'])) {
+                $user = $_POST['user'];
+                $pass = $_POST['pass'];
+                $email = $_POST['email'];
+                $address = $_POST['address'];
+                $tel = $_POST['tel'];
+                $role = $_POST['role'];
+
+                // Gọi hàm insert_taikhoan để thêm dữ liệu vào CSDL
+                insert_taikhoan($user, $pass, $email, $address, $tel, $role);
+                $thongbao = "Thêm thành công";
+            }
+            // Bao gồm file HTML hiển thị form
+            include "taikhoan/add.php";
+            break;
+
         case "xoatk":
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 delete_taikhoan($_GET['id']);
@@ -190,8 +208,26 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listtk = loadall_taikhoan();
             include "taikhoan/list.php";
             break;
-        
-
+        case "suatk":
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $taikhoan = loadone_taikhoan($_GET['id']);
+            }
+            include "taikhoan/update.php";
+            break;
+        case "updatetk":
+            if (isset($_POST['capnhap']) && ($_POST['capnhap'])) {
+                $id = $_POST['id'];
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $pass = $_POST['pass'];
+                $address = $_POST['address'];
+                $tel = $_POST['tel'];
+                $role = $_POST['role'];
+                update_taikhoan2($id, $email, $name, $pass, $role, $tel, $address);
+            }
+            $listtk = loadall_taikhoan();
+            include "taikhoan/list.php";
+            break;
     }
 } else {
     include "home.php";
