@@ -228,6 +228,13 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listtk = loadall_taikhoan();
             include "taikhoan/list.php";
             break;
+        case "thongke":
+            $listthongke = loadall_thongke_sanham_dm();
+            include "thongke/list.php";
+            break;
+        case "bieudo":
+            include "thongke/bieudo.php";
+            break;
     }
 } else {
     include "home.php";

@@ -37,7 +37,7 @@
                 <li><a href="index.php?act=dsbl">Bình Luận</a></li>
                 <li><a href="index.php?act=listimg">Image</a></li>
                 <li><a href="">Đơn Hàng</a></li>
-                <li><a href="">Thống Kê</a></li>
+                <li><a href="?act=thongke">Thống Kê</a></li>
                 
               
             </ul>
