@@ -239,13 +239,9 @@ width: 100%;
   flex-grow: 1;
 }
 .timkiem{
-
   position: absolute;
   right: 190px;
   top: 30px;
-  
- 
-  
 }
 
 .timkiem input[type=text]{
