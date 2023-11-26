@@ -327,11 +327,20 @@
 }
 .spnb{
     width: 21%;
-    height: 300px;
+    height: 320px;
     border: 1px solid cadetblue;
     text-align: center;
     background-color: white;
     margin: 10px
+}
+.spnb input{
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 3px;
+    width: 60%;
+    height: 30px;
+    margin-top: 5px;
 }
 .spnb img{
     margin: 16px 0px;
@@ -581,4 +590,30 @@
 .spnb2 img:hover{
     transform: scale(1.2);
     transition: transform 0.7s ease;
+}
+
+.row{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+.cart{
+    width: 65%;
+    background-color: rgb(113, 90, 90);
+    height: 300px;
+    margin-right: 3%;
+
+}
+.hoadon{
+    width: 32%;
+    background-color: rebeccapurple;
+    height: 300px;
+}
+.btcart button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    margin: 10px 0 0 10px;
+    border-radius: 3px;
 }
