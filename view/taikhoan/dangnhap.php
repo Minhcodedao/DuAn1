@@ -57,7 +57,10 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
-
+    input[type='submit']{
+      background-color: #007bff;
+      color: white;
+    }
     .form-group button:hover {
       background-color: #0056b3;
     }
@@ -92,7 +95,7 @@
 <body>
   <div class="login-container" id="login-container">
     <h2>Đăng Nhập</h2>
-    <form class="login-form">
+    <form class="login-form" action="index.php?act=dangnhap" method="post">
       <div class="form-group">
         <label for="user">Tên đăng nhập:</label>
         <input type="text" name="user" required>
@@ -102,13 +105,22 @@
         <label for="pass">Mật khẩu:</label>
         <input type="password" name="pass" required>
       </div>
+      <div class="form-group">
+        <h4 style="color: red;">
+          <?php
+            if(isset($thongbao2)&&($thongbao2!="")){
+              echo $thongbao2;
+            }
+          ?>
+        </h4>
+      </div>
       <br>
       <a href="" style="color: red; text-decoration: none;">
         Quên mật khẩu?
       </a>
       <hr class="mb" style="margin-top: 15px;">
       <div class="form-group">
-        <button type="submit" name="dangnhap">Đăng Nhập</button>
+        <input type="submit" name="dangnhap" value="Đăng Nhập"></input>
       </div>
     </form>
     <div class="social-icons">

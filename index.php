@@ -60,10 +60,12 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break; 
         case 'dangky':
             if(isset($_POST['dangky']) && ($_POST['dangky'])){
-                $email = $_POST['emaildk'];
-                $user= $_POST['userdk'];
-                $pass= $_POST['passdk'];
-                insert_taikhoan($email,$user,$pass);
+                $email = $_POST['email'];
+                $user= $_POST['user'];
+                $pass= $_POST['pass'];
+                $tel= $_POST['tel'];
+                $address= $_POST['address'];
+                insert_taikhoan($email,$user,$pass,$tel,$address);
                 $thongbao = "Đã đăng ký thành công! Vui lòng đăng nhập để thực hiện các chức năng khác!";
             }
             include "./view/taikhoan/dangky.php";
@@ -75,12 +77,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $checkuser =checkuser($user,$pass);
                 if(is_array($checkuser)){
                     $_SESSION['user']= $checkuser;
-                    // $thongbao = "Bạn đã đăng nhập thành công";
-                    header('location: index.php');
+                    header('location: haeder.php');
                 }else{
-                    $thongbao = "Tài khoản không tồn tại! VUi lòng kiểm tra hoặc đăng ký!";
+                    $thongbao2 = "Tài khoản không tồn tại! VUi lòng kiểm tra hoặc đăng ký!";
                 }
-                $thongbao = "Đã đăng ký thành công! Vui lòng đăng nhập để thực hiện các chức năng khác!";
             }
             include "./view/taikhoan/dangnhap.php";
             break; 

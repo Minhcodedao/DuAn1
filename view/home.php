@@ -1,6 +1,4 @@
-<?php
-    // echo $_SESSION['user'];
-?>
+
 <div class="banner mb">
             <!-- Slideshow container -->
             <div class="slideshow-container">

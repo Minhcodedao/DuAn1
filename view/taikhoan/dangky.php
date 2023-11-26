@@ -80,7 +80,10 @@
       background-color: #3b5998; /* Facebook color */
       color: #ffffff;
     }
-
+    input[type='submit']{
+      background-color: #007bff;
+      color: white;
+    }
     .social-buttons button.google {
       background-color: #db4a39; /* Google color */
     }
@@ -110,7 +113,7 @@
 <body>
   <div class="signup-container">
     <h2>Đăng Ký Tài Khoản</h2>
-    <form class="signup-form">
+    <form class="signup-form" action="index.php?act=dangky" method="post">
       <div class="form-group">
         <label for="fullname">Tên đăng nhập:</label>
         <input type="text" name="user" required placeholder="VD: khanhhoangtran123">
@@ -129,14 +132,23 @@
       </div>
       <div class="form-group">
         <label for="password">Mật khẩu:</label>
-        <input type="password" name="password" required placeholder="VD: hoang1234">
+        <input type="password" name="pass" required placeholder="VD: hoang1234">
+      </div>
+      <div class="form-group" style="width: 100px;">
+        <input type="submit" name="dangky" value="Đăng ký"></input>
       </div>
       <div class="form-group">
-        <button type="submit">Đăng Ký</button>
+        <h4 style="color: red;">
+          <?php
+            if(isset($thongbao)&&($thongbao!="")){
+              echo $thongbao;
+            }
+          ?>
+        </h4>
       </div>
     </form>
     <div class="login-link">
-      <p>Đã có tài khoản? <a href="dangnhap.html">Đăng nhập ngay</a></p>
+      <p>Đã có tài khoản? <a href="index.php?act=dangnhap">Đăng nhập ngay</a></p>
     </div>
     
     <!-- Social login buttons (fake buttons) -->
