@@ -55,18 +55,18 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "danhmuc/list.php";
             break;
         case "updateimg":
-            if (isset($_POST['addanh']) && ($_POST['addanh'])) {
+            if (isset($_POST['suaanh']) && ($_POST['suaanh'])) {
                 $id = $_POST['id'];
-                $image1 = $_FILES['img1']['name'];
-                $image2 = $_FILES['img2']['name'];
+                $image1 = $_FILES['image1']['name'];
+                $image2 = $_FILES['image2']['name'];
                 $target_dir = "../upload/";
-                $target_file1 = $target_dir . basename($_FILES['img1']['name']);
-                $target_file2 = $target_dir . basename($_FILES['img2']['name']);
-                if (move_uploaded_file($_FILES["img1"]["tmp_name"], $target_file1)) {
+                $target_file1 = $target_dir . basename($_FILES['image1']['name']);
+                $target_file2 = $target_dir . basename($_FILES['image2']['name']);
+                if (move_uploaded_file($_FILES["image1"]["tmp_name"], $target_file1)) {
                 } else {
                     echo "Sorry, there was an error uploading your file1.";
                 }
-                if (move_uploaded_file($_FILES["img2"]["tmp_name"], $target_file2)) {
+                if (move_uploaded_file($_FILES["image2"]["tmp_name"], $target_file2)) {
                 } else {
                     echo "Sorry, there was an error uploading your file2.";
                 }

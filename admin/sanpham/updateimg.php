@@ -19,7 +19,7 @@
 ?>
 <body>
     <div class="form1" style="margin-top: 60px; width: 70%; margin-left: 15%;" >
-        <form action="index.php?act=updateimg" method="post" enctype="multipart/form-data" name="#">
+        <form action="index.php?act=updateimg" method="post" enctype="multipart/form-data">
             <!-- form add sản phẩm -->
             <h2>Sửa Danh Mục</h2>
             <table class="add">

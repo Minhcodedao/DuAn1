@@ -114,7 +114,7 @@
     display: block;
 }
 .ic_left{
-    margin-left: 300px;
+    margin-left: 230px;
 }
 .logo{
     width: 20%;
@@ -526,7 +526,6 @@
 .menuclick{
     width: 80%;
     margin: 0 auto;
-    background-color: #ae6356;
 }
 .mot{
     display: flex;
@@ -571,7 +570,6 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-color: aquamarine;
 }
 .spnb2{
     height: 300px;

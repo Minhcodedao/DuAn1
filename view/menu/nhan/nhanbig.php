@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <div class="banner mb">
+        <img src="./image/banner-cat-nhan.jpg" alt="">
+    </div>
     <div class="menuclick">
+        
         <div class="mot">
-            <div><h3>SẢN PHẨM ĐỒNG HỒ</h3></div>
+            <div><h3>SẢN PHẨM NHẪN</h3></div>
             <div class="sapxep">
                 <label for="">Sắp xếp theo</label>
                 <select name="sapxep" id="">

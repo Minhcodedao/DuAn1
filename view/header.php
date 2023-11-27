@@ -29,7 +29,15 @@
                 <div class="gioithieu2">
                     <ul class="ic_left">
                         <li>
-                            <a class="center tk" href=""> <img src="image/a1.png">Tài khoản</a>
+                            <a class="center tk" href=""> <img src="image/a1.png">
+                                <?php
+                                    if(isset($_SESSION['user'])){
+                                        echo "Xin chào: ".$_SESSION['user']['user'];
+                                    }else{
+                                        echo "Tài khoản";
+                                    }
+                                ?>
+                            </a>
                             <ul class="sub_menu2">
                                 <li><a href="index.php?act=dangnhap"><h5>Đăng nhập</h5></a></li>
                                 <li><a href="index.php?act=dangky"><h5>Đăng ký</h5></a></li>
