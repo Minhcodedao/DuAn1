@@ -453,7 +453,7 @@
     background-color: red;
     color: white;
     width: 47%;
-    height: 50px;
+    height: 40px;
     margin-right: 5%;
     border: none;
     box-shadow: 2px black inset;
@@ -462,23 +462,24 @@
     background-color: rgb(171, 164, 164);
     color: rgb(0, 0, 0);
     width: 47%;
-    height: 50px;
+    height: 40px;
     border: none;
 }
 .chat{
     background-color: #b1a2a2;
     margin-top: 30px;
-    height: 50px;
+    height: 45px;
     display: flex;
 }
 .chat img{
-    margin-top: 8px;
+    margin-top: 5px;
     width:30px;
     height: 35px;
     margin-left: 25%;
 }
-.chat h3{
+.chat h4{
     margin-top: 17px;
+    margin-left: 5px;
 }
 
 .camket{
@@ -501,7 +502,6 @@
 
 .ck_left{
     width: 50%;
-    border-right: 1px solid rgb(123, 117, 117);
 }
 .ck_left>.candong{
     display: flex;
@@ -620,4 +620,45 @@
     margin: 0 auto;
     height: 500px;
     background-color: aquamarine;
+    margin-top: 20px;
+}
+.binhluan form{
+    width: 100%;
+    display: flex;
+}
+.textbl{
+    width: 48%;
+    background-color: #717171;
+    margin-left: 2%;
+    
+}
+.textbl textarea{
+    width: 100%;
+    height: 100px;
+    
+}
+.ttbl{
+    width: 48%;
+    background-color: #6b2f2f;
+    margin-left: 2%;
+
+}
+.ttbl input{
+    width: 45%;
+    margin-left: 2%;
+    height: 45px;
+    border: none;
+    border: 0.5px solid #717171;
+    padding-left: 10px;
+
+}
+.ttbl input[type='text']:last-child,
+.ttbl input[type='submit']{
+    margin-top: 10px;
+}
+.ttbl input[type='submit']{
+    background-color: rgb(142, 2, 142);
+    color: white;
+    font-size: medium;
+    font-weight: bold;
 }

@@ -20,7 +20,6 @@
           <div class="more">
             <?php
               $imgsp = load_image($id);
-              
               $hinh1 = $img_path.$imgsp['image1'];
               $hinh2 = $img_path.$imgsp['image2'];
 
@@ -51,7 +50,7 @@
             </div>
             <div class="chat">
               <img src="./image/icon-chat-voi-tu-van-vien.png" alt="">
-              <h3>Liên Hệ Với Tư Vấn Viên</h3>
+              <h4>Liên Hệ Với Tư Vấn Viên</h>
             </div>
           </div>
           
@@ -105,12 +104,21 @@
           </div>
         </div>
       </div>
-      
-      <h2 style="margin-left: 8%; border-bottom: 2px solid red; width: 200px;">VIẾT ĐÁNH GIÁ</h2>
-      <hr style="width: 85%; margin: 0 auto;">
-
+    
+      <hr style="width: 85%; margin: 0 auto; margin-bottom: 20px;">
+      <h2 style="margin-left: 10%; width: 200px;">VIẾT ĐÁNH GIÁ</h2>
+      <p style="margin-left: 10%; width: 200px; margin-top: 10px;">Nhập đánh giá của bạn</p>
       <div class="binhluan">
-        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+          $(document).ready(function() {
+               $("#binhluan").load("view/binhluan.php", {idpro: <?= $id ?>});
+          });
+        </script>
+        <div class="ok" id="binhluan">
+
+        </div>
       </div>
 
       <div class="article">
