@@ -56,7 +56,7 @@
           </div>
           
         </div>
-        <hr>
+        
       </div>
       <hr style="width: 80%; margin: 0 auto; margin-top: 30px;">
       <div class="camket mb">
@@ -105,6 +105,14 @@
           </div>
         </div>
       </div>
+      
+      <h2 style="margin-left: 8%; border-bottom: 2px solid red; width: 200px;">VIẾT ĐÁNH GIÁ</h2>
+      <hr style="width: 85%; margin: 0 auto;">
+
+      <div class="binhluan">
+        
+      </div>
+
       <div class="article">
             <h2>SẢN PHẨM CÙNG LOẠI</h2>
             <hr class="mb">

@@ -615,3 +615,9 @@
     margin: 10px 0 0 10px;
     border-radius: 3px;
 }
+.binhluan{
+    width: 85%;
+    margin: 0 auto;
+    height: 500px;
+    background-color: aquamarine;
+}

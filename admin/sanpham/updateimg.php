@@ -26,7 +26,7 @@
                 <input type="hidden" name="id" value="<?php echo $id ?>">
                 <tr>
                     <td>IMAGE 1</td>
-                    <td><input type="file" name="image1" id=""></td>
+                    <td><input type="file" name="image1"></td>
                     <td><?php echo $hinh1 ?></td>
                 </tr>
                 <tr>

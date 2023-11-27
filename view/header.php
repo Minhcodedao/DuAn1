@@ -42,6 +42,15 @@
                                 <li><a href="index.php?act=dangnhap"><h5>Đăng nhập</h5></a></li>
                                 <li><a href="index.php?act=dangky"><h5>Đăng ký</h5></a></li>
                                 <li><a href="index.php?act=thoat"><h5>Đăng xuất</h5></a></li>
+                                <li>
+                                    <?php
+                                        if(isset($_SESSION['user'])&& ($_SESSION['user']['role']==1)){
+                                            echo '<a href="admin/index.php"><h5>Đăng nhập admin</h5></a>';
+                                        }else{
+                                            echo '<h5>Role : 0</h5>';
+                                        }
+                                    ?>
+                                </li>
                             </ul>
                         </li>
                         <li>
