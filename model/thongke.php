@@ -11,4 +11,17 @@ function loadall_thongke_sanham_dm()
     
     return pdo_query($sql);
 }
+// thông kê các sản phẩm được mua nhiều nhất
+function loadall_thongke_sanham_dm_gg()
+{
+    $sql = "SELECT dm.name, COUNT(*) as soluong
+            FROM danhmuc dm  
+            JOIN sanpham sp ON dm.id = sp.iddm
+            GROUP BY dm.id, dm.name
+            ORDER BY soluong ASC";
+    
+    return pdo_query($sql);
+}
+
+
 ?>

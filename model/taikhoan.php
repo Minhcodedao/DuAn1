@@ -18,14 +18,12 @@
         $sp = pdo_query_one($sql);
         return $sp;
     }
-    function update_taikhoan($id, $user, $pass, $email, $address, $tel){
-        $sql = "UPDATE `taikhoan` SET  `user`= '$user', `pass`= '$pass', `email`= '$email', `address`= '$address', `tel`= '$tel' WHERE `id`=" .$id;           
+    
+    function update_taikhoan($id, $user, $pass, $email, $address, $tel, $role ){
+        $sql = "UPDATE taikhoan SET user='$user',pass='$pass',email='$email',address='$address',tel='$tel' ,role='$role' WHERE id=".$id;
         pdo_execute($sql);
     }
-    function update_taikhoan2($id, $user, $pass, $email, $address, $tel,$role){
-        $sql = "UPDATE `taikhoan` SET  `user`= '$user', `pass`= '$pass', `email`= '$email', `address`= '$address', `tel`= '$tel',`role`= '$role' WHERE `id`=" .$id;           
-        pdo_execute($sql);
-    }
+  
     function loadall_taikhoan(){
         $sql = "SELECT * FROM taikhoan ORDER BY id DESC";
         $listtaikhoan = pdo_query($sql);

@@ -27,5 +27,5 @@
 
                 <!-- link den bieudo  -->
     </table>
-    <button> <a href="index.php?act=bieudo">Biểu đồ thông kê sản phẩm</a></button>
+    <button> <a href="index.php?act=bdososp">Biểu đồ thông kê sản phẩm</a></button>
 </div>
