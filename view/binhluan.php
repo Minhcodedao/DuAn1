@@ -3,18 +3,23 @@
     $idpro = $_REQUEST['idpro'];
     include "../model/binhluan.php";
     include "../model/pdo.php";
+    include "../model/taikhoan.php";
 
     if(isset($_SESSION['user'])){
         $u = $_SESSION['user']['user'];
         $m = $_SESSION['user']['email'];
         $t = $_SESSION['user']['tel'];
+        $ok = '';
     }
     else{
         $u = "";
         $m = "";
         $t = "";
+        $ok = 'rows="10" placeholder="Bạn cần đăng nhập để thực hiện chức năng này" readonly';
     }
     $dsbl = loadall_binhluan($idpro);
+
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,28 +32,37 @@
 <body>
     <form action="<?=$_SERVER['PHP_SELF'];?>" method="post">
         <div class="textbl">
-        <textarea name="noidung" id="" cols="30" rows="10"></textarea>
+        <textarea name="noidung" id="" cols="30" <?= $ok ?> ></textarea>
         </div>
         <div class="ttbl">
-        <input type="text" name="user" placeholder="Your name" value="<?= $u ?>"> 
-        <input type="email" name="email" placeholder="Your Email" value="<?= $m ?>"><br>
-        <input type="text" name="tel" placeholder="Your telephone" value="<?= $t ?>">
+        <input type="text" name="user" placeholder="Your name" value="<?= $u ?>" readonly> 
+        <input type="email" name="email" placeholder="Your Email" value="<?= $m ?>" readonly><br>
+        <input type="text" name="tel" placeholder="Your telephone" value="<?= $t ?>" readonly>
         <input type="hidden" name="idpro" value="<?= $idpro ?>">
         <input type="submit" name="guibl" value="GỬI ĐÁNH GIÁ">
         </div> 
     </form>
+    
+    <div class="scroll">
     <div class="ds" id="binhluan">
         <?php
+            
             foreach($dsbl as $bl){
                 extract($bl);
-                echo '<img src="./image/ava-acckh.png" alt="">
-                <h4>'.$iduser.'</h4>
-                <p>'.$noidung.'</p>
-                <p>'.$ngaybinhluan.'</p>';
+                $tk = loadone_taikhoan($iduser);
+                echo '<div class="avt">
+                        <img src="./image/ava-acckh.png" alt="">
+                        <h4>'.$tk['user'].'</h4>
+                    </div>
+                    <p>'.$noidung.'</p>
+                    <div  class="tg">
+                        <p>'.$ngaybinhluan.'</p>
+                    </div>';
             }
         ?>
 
 
+    </div>
     </div>
     <?php
     if(isset($_POST['guibl']) && ($_POST['guibl'])){

@@ -61,7 +61,7 @@
       <div class="camket mb">
         <div class="ck_left">
           <div class="candong">
-            <img src="./image/icv-titleh3.png" style="height: 50px; width: 50px;">
+            <img src="./image/icv-titleh3.png" style="height: 40px; width: 40px;">
             <h3>CAM KẾT CHẤT LƯỢNG</h3>
           </div>
           <div class="candong">
@@ -83,7 +83,7 @@
         </div>
         <div class="ck_right">
           <div class="candong">
-            <img src="./image/icvtitlth3.png" style="height: 50px; width: 50px;">
+            <img src="./image/icvtitlth3.png" style="height: 35px; width: 35px;">
             <h3>HƯỚNG DẪN MUA HÀNG ONLINE</h3>
           </div>
           <div class="candong">
@@ -102,13 +102,17 @@
             <img src="./image/icon_tix.png" alt="">
             <p>Kiểm tra và xác nhận đơn hàng</p>
           </div>
+          <div class="candong">
+            <img src="./image/icon_tix.png" alt="">
+            <p>Đơn hàng thành công sẽ được gửi về email & sms của quý khách</p>
+          </div>
         </div>
       </div>
     
-      <hr style="width: 85%; margin: 0 auto; margin-bottom: 20px;">
-      <h2 style="margin-left: 10%; width: 200px;">VIẾT ĐÁNH GIÁ</h2>
-      <p style="margin-left: 10%; width: 200px; margin-top: 10px;">Nhập đánh giá của bạn</p>
-      <div class="binhluan">
+      <hr style="width: 85%; margin: 0 auto; margin-bottom: 5px;">
+      <h2 style="margin-left: 7%; width: 200px;">ĐÁNH GIÁ</h2>
+      <p style="margin-left:7%; width: 200px; margin-top: 10px;">Nhập đánh giá của bạn</p>
+      <div class="binhluan mb">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
@@ -122,52 +126,34 @@
       </div>
 
       <div class="article">
-            <h2>SẢN PHẨM CÙNG LOẠI</h2>
-            <hr class="mb">
-            <div class="sp">
-                <?php
-                    foreach($dstop5 as $sp){
-                        extract($sp);
-                        $hinh =$img_path.$img;
-                        $sale = $price*11/10;
-                        $linksp = "index.php?act=sanphamct&idsp=".$id;
-                        echo '
-                        <div class="spnb mb">
-                            <a href="'.$linksp.'">
-                                <img src="'.$hinh.'" alt="">
-                                
-                            </a>
-                            <div class="tt">
-                                <h5>'.$name.'</h5>
+        <h2>SẢN PHẨM CÙNG LOẠI</h2>
+        <hr class="mb">
+        <div class="sp">
+          <?php
+              foreach($dstop5 as $sp){
+                  extract($sp);
+                  $hinh =$img_path.$img;
+                  $sale = $price*11/10;
+                  $linksp = "index.php?act=sanphamct&idsp=".$id;
+                  echo '
+                  <div class="spnb mb">
+                      <a href="'.$linksp.'">
+                          <img src="'.$hinh.'" alt="">
+                          
+                      </a>
+                      <div class="tt">
+                          <h5>'.$name.'</h5>
 
-                                <p>Giá gốc: <del>'.$sale.'</del></p>
-                                <h3>'.$price.'</h3>
-                            </div>
-                        </div>';
-                    }
-                ?>
-            </div>
-            <img src="../image/a4.png" alt="">
-            <img src="" alt="">
-            <div class="sp">
-                <?php
-                    foreach($dstop10 as $sp){
-                        extract($sp);
-                        $hinh =$img_path.$img;
-                        $linksp = "index.php?act=sanphamct&idsp=".$id;
-                        echo '
-                        <div class="spnb mb">
-                            <a href="'.$linksp.'"><img src="'.$hinh.'" alt=""></a>
-                            <div class="tt">
-                                <h5>'.$name.'</h5>
-                                <p>Giá gốc: <del>'.$sale.'</del></p>
-                                <h3>'.$price.'</h3>
-                            </div>
-                        </div>';
-                    }
-                ?>    
-            </div>
-            <a href="#" class="btn mb">Xem thêm</a>
+                          <p>Giá gốc: <del>'.$sale.'</del></p>
+                          <h3>'.$price.'</h3>
+                      </div>
+                  </div>';
+              }
+          ?>
+        </div>
+
+            
+        <a href="#" class="btn mb">Xem thêm</a>
       </div>
     </div>
   </body>
