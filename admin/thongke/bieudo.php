@@ -20,7 +20,7 @@
                        2]);
 
       var options = {
-        title: "Density of Precious Metals, in g/cm^3",
+        title: "Thong ke so luong trong tung danh muc ",
         width: 600,
         height: 400,
         bar: {groupWidth: "95%"},
