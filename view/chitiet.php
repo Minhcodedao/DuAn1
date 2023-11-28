@@ -11,7 +11,7 @@
       <?php 
         extract($onesp);
         $img=$img_path.$img;
-      ?>
+      ?>7
       <div class="chitiet">
         <div class="ct_img">
           <div class="khung">
@@ -37,12 +37,16 @@
         <div class="ct_tt">
           <div class="ct_text">
             <h3><?= $name ?></h3>
-            <p>MÃ SẢN PHẨM: AFRB002360D3DA1</p>
+            <p<?= $masp ?></p>
             <h2 class="gia"><?= $price ?></h2>
             <p>*Giá có thể thay đổi tùy thuộc vào kích thước và trọng lượng thực tế của sản phẩm.Vui lòng gọi 1800 1168 để được hỗ trợ.</p>
             <p class="mb">Mô tả: <?= $mota ?></p>
-
-
+            <form action="index.php?act=addtocart" method="post">
+              <input type="hidden" name="id" value="<?= $id ?>">
+              <input type="hidden" name="name" value="<?= $name ?>">
+              <input type="hidden" name="image" value="<?= $image ?>">
+              <input type="hidden" name="price" value="<?= $price ?>">
+            </form>
             <hr class="mb">
             <div class="ct_button">
               <button class="buynow">Mua Ngay</button>
@@ -151,7 +155,6 @@
               }
           ?>
         </div>
-
             
         <a href="#" class="btn mb">Xem thêm</a>
       </div>
