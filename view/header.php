@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+  
+    </style>
     <link rel="stylesheet" href="./css/style.css">
+    
+    
     <!--  -->
     <script src="script.js"></script>
 
@@ -17,9 +21,9 @@
                 <div class="gioithieu">
                     <ul>
                         <li>
-                            <a class="center" href="#"> <img src="image/a1.png">Về Trang sức DOJI</a>
-                            <a class="center" href="#"> <img src="image/a2.png">Về hệ thống phân phối</a>
-                            <a class="center" href="#"> <img src="image/a3.png">1800 1168</a>
+                            <a class="center" href="index.php"> <img src="image/home4.jpg" >Về Trang sức DOJI</a>
+                            <a class="center" href="#"> <img src="image/diachi.jpg">Về hệ thống phân phối</a>
+                            <a class="center" href="#"> <img src="image/phone.jpg">1800 1168</a>
                         </li>
                     </ul>
                 </div>
@@ -29,7 +33,7 @@
                 <div class="gioithieu2">
                     <ul class="ic_left">
                         <li>
-                            <a class="center tk" href=""> <img src="image/a1.png">
+                            <a class="center tk" href=""> <img src="image/user.jpg">
                                 <?php
                                     if(isset($_SESSION['user'])){
                                         echo "Xin chào: ".$_SESSION['user']['user'];
@@ -54,7 +58,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a class="center" href="index.php?act=giohang"> <img src="image/a2.png">Giỏ hàng</a>
+                            <a class="center" href="index.php?act=giohang"> <img src="image/cart.jpg">Giỏ hàng</a>
                         </li>
                     </ul>
                     <form class="timkiem">
