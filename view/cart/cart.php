@@ -8,17 +8,42 @@
 </head>
 <body>
     <div class="row">
-        <div class="cart">
+        <div class="cart mb">
             <div>
                 <h3 style=" width: 200px;border-bottom: 2px solid red;">Giỏ hàng</h3>
                 <hr>
             </div>
             <div class="btcart">
                 <a href="index.php"><button>« Tiếp tục mua hàng</button></a>
+                <div class="spcart">
+                    <div class="imgcart">
+                        <img src="./image/kc2.jpg" alt="">
+                    </div>
+                    <div class="ttcart">
+                        <h3>Nhẫn èhwifhweifwhhhhwfuehw</h3>
+                        <p>MSP: weffwfyegffe</p>
+                        <?php $i=1 ?>
+                        <div class="counter">
+                            <label for="">Số lượng: </label>
+                            <span style="width: 20px;background-color: red;color: white; text-align: center; margin-left: 10px;" >1</span>
+                            <p>Chất liệu : Vàng</p>
+                            <p>Giá tiền: $999</p>
+                        </div>
+                        <div class="price">
+                            <p>Tạm tính $999</p>
+                            <p>Thành tiền $999</p>
+                        </div>
+                        <div class="btcart">
+                            <a href=""><button>Xoa</button></a>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </div>
         <div class="hoadon">
             <h1>ĐỪNG VIẾT GÌ THÊM</h1>
+            
         </div>
     </div>
 </body>

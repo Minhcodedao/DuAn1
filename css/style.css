@@ -587,7 +587,7 @@
     transition: transform 0.5s ease;
 }
 .spnb2 img:hover{
-    transform: scale(1.2);
+    transform: scale(1.2); 
     transition: transform 0.7s ease;
 }
 
@@ -599,7 +599,6 @@
 .cart{
     width: 65%;
     background-color: rgb(113, 90, 90);
-    height: 300px;
     margin-right: 3%;
 
 }
@@ -616,6 +615,70 @@
     margin: 10px 0 0 10px;
     border-radius: 3px;
 }
+.spcart{
+    width: 95%;
+    background-color: aquamarine;
+    margin: 0 auto;
+    height: 180px;
+    display: flex;
+}
+.imgcart{
+    margin-top: 30px;
+    width: 20%;
+    background-color: burlywood;
+}
+.imgcart img{
+    width: 120px;
+    width: 120px;
+    border: 1px solid #717171;
+    margin-left: 20px;
+}
+.ttcart{
+    margin-top: 30px;
+    width: 80%;
+    background-color:#717171;
+}
+.ttcart span{
+    width: 20px;
+    background-color: red;
+    color: white;
+}
+.price{
+    width: 100%;
+    display: flex;
+}
+.counter{
+    display: flex;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .binhluan{
     width: 85%;
     margin: 0 auto;
