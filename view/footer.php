@@ -12,9 +12,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #333;
-    color: #fff;
+    background-color: rgb(245, 245, 245);
+    color: black;
     padding: 20px;
+    line-height: 1.6;
 }
 
 .footer-section {
@@ -24,7 +25,7 @@
 
 .footer-section h2 {
     font-size: 18px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 2px solid  black;
     padding-bottom: 10px;
     margin-bottom: 15px;
     color: #f8d344;
@@ -96,6 +97,8 @@
             <p>
                 <a href="https://www.facebook.com/"><img src="https://img.icons8.com/color/48/000000/facebook-new.png"/></a>
                 <a href="https://www.instagram.com/"><img src="https://img.icons8.com/color/48/000000/instagram-new.png"/></a>
+                <a href="https://www.youtube.com/"><img src="https://img.icons8.com/color/48/000000/youtube-play.png"/></a>
+                
             </p>
         </div>
         <div class="footer-section">
