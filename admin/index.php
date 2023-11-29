@@ -200,6 +200,29 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             // Bao gồm file HTML hiển thị form
             include "taikhoan/add.php";
             break;
+        case "suatk":
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $tk = loadone_taikhoan($_GET['id']);
+                extract($tk);
+            }
+            include "taikhoan/update.php";
+            break;
+        case "updatetk":
+            if (isset($_POST['updatetk']) && ($_POST['updatetk'])) {
+                $id = $_POST['id'];
+                $user = $_POST['user'];
+                $email = $_POST['email'];
+                $pass = $_POST['pass'];
+                $address = $_POST['address'];
+                $tel = $_POST['tel'];
+                $role = $_POST['role'];
+                update_taikhoan($id, $user, $pass, $email, $address, $tel, $role);
+                $thongbao = "Cập nhật thành công";
+            }
+            $listtk = loadall_taikhoan();
+            include "taikhoan/list.php";
+            break;
+
 
         case "xoatk":
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
@@ -208,32 +231,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listtk = loadall_taikhoan();
             include "taikhoan/list.php";
             break;
-        case "suatk":
-            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                $taikhoan = loadone_taikhoan($_GET['id']);
-            }
-            include "taikhoan/update.php";
-            break;
-        case "updatetk":
-            if (isset($_POST['capnhap']) && ($_POST['capnhap'])) {
-                $id = $_POST['id'];
-                $name = $_POST['name'];
-                $email = $_POST['email'];
-                $pass = $_POST['pass'];
-                $address = $_POST['address'];
-                $tel = $_POST['tel'];
-                $role = $_POST['role'];
-                update_taikhoan2($id, $email, $name, $pass, $role, $tel, $address);
-            }
-            $listtk = loadall_taikhoan();
-            include "taikhoan/list.php";
-            break;
+       
         case "thongke":
             $listthongke = loadall_thongke_sanham_dm();
             include "thongke/list.php";
             break;
-        case "bieudo":
-            include "thongke/bieudo.php";
+        case "bdososp":
+           $bd= loadall_thongke_sanham_dm_gg();
+            include "thongke/bdososp.php";
             break;
     }
 } else {
