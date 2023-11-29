@@ -106,7 +106,7 @@
                     </li>
                     <li><a href="#"><h5>TIN TỨC</h5></a></li>
                     <li><a href="#"><h5>LIÊN HỆ</h5></a></li>
-                    <li><a href="#"><h5>GIỚI THIỆU</h5></a></li>
+                    <li><a href="?act=thanhtoan"><h5>GIỚI THIỆU</h5></a></li>
                 
                 </ul>
             </div>
@@ -127,6 +127,7 @@
                 }
             }
         </script>
+        <script lang="javascript">var __vnp = {code : 19726,key:'', secret : 'b11e9ba4756ae66f38797ce40636ebf6'};(function() {var ga = document.createElement('script');ga.type = 'text/javascript';ga.async=true; ga.defer=true;ga.src = '//core.vchat.vn/code/tracking.js?v=60017'; var s = document.getElementsByTagName('script');s[0].parentNode.insertBefore(ga, s[0]);})();</script>
         
     
 </body>
