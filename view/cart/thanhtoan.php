@@ -242,45 +242,46 @@
         }
 
  /* CSS cua dat */
-    .spcart{
-        width: 95%;
-        background-color: aquamarine;
-        margin: 0 auto;
-        height: 180px;
-        display: flex;
-    }.spcart p{
-        font-size: 0.9vw;
-        margin-top: -5px;
-    }
-    .imgcart{
-        margin-top: 30px;
-        width: 27%;
-        background-color: burlywood;
-    }
-    .imgcart img{
-        width: 120px;
-        width: 120px;
-        border: 1px solid #717171;
-        margin-left: 0px;
-    }
-    .ttcart{
-        margin-top: 30px;
-        width: 70%;
-        background-color:#717171;
-        margin-left: 3%
-    }
-    .price{
-        display: none;
-    }
-    .counter{
-        display: block;
-        width: 100%;
-        align-items: center;
-        margin: 5px 0;
-    }
-    .counter h4{
-        margin-left: 5px;
-    }
+ .spcart{
+    width: 95%;
+    background-color: aquamarine;
+    margin: 0 auto;
+    height: 180px;
+    display: flex;
+    font-size: 0.9vw;
+}
+.imgcart{
+    margin-top: 30px;
+    width: 27%;
+    background-color: burlywood;
+}
+.imgcart img{
+    width: 120px;
+    width: 120px;
+    border: 1px solid #717171;
+    margin-left: 0px;
+}
+.ttcart{
+    margin-top: 30px;
+    width: 73%;
+    background-color:#717171;
+}
+.ttcart span{
+    border-radius: 5px;
+}
+.price{
+    width: 100%;
+    display: flex;
+}
+.counter{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 5px 0;
+}
+.counter h4{
+    margin-left: 40px;
+}
 /* ok */
 
 
@@ -353,17 +354,17 @@
 
                     <div class="payment-options">
                         <div class="payment-option">
-                            <input type="radio" id="creditCard" name="paymentMethod" value="creditCard">
+                            <input type="radio" id="creditCard" name="pttt">
                             <label for="creditCard">Thẻ tín dụng</label>
                         </div>
 
                         <div class="payment-option">
-                            <input type="radio" id="bankTransfer" name="paymentMethod" value="bankTransfer">
+                            <input type="radio" id="bankTransfer" name="pttt">
                             <label for="bankTransfer">Chuyển khoản ngân hàng</label>
                         </div>
 
                         <div class="payment-option">
-                            <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cashOnDelivery">
+                            <input type="radio" id="cashOnDelivery" name="pttt">
                             <label for="cashOnDelivery">Thanh toán khi nhận hàng</label>
                         </div>
                     </div>
@@ -380,54 +381,46 @@
                 <p>Thông tin đơn hàng</p>
                 <div class="lstitmnr">
                 <?php
-                        $tong = 0;
-                        $i=0;
-                        foreach($_SESSION['mycart'] as $cart){
-                            $hinh = $cart[3];
-                            $ttien = $cart[4]*$cart[5];
-                            $tong+=$ttien;
-                            $xoasp = '<a href="index.php?act=delcart&idcart='.$i.'"><button>Xoa</button></a>';
+                    $tong = 0;
+                    $i=0;
+                    foreach($_SESSION['mycart'] as $cart){
+                        $hinh = $cart[3];
+                        $ttien = $cart[4]*$cart[5];
+                        $tong+=$ttien;
 
-                            echo'
-                            <div class="spcart">
-                                <div class="imgcart">
-                                        <img src="'.$hinh.'" alt="">
+                        echo'
+                        <div class="spcart">
+                            <div class="imgcart">
+                                    <img src="'.$hinh.'" alt="">
+                                </div>
+                                <div class="ttcart">
+                                    <h3>'.$cart[1].'</h3>
+                                    <p>'.$cart[2].'</p>
+                                    <?php $i=1 ?>
+                                    <div class="counter">
+                                        <label for=""><h4 style="margin-left: 0px;">Số lượng:</h4> </label>
+                                        <span style="width: 20px;background-color: red;color: white; text-align: center; margin-left: 10px;" >'.$cart[5].'</span>
+                                        <p>Chất liệu : Vàng</p>
                                     </div>
-                                    <div class="ttcart">
-                                        <h3>'.$cart[1].'</h3>
-                                        <p>'.$cart[2].'</p>
-                                        <?php $i=1 ?>
-                                        <div class="counter">
-                                            <label for=""><h4 style="margin-left: 0px;">Số lượng:</h4> </label>
-                                            <span style="width: 20px;background-color: red;color: white; text-align: center; margin-left: 10px;" >'.$cart[5].'</span>
-                                            <h4>Chất liệu :</h4><p> Vàng</p>
-                                            <p><h4>Giá tiền:</h4>'.$cart[4].'</p>
-                                        </div>
-                                        <div class="price">
-                                            <p><h4>Thành tiền:</h4>'.$ttien.'</p>
-                                        </div>
-                                        <div class="btcart">
-                                            '.$xoasp.'
-                                        </div>
-                                        
-                                    </div>
-                                    
-                                    
-                                </div>';
-                                $i+=1;
-                        }
-                    ?>
+                                    <p><h4>Giá tiền:</h4>$'.$cart[4].'</p>
+                                </div>
+                                
+                                
+                            </div>';
+                            $i+=1;
+                    }
+                ?>
 
                 </div>
                 <div class="lsttttrans">
                     <div id="VoucherApplyHtml">
                         <div class="it-cartr">
                             <p>Tạm tính:</p>
-                            <p>6,630,000đ</p>
+                            <p>$<?= $tong ?></p>
                         </div>
                         <div class="it-cartr">
                             <p>Giảm giá:</p>
-                            <p>Liên hệ</p>
+                            <p>Không</p>
                         </div>
                         <div class="it-cartr">
                             <p>Vận chuyển:</p>
@@ -435,7 +428,7 @@
                         </div>
                         <div class="it-cartr">
                             <p>Thành tiền:<span>(Đã bao gồm VAT)</span></p>
-                            <p>6,630,000đ</p>
+                            <p>$<?= $tong ?></p>
                         </div>
                     </div>
                     <div class="it-cartr frm-vou">
@@ -445,7 +438,6 @@
                             <input type="text" id="VorcherCode" class="valid">
                             <button id="VorcherCodeSubmit" data-allow="0" type="button">Áp dụng</button>
                         </div>
-                        <div id="VoucherCodeCheck"></div>
                     </div>
                 </div>
             </div>
@@ -468,8 +460,6 @@
                     </div>
                 </div>
             </div>
-
-            <span style="display:none;">QuyTrinhVanChuyen</span>
 
         </div>
     </div>
