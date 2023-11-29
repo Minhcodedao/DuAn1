@@ -106,7 +106,7 @@
                     </li>
                     <li><a href="#"><h5>TIN TỨC</h5></a></li>
                     <li><a href="#"><h5>LIÊN HỆ</h5></a></li>
-                    <li><a href="?act=thanhtoan"><h5>GIỚI THIỆU</h5></a></li>
+                    <li><a href="#"><h5>GIỚI THIỆU</h5></a></li>
                 
                 </ul>
             </div>

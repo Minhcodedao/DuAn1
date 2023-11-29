@@ -52,10 +52,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "./view/sanpham.php";
             
             break;
-        case 'daychuyennam':
-            $listsanpham = loadall_sanpham_dcn();
-            include "./view/daychuyennam.php";
-            break;
+      
         case 'lienhe':
             include "view/lienhe.php";
             break; 
@@ -88,7 +85,13 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "thanhtoan":
             include "./view/cart/thanhtoan.php";
             break;
-
+        case "bongtai":
+          
+            include "./view/menu/bongtai.php";
+            break;
+        case "vongtay":
+            include "./view/menu/vongtay.php";
+            break;
         case 'thoat':
             session_unset();
             header('location: index.php');

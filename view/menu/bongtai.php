@@ -13,7 +13,7 @@
     <div class="menuclick">
         
         <div class="mot">
-            <div><h3>ĐỒNG HỒ</h3></div>
+            <div><h3>SẢN PHẨM BÔNG TAI</h3></div>
             <div class="sapxep">
                 <label for="">Sắp xếp theo</label>
                 <select name="sapxep" id="">
@@ -27,9 +27,9 @@
         <div class="loc">
             <h4>Loại sản phẩm:</h4>
             <ul class="loc_sp">
-                <li><a href="">DÂY DA</a></li>
-                <li><a href="">DÂY KIM LOẠI</a></li>
-           
+                <li><a href="">Nhẫn Vàng</a></li>
+                <li><a href="">Nhẫn Kim Cương</a></li>
+                <li><a href="">Nhẫn Đá Màu</a></li>
             </ul>
         </div>
         <div class="menu_than">
