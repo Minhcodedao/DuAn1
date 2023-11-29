@@ -5,6 +5,7 @@ include "./model/pdo.php";
 include "./model/sanpham.php";
 include "./model/danhmuc.php";
 include "./model/taikhoan.php";
+include "./model/cart.php";
 include "./view/header.php";
 include "./global.php";
 if(!isset($_SESSION['mycart'])) $_SESSION['mycart']=[];
@@ -27,14 +28,13 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             if(isset($_GET['idsp']) && ($_GET['idsp']>0)){
                 $id = $_GET['idsp'];
                 $onesp = loadone_sanpham($id);
+                $imgsp = load_image($id);
                 extract($onesp);
                 $sp_cung_loai=load_sanpham_cungloai($id,$iddm);
                 include "view/chitiet.php";
             }else{
                 include "./view/home.php";
             }
-            
-            
             break;
         case 'sanpham':
             if(isset($_POST['kyw']) && ($_POST['kyw']!="")){
@@ -85,12 +85,16 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             include "./view/taikhoan/dangnhap.php";
             break; 
+        case "thanhtoan":
+            include "./view/cart/thanhtoan.php";
+            break;
+
         case 'thoat':
             session_unset();
             header('location: index.php');
             break; 
         case "giohang":
-            include "./view/cart/cart.php";
+            include "./view/cart/viewcart.php";
             break;
         case "nhan":
             include "./view/menu/nhanbig.php";
@@ -100,6 +104,34 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
         case "dongho":
             include "./view/menu/dongho.php";
+            break;
+        case 'addtocart':
+            if(isset($_POST['addtocart']) && ($_POST['addtocart'])){
+                $id= $_POST['id'];
+                $name= $_POST['name'];
+                $masp= $_POST['masp'];
+                $image= $_POST['image'];
+                $price= $_POST['price'];
+                $soluong =1;
+                $ttien = $soluong * $price;
+                $spadd = [$id,$name,$masp,$image,$price,$soluong,$ttien];
+                array_push($_SESSION['mycart'],$spadd);
+            }
+            include "./view/cart/viewcart.php";
+            break;
+        case 'delcart':
+            if(isset($_GET['idcart'])&&($_GET['idcart']>=0)){
+                array_splice($_SESSION['mycart'],$_GET['idcart'],1);
+            }else{
+                $_SESSION['mycart']=[];
+            }
+            header('location: index.php?act=viewcart'); 
+            break;
+        case 'viewcart':
+            include "view/cart/viewcart.php";
+            break;
+        case 'bill':
+            include "view/cart/thanhtoan.php";
             break;
         case "daychuyen":
             include "./view/menu/daychuyen.php";

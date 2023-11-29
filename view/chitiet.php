@@ -19,11 +19,10 @@
           </div>
           <div class="more">
             <?php
-              $imgsp = load_image($id);
-              $hinh1 = $img_path.$imgsp['image1'];
+              $image1= $imgsp['image1'];
+              $hinh1 = $img_path.$image1;
               $hinh2 = $img_path.$imgsp['image2'];
-
-
+             
             ?>
             <div class="more_img">
               <img src="<?= $hinh1 ?>" alt="">
@@ -41,17 +40,23 @@
             <h2 class="gia"><?= $price ?></h2>
             <p>*Giá có thể thay đổi tùy thuộc vào kích thước và trọng lượng thực tế của sản phẩm.Vui lòng gọi 1800 1168 để được hỗ trợ.</p>
             <p class="mb">Mô tả: <?= $mota ?></p>
+
+
             <form action="index.php?act=addtocart" method="post">
               <input type="hidden" name="id" value="<?= $id ?>">
               <input type="hidden" name="name" value="<?= $name ?>">
-              <input type="hidden" name="image" value="<?= $image ?>">
+              <input type="hidden" name="image" value="<?= $img ?>">
+              <input type="hidden" name="masp" value="<?= $masp ?>">
               <input type="hidden" name="price" value="<?= $price ?>">
+              <input type="submit" value="">
+
+
+              <hr class="mb">
+              <div class="ct_button">
+                <button class="buynow">Mua Ngay</button>
+                <input class="addtocart" type="submit" value="Thêm vào giỏ hàng" name="addtocart">
+              </div>
             </form>
-            <hr class="mb">
-            <div class="ct_button">
-              <button class="buynow">Mua Ngay</button>
-              <button class="addtocart">Thêm Vào Giỏ Hàng</button>
-            </div>
             <div class="chat">
               <img src="./image/icon-chat-voi-tu-van-vien.png" alt="">
               <h4>Liên Hệ Với Tư Vấn Viên</h>

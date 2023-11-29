@@ -24,8 +24,10 @@
             <h2>Sửa Danh Mục</h2>
             <table class="add">
                 <input type="hidden" name="id" value="<?php echo $id ?>">
+                <input type="hidden" name="idpro" value="<?php echo $idpro ?>">
                 <tr>
                     <td>IMAGE 1</td>
+                    <input type="hidden" name="image1" value="<?php echo $image1 ?>">
                     <td><input type="file" name="image1"></td>
                     <td><?php echo $hinh1 ?></td>
                 </tr>

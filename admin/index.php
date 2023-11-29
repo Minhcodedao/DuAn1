@@ -57,20 +57,24 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "updateimg":
             if (isset($_POST['suaanh']) && ($_POST['suaanh'])) {
                 $id = $_POST['id'];
-                $image1 = $_FILES['image1']['name'];
-                $image2 = $_FILES['image2']['name'];
-                $target_dir = "../upload/";
-                $target_file1 = $target_dir . basename($_FILES['image1']['name']);
-                $target_file2 = $target_dir . basename($_FILES['image2']['name']);
+                $image1 = $_POST['image1'];
+                if($_FILES['image1']['size'] > 0) {
+                    $image1 = $_FILES['image1']['name'];
+                    // $image2 = $_FILES['image2']['name'];
+                    $target_dir = "../upload/";
+                    $target_file1 = $target_dir . basename($_FILES['image1']['name']);
+                    // $target_file2 = $target_dir . basename($_FILES['image2']['name']);
+                }
+               
                 if (move_uploaded_file($_FILES["image1"]["tmp_name"], $target_file1)) {
                 } else {
                     echo "Sorry, there was an error uploading your file1.";
                 }
-                if (move_uploaded_file($_FILES["image2"]["tmp_name"], $target_file2)) {
-                } else {
-                    echo "Sorry, there was an error uploading your file2.";
-                }
-                update_image($image1, $image2, $id);
+                // if (move_uploaded_file($_FILES["image2"]["tmp_name"], $target_file2)) {
+                // } else {
+                //     echo "Sorry, there was an error uploading your file2.";
+                // }
+                update_image($id, $image1);
             }
             $listimage = loadall_image();
             $listsp = loadall_sanpham();
@@ -240,6 +244,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
            $bd= loadall_thongke_sanham_dm_gg();
             include "thongke/bdososp.php";
             break;
+        case "exitadmin":
+             header("location:../index.php");
+            exit;
+            
     }
 } else {
     include "home.php";
