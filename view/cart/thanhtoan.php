@@ -95,7 +95,6 @@
             margin: 20px auto;
             padding: 20px;
             background-color: #f9f9f9;
-            height: 600px;
         }
 
         .cartrght p {
@@ -242,13 +241,54 @@
             cursor: pointer;
         }
 
+ /* CSS cua dat */
+    .spcart{
+        width: 95%;
+        background-color: aquamarine;
+        margin: 0 auto;
+        height: 180px;
+        display: flex;
+    }.spcart p{
+        font-size: 0.9vw;
+        margin-top: -5px;
+    }
+    .imgcart{
+        margin-top: 30px;
+        width: 27%;
+        background-color: burlywood;
+    }
+    .imgcart img{
+        width: 120px;
+        width: 120px;
+        border: 1px solid #717171;
+        margin-left: 0px;
+    }
+    .ttcart{
+        margin-top: 30px;
+        width: 70%;
+        background-color:#717171;
+        margin-left: 3%
+    }
+    .price{
+        display: none;
+    }
+    .counter{
+        display: block;
+        width: 100%;
+        align-items: center;
+        margin: 5px 0;
+    }
+    .counter h4{
+        margin-left: 5px;
+    }
+/* ok */
 
 
 
-        .dat-mua-button:hover {
-            background-color: #45a049;
-            /* Darker green color on hover */
-        }
+    .dat-mua-button:hover {
+        background-color: #45a049;
+        /* Darker green color on hover */
+    }
     </style>
 </head>
 
@@ -259,64 +299,79 @@
             <div class="title-h2">
                 <h2>Thông tin người mua</h2>
             </div>
+            <?php
+                if(isset($_SESSION['user'])){
+                    $name = $_SESSION['user']['user'];
+                    $address = $_SESSION['user']['address'];
+                    $email = $_SESSION['user']['email'];
+                    $tel = $_SESSION['user']['tel'];
+                }else{
+                    $name = "";
+                    $address = "";
+                    $email = "";
+                    $tel = "";
+                }
 
-            <div class="formw-inf">
-                <div class="form-group">
-                    <label class="f-fulname" required>HỌ TÊN </label>
-                    <input type="text" class="fullname" name="fullname" id="fullnamepayment" value="">
+
+
+            ?>
+
+            <form action="">
+                <div class="formw-inf">
+                    <div class="form-group">
+                        <label class="f-fulname" required>HỌ TÊN </label>
+                        <input type="text" class="fullname" name="name" value="<?= $name ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="paymentmobile">ĐIỆN THOẠI</label>
+                        <input type="text" class="number" name="tel" value="<?= $tel ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="paymentemail">EMAIL</label>
+                        <input type="text" name="email" value="<?= $email ?>">
+                    </div>
+                    <br>
+                    <br>
                 </div>
-                <div class="form-group">
-                    <label for="paymentmobile">ĐIỆN THOẠI</label>
-                    <input type="text" class="number" name="paymentmobile" id="paymentmobile">
+
+                <div class="title-h2">
+                    <h2>Địa Chỉ Giao Hàng</h2>
                 </div>
-                <div class="form-group">
-                    <label for="paymentemail">EMAIL</label>
-                    <input type="text" name="paymentemail" id="paymentemail" value="">
+                <div class="formw-inf">
+                    <div class="form-group">
+                        <label class="adrees" required > Địa Chỉ </label>
+                        <input type="text" class="adrees" name="adress" value="<?= $address ?>">
+                    </div>
+
                 </div>
-                <div class="form-group">
-                    <label for="dateofbirth">NGÀY SINH</label>
-                    <input type="text" name="dateofbirth" id="dateofbirth" autocomplete="off" value="">
-                </div>
+            
+
                 <br>
                 <br>
-            </div>
+                <div class="payment-method">
+                    <h2> Hình Thức Thanh Toán </h2>
 
-            <div class="title-h2">
-                <h2> Chọn Địa Chỉ Giao Hàng </h2>
-            </div>
-            <div class="formw-inf">
-                <div class="form-group">
-                    <label class="adrees" required > Địa Chỉ </label>
-                    <input type="text" class="adrees" name="adress" id="fullnamepayment" placeholder="Địa chỉ cụ thể/Xã/Huyện/Tỉnh">
-                </div>
+                    <div class="payment-options">
+                        <div class="payment-option">
+                            <input type="radio" id="creditCard" name="paymentMethod" value="creditCard">
+                            <label for="creditCard">Thẻ tín dụng</label>
+                        </div>
 
-            </div>
+                        <div class="payment-option">
+                            <input type="radio" id="bankTransfer" name="paymentMethod" value="bankTransfer">
+                            <label for="bankTransfer">Chuyển khoản ngân hàng</label>
+                        </div>
 
-            <br>
-            <br>
-            <div class="payment-method">
-                <h2> Hình Thức Thanh Toán </h2>
-
-                <div class="payment-options">
-                    <div class="payment-option">
-                        <input type="radio" id="creditCard" name="paymentMethod" value="creditCard">
-                        <label for="creditCard">Thẻ tín dụng</label>
-                    </div>
-
-                    <div class="payment-option">
-                        <input type="radio" id="bankTransfer" name="paymentMethod" value="bankTransfer">
-                        <label for="bankTransfer">Chuyển khoản ngân hàng</label>
-                    </div>
-
-                    <div class="payment-option">
-                        <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cashOnDelivery">
-                        <label for="cashOnDelivery">Thanh toán khi nhận hàng</label>
+                        <div class="payment-option">
+                            <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cashOnDelivery">
+                            <label for="cashOnDelivery">Thanh toán khi nhận hàng</label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div style="text-align: center; margin-top: 20px;">
-                <button class="dat-mua-button">Đặt Mua</button>
-            </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="dat-mua-button">Đặt Mua</button>
+                </div>
+            </form>
 
 
         </div>
@@ -324,21 +379,45 @@
             <div class="cartrght">
                 <p>Thông tin đơn hàng</p>
                 <div class="lstitmnr">
-                    <div class="_itmnr">
-                        <div class="img-itmnr">
-                            <!-- anhsp -->
-                            <a target="_blank" href="" title="Hoa tai 14K AFEK000689F3CZ1">
-                                <img alt="#" src="./image/daychuyen5.png">
-                            </a>
-                        </div>
-                        <div class="txt-itmnr">
-                            <p> Hoa tai 14K AFEK000689F3CZ1 </p>
-                            <p class="id-itpicked">MSP : AFEK000689F3CZ1</p>
-                            <p class="notesl">Số lượng:<span>1</span></p>
+                <?php
+                        $tong = 0;
+                        $i=0;
+                        foreach($_SESSION['mycart'] as $cart){
+                            $hinh = $cart[3];
+                            $ttien = $cart[4]*$cart[5];
+                            $tong+=$ttien;
+                            $xoasp = '<a href="index.php?act=delcart&idcart='.$i.'"><button>Xoa</button></a>';
 
-                        </div>
+                            echo'
+                            <div class="spcart">
+                                <div class="imgcart">
+                                        <img src="'.$hinh.'" alt="">
+                                    </div>
+                                    <div class="ttcart">
+                                        <h3>'.$cart[1].'</h3>
+                                        <p>'.$cart[2].'</p>
+                                        <?php $i=1 ?>
+                                        <div class="counter">
+                                            <label for=""><h4 style="margin-left: 0px;">Số lượng:</h4> </label>
+                                            <span style="width: 20px;background-color: red;color: white; text-align: center; margin-left: 10px;" >'.$cart[5].'</span>
+                                            <h4>Chất liệu :</h4><p> Vàng</p>
+                                            <p><h4>Giá tiền:</h4>'.$cart[4].'</p>
+                                        </div>
+                                        <div class="price">
+                                            <p><h4>Thành tiền:</h4>'.$ttien.'</p>
+                                        </div>
+                                        <div class="btcart">
+                                            '.$xoasp.'
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    
+                                </div>';
+                                $i+=1;
+                        }
+                    ?>
 
-                    </div>
                 </div>
                 <div class="lsttttrans">
                     <div id="VoucherApplyHtml">

@@ -94,7 +94,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             header('location: index.php');
             break; 
         case "giohang":
-            include "./view/cart/cart.php";
+            include "./view/cart/viewcart.php";
             break;
         case "nhan":
             include "./view/menu/nhanbig.php";
@@ -129,6 +129,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
         case 'viewcart':
             include "view/cart/viewcart.php";
+            break;
+        case 'bill':
+            include "view/cart/thanhtoan.php";
             break;
         case "daychuyen":
             include "./view/menu/daychuyen.php";

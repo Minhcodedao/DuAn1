@@ -53,16 +53,25 @@
                                 </div>';
                                 $i+=1;
                         }
-                        echo '<a href="index.php?act=delcart"><input type="button" value="XÓA GIỎ HÀNG"></a>';
-
-
                     ?>
+                    <a href="index.php?act=delcart"><input type="button" value="XÓA GIỎ HÀNG"></a>
                     
                 
             </div>
         </div>
         <div class="hoadon">
-            <h1>ĐỪNG VIẾT GÌ THÊM</h1>
+            <h4>Tổng tiền</h4>
+            <div class="dong">
+                <p>Tạm tính</p><h5><?= $tong ?></h5>
+            </div>
+            <hr>
+            <div class="dong">
+                <p>Vận chuyển</p><h5>Miễn phí vận chuyển</h5>
+            </div>
+            <p>Mã giảm giá/quà tặng</p>
+            <input type="text" name="magg">
+            <a href="index.php?act=bill"><input type="button" value="TIẾN HÀNH ĐẶT HÀNG"></a>
+
             
         </div>
     </div>
