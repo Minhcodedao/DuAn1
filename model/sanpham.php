@@ -32,8 +32,6 @@ function loadall_sanpham($keyw="",$iddm=0){
     $listsanpham=pdo_query($sql);
     return  $listsanpham;
 }
-
-// 
 function loadone_sanpham($id){
     $sql = "select * from sanpham where id = $id";
     $result = pdo_query_one($sql);
