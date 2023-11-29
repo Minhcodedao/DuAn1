@@ -85,6 +85,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             include "./view/taikhoan/dangnhap.php";
             break; 
+        case "thanhtoan":
+            include "./view/cart/thanhtoan.php";
+            break;
+
         case 'thoat':
             session_unset();
             header('location: index.php');
