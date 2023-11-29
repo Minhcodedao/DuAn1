@@ -187,6 +187,11 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listtk = loadall_taikhoan();
             include "taikhoan/list.php";
             break;
+            // đơn hàng
+        case "dsdh":
+            $listdh = loadall_donhang();
+            include "donhang/list.php";
+            break;
         case "addtk":
             // Kiểm tra xem nút submit đã được nhấn chưa
             if (isset($_POST['themmoitk']) && ($_POST['themmoitk'])) {

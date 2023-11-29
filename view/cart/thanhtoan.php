@@ -243,17 +243,17 @@
 
  /* CSS cua dat */
  .spcart{
-    width: 95%;
-    background-color: aquamarine;
+    width: 100%;
+    background-color: #f9f9f9;
     margin: 0 auto;
-    height: 180px;
+    height: 155px;
     display: flex;
     font-size: 0.9vw;
 }
 .imgcart{
-    margin-top: 30px;
+    margin-top: 0px;
     width: 27%;
-    background-color: burlywood;
+    background-color: #f9f9f9;
 }
 .imgcart img{
     width: 120px;
@@ -262,9 +262,10 @@
     margin-left: 0px;
 }
 .ttcart{
-    margin-top: 30px;
+    margin-top: 0px;
+    margin-left: 10px;
     width: 73%;
-    background-color:#717171;
+    background-color: #f9f9f9;
 }
 .ttcart span{
     border-radius: 5px;
@@ -278,9 +279,15 @@
     width: 100%;
     align-items: center;
     margin: 5px 0;
+
 }
 .counter h4{
     margin-left: 40px;
+    margin-top: 0px;
+}
+.counter p{
+    margin-left: 40px;
+    margin-top: 0px;
 }
 /* ok */
 
@@ -402,7 +409,8 @@
                                         <span style="width: 20px;background-color: red;color: white; text-align: center; margin-left: 10px;" >'.$cart[5].'</span>
                                         <p>Chất liệu : Vàng</p>
                                     </div>
-                                    <p><h4>Giá tiền:</h4>$'.$cart[4].'</p>
+                                    
+                                    <h4 style="color:red">Giá tiền:$'.$cart[4].' </h4>
                                 </div>
                                 
                                 
