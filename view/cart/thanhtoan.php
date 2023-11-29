@@ -286,8 +286,8 @@
             </div>
             <div class="formw-inf">
                 <div class="form-group">
-                    <label class="adrees" required> Địa Chỉ </label>
-                    <input type="text" class="adrees" name="adress" id="fullnamepayment" value="">
+                    <label class="adrees" required > Địa Chỉ </label>
+                    <input type="text" class="adrees" name="adress" id="fullnamepayment" placeholder="Địa chỉ cụ thể/Xã/Huyện/Tỉnh">
                 </div>
 
             </div>
