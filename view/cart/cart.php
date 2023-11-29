@@ -24,18 +24,19 @@
                         <p>MSP: weffwfyegffe</p>
                         <?php $i=1 ?>
                         <div class="counter">
-                            <label for="">Số lượng: </label>
+                            <label for=""><h4 style="margin-left: 0px;">Số lượng:</h4> </label>
                             <span style="width: 20px;background-color: red;color: white; text-align: center; margin-left: 10px;" >1</span>
-                            <p>Chất liệu : Vàng</p>
-                            <p>Giá tiền: $999</p>
+                            <h4>Chất liệu :</h4><p> Vàng</p>
+                            <p><h4>Giá tiền:</h4> $999</p>
                         </div>
                         <div class="price">
                             <p>Tạm tính $999</p>
                             <p>Thành tiền $999</p>
                         </div>
-                        <div class="btcart">
-                            <a href=""><button>Xoa</button></a>
-                        </div>
+                        
+                    </div>
+                    <div class="btcart">
+                        <a href=""><button>Xoa</button></a>
                     </div>
                     
                 </div>

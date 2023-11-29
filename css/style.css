@@ -188,7 +188,6 @@
     position: absolute;
     background-color:rgb(255, 255, 255);
     box-shadow: 0px 20px 16px 0px rgba(15, 14, 14, 0.2); 
-
     width: 170px;
     display: none;
     z-index: 1000;
@@ -239,35 +238,6 @@
     box-shadow: 0 0 50px rgba(0, 0, 0, .9);            
 }        
 
-/* Odd stuff */
-.submenu > li:nth-child(odd){
-    transform: skewX(-25deg) translateX(0);
-}
-
-.submenu > li:nth-child(odd) > a {
-    transform: skewX(25deg);
-}
-
-.submenu > li:nth-child(odd)::after {
-    right: -50%;
-    transform: skewX(-25deg) rotate(3deg);
-}                
-
-/* Even stuff */
-.submenu > li:nth-child(even){
-    transform: skewX(25deg) translateX(0);
-}
-
-.submenu > li:nth-child(even) > a {
-    transform: skewX(-25deg);
-}
-
-.submenu > li:nth-child(even)::after {
-    left: -50%;
-    transform: skewX(25deg) rotate(3deg);
-}
-
-/* Xem menu thả xuống */
 .submenu,
 .submenu li {
     opacity: 0;
@@ -724,9 +694,7 @@
     background-color:#717171;
 }
 .ttcart span{
-    width: 20px;
-    background-color: red;
-    color: white;
+    border-radius: 5px;
 }
 .price{
     width: 100%;
@@ -735,7 +703,16 @@
 .counter{
     display: flex;
     width: 100%;
+    align-items: center;
+    margin: 5px 0;
 }
+.counter h4{
+    margin-left: 40px;
+}
+
+
+
+/* binh luan*/
 .binhluan{
     width: 85%;
     margin: 0 auto;

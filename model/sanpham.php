@@ -81,16 +81,11 @@ function update_sanpham($id,$iddm,$name, $masp,$price,$mota,$img){
 
     pdo_execute($sql);
 }
-function update_image($id,$image1,$image2){
-    if($image1!=''){
-        $sql="update image set image1='".$image1."' where id=".$id;
-    }
-    else if($image2!=''){
-        $sql="update image set image2='".$image2."' where id=".$id;
-    }
-    else{
-        $sql ="";
-    }
+function update_image($id,$image){
+   
+    $sql="update image set image1='".$image."' where id=".$id;
+    // echo $sql;die;
+    
     pdo_execute($sql);
 }
 
