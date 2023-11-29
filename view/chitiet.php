@@ -11,7 +11,7 @@
       <?php 
         extract($onesp);
         $img=$img_path.$img;
-      ?>7
+      ?>
       <div class="chitiet">
         <div class="ct_img">
           <div class="khung">

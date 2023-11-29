@@ -650,34 +650,6 @@
     display: flex;
     width: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .binhluan{
     width: 85%;
     margin: 0 auto;
@@ -720,6 +692,7 @@
     font-size: medium;
     font-weight: bold;
 }
+
 .scroll{
     width: 70%;
 }

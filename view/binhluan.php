@@ -10,12 +10,14 @@
         $m = $_SESSION['user']['email'];
         $t = $_SESSION['user']['tel'];
         $ok = '';
+        $bt= '<input type="submit" name="guibl" value="GỬI ĐÁNH GIÁ" readonly>';
     }
     else{
         $u = "";
         $m = "";
         $t = "";
         $ok = 'rows="10" placeholder="Bạn cần đăng nhập để thực hiện chức năng này" readonly';
+        $bt = '<input type="hidden" name="guibl" value="GỬI ĐÁNH GIÁ">';
     }
     $dsbl = loadall_binhluan($idpro);
 
@@ -32,15 +34,16 @@
 <body>
     <form action="<?=$_SERVER['PHP_SELF'];?>" method="post">
         <div class="textbl">
-        <textarea name="noidung" id="" cols="30" <?= $ok ?> ></textarea>
+            <textarea name="noidung" id="" cols="30" <?= $ok ?> ></textarea>
         </div>
-        <div class="ttbl">
-        <input type="text" name="user" placeholder="Your name" value="<?= $u ?>" readonly> 
-        <input type="email" name="email" placeholder="Your Email" value="<?= $m ?>" readonly><br>
-        <input type="text" name="tel" placeholder="Your telephone" value="<?= $t ?>" readonly>
-        <input type="hidden" name="idpro" value="<?= $idpro ?>">
-        <input type="submit" name="guibl" value="GỬI ĐÁNH GIÁ">
+            <div class="ttbl">
+            <input type="text" name="user" placeholder="Your name" value="<?= $u ?>" readonly> 
+            <input type="email" name="email" placeholder="Your Email" value="<?= $m ?>" readonly><br>
+            <input style="margin-top: 10px;" type="text" name="tel" placeholder="Your telephone" value="<?= $t ?>" readonly>
+            <input type="hidden" name="idpro" value="<?= $idpro ?>">     
+            <?php echo $bt ?>
         </div> 
+        
     </form>
     
     <div class="scroll">

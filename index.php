@@ -92,8 +92,17 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "giohang":
             include "./view/cart/cart.php";
             break;
-        case "nhanbig":
-            include "./view/menu/nhan/nhanbig.php";
+        case "nhan":
+            include "./view/menu/nhanbig.php";
+            break;
+        case "daychuyen":
+            include "./view/menu/daychuyen.php";
+            break;
+        case "dongho":
+            include "./view/menu/dongho.php";
+            break;
+        case "daychuyen":
+            include "./view/menu/daychuyen.php";
             break;
         default:
             include "./view/home.php";
