@@ -211,6 +211,7 @@
 /* header admin */
 
 
+
 .header1{
   background-color: rgb(59, 62, 71);
   height: 90px;
@@ -268,7 +269,7 @@ width: 100%;
   background-color: rgb(148, 150, 156);
   color: black;
 }
-.user>i{
+.user>a{
 
   margin-right: 50px;
  
@@ -282,11 +283,29 @@ width: 100%;
   height: 50px;
   top: 99px;
   left: 8px;
-
+  
   justify-content: center;
- 
+  
   
 }
+/*  */
+.nav {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  
+
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/*  */
 .menu ul{
   display: flex;
   list-style: none;

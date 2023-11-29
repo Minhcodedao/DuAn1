@@ -240,6 +240,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
            $bd= loadall_thongke_sanham_dm_gg();
             include "thongke/bdososp.php";
             break;
+        case "exitadmin":
+             header("location:../index.php");
+            exit;
+            
     }
 } else {
     include "home.php";
