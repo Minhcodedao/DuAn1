@@ -369,20 +369,19 @@
                 <br>
                 <div class="payment-method">
                     <h2> Hình Thức Thanh Toán </h2>
-
                     <div class="payment-options">
                         <div class="payment-option">
-                            <input type="radio" id="creditCard" name="pttt">
+                            <input type="radio" id="creditCard" name="pttt" value="1">
                             <label>Thẻ tín dụng</label>
                         </div>
 
                         <div class="payment-option">
-                            <input type="radio" id="bankTransfer" name="pttt">
+                            <input type="radio" id="bankTransfer" name="pttt" value="2">
                             <label>Chuyển khoản ngân hàng</label>
                         </div>
 
                         <div class="payment-option">
-                            <input type="radio" id="cashOnDelivery" name="pttt">
+                            <input type="radio" id="cashOnDelivery" name="pttt" value="3">
                             <label>Thanh toán khi nhận hàng</label>
                         </div>
                     </div>

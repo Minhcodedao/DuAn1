@@ -30,11 +30,21 @@
         </div>
         <div class="ttnd">
           <h4>THÔNG TIN ĐƠN HÀNG</h4>
+          <?php
+            if($bill['bill_pttt']==1){
+              $tt = "Thẻ tín dụng";
+            }
+            if($bill['bill_pttt']==2){
+              $tt = "Chuyển khoản ngân hàng";
+            }else{
+              $tt = "Thanh toán khi nhận hàng";
+            }
+          ?>
           <div class="tt2">
             <p>Mã đơn hàng: DH_<?= $bill['id']?></p>
             <p>Ngày đặt hàng:  <?= $bill['ngaydathang']?></p>
             <p>Tổng đơn hàng: $<?= $bill['total']?></p>
-            <p>Phương thức thanh toán: <?= $bill['bill_pttt']?></p>
+            <p>Phương thức thanh toán: <?= $tt ?></p>
           </div>
         </div>
       </div>
