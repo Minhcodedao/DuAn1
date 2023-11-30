@@ -115,7 +115,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $masp= $_POST['masp'];
                 $image= $_POST['image'];
                 $price= $_POST['price'];
-                $soluong =1;
+                $soluong = 1 ;
                 $ttien = $soluong * $price;
                 $spadd = [$id,$name,$masp,$image,$price,$soluong,$ttien];
                 array_push($_SESSION['mycart'],$spadd);

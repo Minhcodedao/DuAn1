@@ -785,6 +785,10 @@
 /* thanhtoan */
 
 
+
+
+
+/* đoạn này đến hết*/
 .mg {
     margin: 0 auto;
   }
@@ -838,6 +842,10 @@
     display: flex;
     align-items: center;
   }
+  .mathang{
+    width: 50%;
+    background-color: red;
+  }
   .sanpham img {
     width: 100px;
     height: 100px;
@@ -851,7 +859,4 @@
   .sanpham p {
     margin: 5px 0 0 20px;
   }
-  .mathang{
-    width: 40%;
-    background-color: red;
-  }
+  

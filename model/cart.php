@@ -43,32 +43,22 @@
         global $img_path;
         $tong =0;
         $i=0;
-        echo'<tr>
-                <th>HÌNH</th>
-                <th>SẢN PHẨM</th>
-                <th>ĐƠN GIÁ</th>
-                <th>SỐ LƯỢNG</th>
-                <th>THÀNH TIỀN</th>
-            </tr>';
-
         foreach($listbill as $cart){
-            $hinh = $img_path.$cart['img'];
             $ttien = $cart['price'] * $cart['soluong'];
             echo '
-                <tr>
-                    <td><img src="'.$hinh.'" alt="" height="80px"></td>
-                    <td>'.$cart['name'].'</td>
-                    <td>$'.$cart['price'].'</td>
-                    <td>'.$cart['soluong'].'</td>
-                    <td>$'.$cart['thanhtien'].'</td>
-                </tr>';
+            <div class="sanpham">
+                <img src="'.$cart['img'].'" alt="Hình ảnh sản phẩm 1">
+                <div class="sp-info">
+                <p>Tên sản phẩm: '.$cart['name'].'</p>
+                <p>Giá: $'.$cart['price'].'</p>
+                <p>Số lượng: '.$cart['soluong'].'</p>
+                </div>
+            
+            </div>';
             $tong+=$ttien;
             $i+=1;
-        }   
-        echo'<tr>
-                <td colspan="4"><strong>TỔNG ĐƠN HÀNG</strong></td>
-                <td>$'.$tong.'</td>
-            </tr>';
+        }  
+        echo'<p>ok</p>';
     }
 ?>
 

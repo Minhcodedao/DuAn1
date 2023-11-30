@@ -33,7 +33,7 @@
           <div class="tt2">
             <p>Mã đơn hàng: DH_<?= $bill['id']?></p>
             <p>Ngày đặt hàng:  <?= $bill['ngaydathang']?></p>
-            <p>Tổng đơn hàng: <?= $bill['total']?> sản phẩm</p>
+            <p>Tổng đơn hàng: $<?= $bill['total']?></p>
             <p>Phương thức thanh toán: <?= $bill['bill_pttt']?></p>
           </div>
         </div>
@@ -41,15 +41,7 @@
       <div class="mathang">
         <h4>THÔNG TIN MẶT HÀNG</h4>
         <!-- Các sản phẩm -->
-        <div class="sanpham">
-          <img src="link_anh_san_pham_1.jpg" alt="Hình ảnh sản phẩm 1">
-          <div class="sp-info">
-            <p>Mã sản phẩm: SP001</p>
-            <p>Tên sản phẩm: Product 1</p>
-            <p>Giá: $50</p>
-            <p>Số lượng: 2</p>
-          </div>
-        </div>
+        <?php bill_chi_tiet($billct) ?>
         <!-- Thêm các sản phẩm khác nếu cần -->
       </div>
     </div>
