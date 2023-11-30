@@ -58,7 +58,11 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   
+=======
+    <a href="index.php?act=mybill"><button>XEM THONG TIN ĐƠN HÀNG</button></a>
+>>>>>>> 44d3a893b3915a9ab9448030bdf75ba20e5d70e5
   </div>
 </body>
 </html>

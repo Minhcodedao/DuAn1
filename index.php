@@ -136,6 +136,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case 'bill':
             include "view/cart/thanhtoan.php";
             break;
+        case 'mybill':
+            $listbill = loadall_bill("",0);
+            include "view/cart/mybill.php";
+            break;
         case 'billconfirm':
             if(isset($_POST['dongydathang'])&&($_POST['dongydathang'])){
                 if(isset($_SESSION['user'])) $iduser = $_SESSION['user']['id'];
