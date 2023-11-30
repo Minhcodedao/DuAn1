@@ -22,6 +22,18 @@ function loadall_thongke_sanham_dm_gg()
     
     return pdo_query($sql);
 }
+// thông kê các sản phẩm có nhiều nhất trong bill
 
 
+// thông kê các sản phẩm được mua nhiều nhất
+function loadall_spbc(){
+    $sql = "SELECT sp.id, sp.name, COUNT(*) as soluong_mua
+            FROM sanpham sp
+            JOIN bill bd ON sp.id = bd.idsp
+            GROUP BY sp.id, sp.name
+            ORDER BY soluong_mua DESC";
+    $listspbc= pdo_query($sql);
+    return $listspbc;
+
+}
 ?>

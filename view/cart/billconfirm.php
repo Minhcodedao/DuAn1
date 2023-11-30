@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/css/style.css">
+
+   
+  
 </head>
 <body>
   <div class="bill mg">
@@ -17,7 +20,13 @@
       <a href="index.php"><button> Về trang chủ</button></a>
       <h3>CẢM ƠN QUÝ KHÁCH ĐÃ ĐẶT HÀNG</h3>
     </div>
-    <div class="thanbill mg">
+    <div class="mathang">
+      <h4>THÔNG TIN MẶT HÀNG</h4>
+      <!-- Các sản phẩm -->
+      <?php bill_chi_tiet($billct) ?>
+      <!-- Thêm các sản phẩm khác nếu cần -->
+    </div>
+    <div class="thanbill_mg">
       <div class="ttbill">
         <div class="ttdh">
           <h4>THÔNG TIN ĐẶT HÀNG</h4>
@@ -43,18 +52,13 @@
           <div class="tt2">
             <p>Mã đơn hàng: DH_<?= $bill['id']?></p>
             <p>Ngày đặt hàng:  <?= $bill['ngaydathang']?></p>
-            <p>Tổng đơn hàng: $<?= $bill['total']?></p>
+            <p >Tổng đơn hàng: <?= $bill['total']?> VND</p>
             <p>Phương thức thanh toán: <?= $tt ?></p>
           </div>
         </div>
       </div>
-      <div class="mathang">
-        <h4>THÔNG TIN MẶT HÀNG</h4>
-        <!-- Các sản phẩm -->
-        <?php bill_chi_tiet($billct) ?>
-        <!-- Thêm các sản phẩm khác nếu cần -->
-      </div>
     </div>
+  
     <a href="index.php?act=mybill"><button>XEM THONG TIN ĐƠN HÀNG</button></a>
   </div>
 </body>

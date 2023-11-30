@@ -28,4 +28,6 @@
                 <!-- link den bieudo  -->
     </table>
     <button> <a href="index.php?act=bdososp">Biểu đồ thông kê sản phẩm</a></button>
+    <button> <a href="index.php?act=spbanchay">Thống kê sản phẩm bán chạy</a></button>
+    <button> <a href="index.php?act=spbce">Thống kê sản phẩm bán tồn kho</a></button>
 </div>

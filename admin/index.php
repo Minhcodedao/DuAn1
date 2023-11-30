@@ -268,6 +268,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "exitadmin":
              header("location:../index.php");
             exit;
+        case "spbanchay":
+            $listspbc = loadall_spbc();
+            include "thongke/spbanchay.php";
+            break;
+        case "sptonkho":
+            $listspbc = loadall_spbc();
+            include "thongke/sptonkho.php";
+            break;
             
     }
 } else {
