@@ -62,7 +62,7 @@
             <!-- bao gồm id id user idpro img name price soluong thanhtien idbill -->
             <tr>
                 <th> MÃ Đơn Hàng</th>
-                <TH> Tên sản Phẩm</TH>
+                <TH> Tên KH</TH>
                 <th> Khách Hàng </th>
                 <th> Thành Tiền </th>
                 <th> Ngày Đặt </th>
@@ -91,6 +91,9 @@
                     $bill_status = "Đang Giao";
                 } elseif ($bill['bill_status'] == 3) {
                     $bill_status = "Đã Giao";
+                }
+                else{
+                    $bill_status = "Đã Hủy";
                 }
 
                 echo "<tr>
