@@ -294,10 +294,20 @@
 
 
 
-    .dat-mua-button:hover {
-        background-color: #45a049;
-        /* Darker green color on hover */
-    }
+.dat_hang {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+.dat_hang input{
+    width: 200px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    border: none;
+}
     </style>
 </head>
 
@@ -376,7 +386,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="text-align: center; margin-top: 20px;">
+                <div style="text-align: center; margin-top: 20px;" class="dat_hang">
                     <a href="index.php?act=billconfirm"><input type="submit" name="dongydathang" value="ĐẶT MUA"></a>
                 </div>
             </form>

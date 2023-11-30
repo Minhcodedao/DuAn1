@@ -653,13 +653,13 @@
 }
 .cart{
     width: 65%;
-    background-color: rgb(113, 90, 90);
+
     margin-right: 3%;
 
 }
 .hoadon{
     width: 32%;
-    background-color: rebeccapurple;
+ 
     height: 300px;
 }
 .btcart button{
@@ -672,7 +672,7 @@
 }
 .spcart{
     width: 95%;
-    background-color: aquamarine;
+   
     margin: 0 auto;
     height: 180px;
     display: flex;
@@ -680,7 +680,7 @@
 .imgcart{
     margin-top: 30px;
     width: 20%;
-    background-color: burlywood;
+   
 }
 .imgcart img{
     width: 120px;
@@ -691,7 +691,7 @@
 .ttcart{
     margin-top: 30px;
     width: 80%;
-    background-color:#717171;
+   
 }
 .ttcart span{
     border-radius: 5px;
@@ -787,40 +787,51 @@
 
 
 
-
-/* đoạn này đến hết*/
 .mg {
-    margin: 0 auto;
+    margin: 20px auto;
   }
+  
   .bill {
     width: 70%;
-    background-color: aquamarine;
+    background-color: #f0f8ff; /* Light Blue color */
     height: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+  
   .camon {
     width: 100%;
-    background-color: rgb(29, 45, 39);
+    background-color: #1d2d27; /* Dark Green color */
     height: 100px;
     margin-bottom: 30px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 0 20px;
   }
+  
   .camon h3 {
     color: #fff;
   }
+  
   .thanbill {
-    width: 100%;
-    background-color: rgb(153, 127, 255);
+    width: 90%;
+    margin: 0 auto;
+    background-color: #9981ff; /* Light Purple color */
     height: 500px;
     display: flex;
+    border-radius: 10px;
+    overflow: hidden;
   }
+  
   .ttbill {
     width: 45%;
     margin-right: 5%;
     margin-left: 5%;
     padding: 20px;
-    background-color: coral;
+    background-color: #ff6f61; /* Light Coral color */
   }
+  
   .ttdh,
   .ttnd {
     width: 100%;
@@ -829,11 +840,20 @@
     padding: 10px;
     border-radius: 5px;
   }
+  
   .ttdh h4,
   .ttnd h4,
   .mathang h4 {
     margin-bottom: 10px;
   }
+  
+  .mathang {
+    width: 50%;
+    background-color: #ff6666; /* Light Red color */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
   .sanpham {
     margin-bottom: 20px;
     padding: 10px;
@@ -842,10 +862,7 @@
     display: flex;
     align-items: center;
   }
-  .mathang{
-    width: 50%;
-    background-color: red;
-  }
+  
   .sanpham img {
     width: 100px;
     height: 100px;
@@ -853,10 +870,12 @@
     object-fit: cover;
     border-radius: 5px;
   }
+  
   .sanpham .sp-info {
     flex: 1;
   }
+  
   .sanpham p {
-    margin: 5px 0 0 20px;
+    margin: 5px 0;
   }
   
