@@ -709,6 +709,67 @@
 .counter h4{
     margin-left: 40px;
 }
+/* Style for the hóa đơn section */
+.hoadon {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    height: 400px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Style for the tổng tiền heading */
+.hoadon h4 {
+    color: red;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Style for each row in the hóa đơn section */
+.hoadon .dong {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Style for the tạm tính and vận chuyển text */
+.hoadon p {
+    color: #555;
+    font-size: 14px;
+}
+
+/* Style for the total amount in each row */
+.hoadon h5 {
+    color: red; /* Red color for emphasis */
+    font-size: 16px;
+}
+
+/* Style for the input field for mã giảm giá/quà tặng */
+.hoadon input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Style for the TIẾN HÀNH ĐẶT HÀNG button */
+.hoadon input[type="button"] {
+    background-color: red;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover effect for the button */
+.hoadon input[type="button"]:hover {
+    background-color: #333;
+}
+
 
 
 
@@ -793,7 +854,7 @@
   
   .bill {
     width: 70%;
-    background-color: #f0f8ff; /* Light Blue color */
+    
     height: 800px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -801,23 +862,35 @@
   
   .camon {
     width: 100%;
-    background-color: #1d2d27; /* Dark Green color */
+    
     height: 100px;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    border-bottom: 2px solid #ccc;  
   }
   
   .camon h3 {
-    color: #fff;
+    color: #cb1c1c;
+  }
+  .camon button {
+    height: 40px;
+    width: 200px;
+    font-size: large;
+    font-weight: bold;
+    background-color: red;
+    border: none;
+    color: #f9f9f9;
+    
+    
   }
   
   .thanbill {
     width: 90%;
     margin: 0 auto;
-    background-color: #9981ff; /* Light Purple color */
+
     height: 500px;
     display: flex;
     border-radius: 10px;
@@ -829,14 +902,14 @@
     margin-right: 5%;
     margin-left: 5%;
     padding: 20px;
-    background-color: #ff6f61; /* Light Coral color */
+ 
   }
   
   .ttdh,
   .ttnd {
     width: 100%;
     margin-bottom: 20px;
-    background-color: #f2f2f2;
+    
     padding: 10px;
     border-radius: 5px;
   }
@@ -847,17 +920,13 @@
     margin-bottom: 10px;
   }
   
-  .mathang {
-    width: 50%;
-    background-color: #ff6666; /* Light Red color */
-    padding: 20px;
-    border-radius: 10px;
-  }
+
+
   
   .sanpham {
     margin-bottom: 20px;
     padding: 10px;
-    background-color: #f2f2f2;
+   
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -878,4 +947,50 @@
   .sanpham p {
     margin: 5px 0;
   }
+  .mathang{
+    border-bottom: 2px solid #ccc;
+    width: 45%;
+ 
+  }
+  .thanbill_mg{
+    width: 50%;
+    margin-left: 48%;
+    margin-top: -194px;
+  }
+  .ttnd{
+    border-bottom: 2px solid #ccc;
+    width: 400px;
+  
+  }
+  .ttnd p{
+    font-size: large;
+   line-height: 30px;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+
+
+  }
+  .ttnd ,.tt1 >h4{
+    font-size: larger;
+    
+
+
+  }
+  .tt1{
+    border-bottom: 2px solid #ccc;
+    width: 400px;
+    
+  }
+  
+  .tt1 p {
+    font-size: large;
+   line-height: 30px;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+
+
+  }
+
+
+  
   
