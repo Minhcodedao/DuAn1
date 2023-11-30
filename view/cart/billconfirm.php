@@ -55,7 +55,7 @@
         <!-- Thêm các sản phẩm khác nếu cần -->
       </div>
     </div>
-    <button>XEM THONG TIN ĐƠN HÀNG</button>
+    <a href="index.php?act=mybill"><button>XEM THONG TIN ĐƠN HÀNG</button></a>
   </div>
 </body>
 </html>

@@ -45,6 +45,7 @@
                             <ul class="sub_menu2">
                                 <li><a href="index.php?act=dangnhap"><h5>Đăng nhập</h5></a></li>
                                 <li><a href="index.php?act=dangky"><h5>Đăng ký</h5></a></li>
+                                <li><a href="index.php?act=mybill"><h5>Dơn hàng của tôi</h5></a></li>
                                 <li><a href="index.php?act=thoat"><h5>Đăng xuất</h5></a></li>
                                 <li>
                                     <?php
