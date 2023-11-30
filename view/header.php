@@ -45,7 +45,7 @@
                             <ul class="sub_menu2">
                                 <li><a href="index.php?act=dangnhap"><h5>Đăng nhập</h5></a></li>
                                 <li><a href="index.php?act=dangky"><h5>Đăng ký</h5></a></li>
-                                <li><a href="index.php?act=mybill"><h5>Đơn hàng của tôi</h5></a></li>
+                                <li><a href="index.php?act=mybill"><h5>Dơn hàng của tôi</h5></a></li>
                                 <li><a href="index.php?act=thoat"><h5>Đăng xuất</h5></a></li>
                                 <li>
                                     <?php
@@ -62,7 +62,7 @@
                             <a class="center" href="index.php?act=giohang"> <img src="image/cart.jpg">Giỏ hàng</a>
                         </li>
                     </ul>
-                    <form class="timkiem" action="index.php?act=sanpham" method="post">
+                    <form class="timkiem" action="index.php?act=timkiem" method="post">
                         <input type="text" placeholder="Tìm kiếm sản phẩm" name="kyw">
                         <input type="submit" value="Go" name="timkiem">
                         <hr>
@@ -105,12 +105,8 @@
                             <li><a href="#"><h5>Nữ</h5></a></li>
                         </ul>
                     </li>
-<<<<<<< HEAD
                     <li><a href="#"><h5>TIN TỨC</h5></a></li>
                     <li><a href="index.php?act=contact"><h5>LIÊN HỆ</h5></a></li>
-=======
-                    <li><a href="#"><h5>LIÊN HỆ</h5></a></li>
->>>>>>> 205f1c58ac4d96f92ee915de6762970b1dca9459
                     <li><a href="#"><h5>GIỚI THIỆU</h5></a></li>
                 
                 </ul>

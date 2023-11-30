@@ -24,7 +24,7 @@ function update_danhmuc($id,$name){
 
 function load_ten_dm($iddm){
     if($iddm>0){
-        $sql="select * from sanpham where id=".$iddm;
+        $sql="select * from danhmuc where id=".$iddm;
         $dm=pdo_query_one($sql);
         extract($dm);
         return $name;

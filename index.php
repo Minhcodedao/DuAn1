@@ -166,6 +166,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "daychuyen":
             include "./view/menu/daychuyen.php";
             break;
+        case "timkiem":
+                include "./view/timkiem.php";
+                break;
         default:
             include "./view/home.php";
             break;
