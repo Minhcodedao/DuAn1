@@ -783,3 +783,75 @@
     margin-left: 5px;
 }
 /* thanhtoan */
+
+
+.mg {
+    margin: 0 auto;
+  }
+  .bill {
+    width: 70%;
+    background-color: aquamarine;
+    height: 800px;
+  }
+  .camon {
+    width: 100%;
+    background-color: rgb(29, 45, 39);
+    height: 100px;
+    margin-bottom: 30px;
+    display: flex;
+    padding: 0 20px;
+  }
+  .camon h3 {
+    color: #fff;
+  }
+  .thanbill {
+    width: 100%;
+    background-color: rgb(153, 127, 255);
+    height: 500px;
+    display: flex;
+  }
+  .ttbill {
+    width: 45%;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding: 20px;
+    background-color: coral;
+  }
+  .ttdh,
+  .ttnd {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .ttdh h4,
+  .ttnd h4,
+  .mathang h4 {
+    margin-bottom: 10px;
+  }
+  .sanpham {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .sanpham img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .sanpham .sp-info {
+    flex: 1;
+  }
+  .sanpham p {
+    margin: 5px 0 0 20px;
+  }
+  .mathang{
+    width: 40%;
+    background-color: red;
+  }

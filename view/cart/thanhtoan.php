@@ -142,6 +142,7 @@
             border-top: 1px solid #ddd;
             padding-top: 15px;
             margin-top: 15px;
+            font-size: 0.9vw;
         }
 
         .it-cartr {
@@ -324,7 +325,7 @@
 
             ?>
 
-            <form action="">
+            <form action="index.php?act=billconfirm" method="post">
                 <div class="formw-inf">
                     <div class="form-group">
                         <label class="f-fulname" required>HỌ TÊN </label>
@@ -348,7 +349,7 @@
                 <div class="formw-inf">
                     <div class="form-group">
                         <label class="adrees" required > Địa Chỉ </label>
-                        <input type="text" class="adrees" name="adress" value="<?= $address ?>">
+                        <input type="text" name="address" value="<?= $address ?>">
                     </div>
 
                 </div>
@@ -362,22 +363,22 @@
                     <div class="payment-options">
                         <div class="payment-option">
                             <input type="radio" id="creditCard" name="pttt">
-                            <label for="creditCard">Thẻ tín dụng</label>
+                            <label>Thẻ tín dụng</label>
                         </div>
 
                         <div class="payment-option">
                             <input type="radio" id="bankTransfer" name="pttt">
-                            <label for="bankTransfer">Chuyển khoản ngân hàng</label>
+                            <label>Chuyển khoản ngân hàng</label>
                         </div>
 
                         <div class="payment-option">
                             <input type="radio" id="cashOnDelivery" name="pttt">
-                            <label for="cashOnDelivery">Thanh toán khi nhận hàng</label>
+                            <label>Thanh toán khi nhận hàng</label>
                         </div>
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 20px;">
-                    <button class="dat-mua-button">Đặt Mua</button>
+                    <a href="index.php?act=billconfirm"><input type="submit" name="dongydathang" value="ĐẶT MUA"></a>
                 </div>
             </form>
 
@@ -421,7 +422,7 @@
 
                 </div>
                 <div class="lsttttrans">
-                    <div id="VoucherApplyHtml">
+                    <div id="VoucherApplyHtml" style="font-size: 0.8vw;">
                         <div class="it-cartr">
                             <p>Tạm tính:</p>
                             <p>$<?= $tong ?></p>
@@ -441,7 +442,6 @@
                     </div>
                     <div class="it-cartr frm-vou">
                         <p>Mã giảm giá/Quà tặng</p>
-
                         <div class="form-group">
                             <input type="text" id="VorcherCode" class="valid">
                             <button id="VorcherCodeSubmit" data-allow="0" type="button">Áp dụng</button>
