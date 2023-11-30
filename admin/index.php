@@ -5,6 +5,8 @@ include "../model/sanpham.php";
 include "../model/binhluan.php";
 include "../model/thongke.php";
 include "../model/taikhoan.php";
+include "../model/bill.php";
+
 include "header.php";
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
@@ -189,9 +191,23 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
             // đơn hàng
         case "dsdh":
-            $listdh = loadall_donhang();
+            if (isset($_POST['kwy']) && ($_POST['kwy'] != "")) {
+                $kyw = $_POST['kwy'];
+            }
+            else{
+                $kyw = "";
+            }
+            $listbill = loadall_bill($kyw,0);
             include "donhang/list.php";
             break;
+        case "xoabill":
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_bill($_GET['id']);
+            }
+            $listbill = loadall_bill("",0);
+            include "donhang/list.php";
+            break;
+            
         case "addtk":
             // Kiểm tra xem nút submit đã được nhấn chưa
             if (isset($_POST['themmoitk']) && ($_POST['themmoitk'])) {

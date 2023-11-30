@@ -34,9 +34,5 @@
         pdo_execute($sql);
     }
 
-    function loadall_donhang(){
-        $sql = "SELECT * FROM cart ORDER BY id DESC";
-        $listdh = pdo_query($sql);
-        return $listdh;
-    }
+   
 ?>
