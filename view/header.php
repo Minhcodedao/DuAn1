@@ -62,9 +62,9 @@
                             <a class="center" href="index.php?act=giohang"> <img src="image/cart.jpg">Giỏ hàng</a>
                         </li>
                     </ul>
-                    <form class="timkiem">
-                        <input type="text" placeholder="Tìm kiếm sản phẩm">
-                        <a href="#"><input type="submit" value="Go"></a>
+                    <form class="timkiem" action="index.php?act=sanpham" method="post">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm" name="kyw">
+                        <input type="submit" value="Go" name="timkiem">
                         <hr>
                     </form>
                 </div>
@@ -106,7 +106,7 @@
                         </ul>
                     </li>
                     <li><a href="#"><h5>TIN TỨC</h5></a></li>
-                    <li><a href="#"><h5>LIÊN HỆ</h5></a></li>
+                    <li><a href="index.php?act=contact"><h5>LIÊN HỆ</h5></a></li>
                     <li><a href="#"><h5>GIỚI THIỆU</h5></a></li>
                 
                 </ul>
