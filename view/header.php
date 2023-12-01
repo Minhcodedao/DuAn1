@@ -75,14 +75,15 @@
                     <li><a href="index.php"><h5>TRANG CHỦ</h5></a></li>
                     <li><a href="index.php?act=nhan"><h5>NHẪN </h5></a>
                         <ul class="sub_menu">
-                            <li><a href=""><h5>NAM</h5></a></li>
-                            <li><a href=""><h5>Nu</h5></a></li>
+                            <li><a href="index.php?act=nhan&loai=NV&name=nhan"><h5>Vàng</h5></a></li>
+                            <li><a href="index.php?act=nhan&loai=NKC&name=nhan"><h5>Kim Cương</h5></a></li>
+                            <li><a href="index.php?act=nhan&loai=NDM&name=nhan"><h5>Đá Màu</h5></a></li>
                         </ul>
                     </li>
-                    <li><a href="index.php?act=daychuyen"><h5>DÂY CHUYỀN </h5></a>
+                    <li><a href="index.php?act=daychuyen"><h5>DÂY CHUYỀN</h5></a>
                         <ul class="sub_menu">
-                        <li><a href="index.php?act=daychuyen&loai=DCV"><h5>Vàng</h5></a></li>
-                            <li><a href="index.php?act=daychuyen&loai=DCKC"><h5>Kim Cương</h5></a></li>
+                            <li><a href="index.php?act=daychuyen&loai=DCV&name=Dây"><h5>Vàng</h5></a></li>
+                            <li><a href="index.php?act=daychuyen&loai=DCKC&name=day"><h5>Kim Cương</h5></a></li>
                            
                         </ul>
                     </li>

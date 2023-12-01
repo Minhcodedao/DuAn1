@@ -17,9 +17,9 @@
             <div class="sapxep">
                 <label for="">Sắp xếp theo</label>
                 <select name="sapxep" id="">
-                    <option value="">Tất cả sản phẩm</option>
-                    <option value="">Giá thấp đến cao</option>
-                    <option value="">Giá cao đến thấp</option>
+                    <option value="1">Tất cả sản phẩm</option>
+                    <option value="2">Giá thấp đến cao</option>
+                    <option value="3">Giá cao đến thấp</option>
                 </select>
             </div>
         </div>
@@ -27,15 +27,15 @@
         <div class="loc">
             <h4>Loại sản phẩm:</h4>
             <ul class="loc_sp">
-                <li><a href="">Nhẫn Vàng</a></li>
-                <li><a href="">Nhẫn Kim Cương</a></li>
-                <li><a href="">Nhẫn Đá Màu</a></li>
+                <li><a href="index.php?act=nhan&loai=NV"><h5>Vàng</h5></a></li>
+                <li><a href="index.php?act=nhan&loai=NKC"><h5>Kim Cương</h5></a></li>
+                <li><a href="index.php?act=nhan&loai=NDM"><h5>Đá Màu</h5></a></li>
             </ul>
         </div>
         <div class="menu_than">
-            <?php foreach($nhan as $nhan): ?>
+            <?php foreach($dc as $d): ?>
                 <?php
-                    extract($nhan);
+                    extract($d);
                     $sale = $price*9/10;
                     $hinh =$img_path.$img;
                     $linksp = "index.php?act=sanphamct&idsp=".$id;

@@ -29,28 +29,30 @@
             <ul class="loc_sp">
                 <li><a href="index.php?act=daychuyen&loai=DCV">Vàng</a></li>
                 <li><a href="index.php?act=daychuyen&loai=DCKC">Kim Cương</a></li>
+                <li><a href="index.php?act=daychuyen&loai=DCKC">Đá Màu</a></li>
              
             </ul>
         </div>
         <div class="menu_than">
-            <?php foreach($dc as $dc): ?>
-                <?php
-                    extract($dc);
-                    $sale = $price*9/10;
-                    $hinh =$img_path.$img;
-                    $linksp = "index.php?act=sanphamct&idsp=".$id;
-                ?>     
-                    <div class="spnb2">
-                        <a href="<?=$linksp?>"><img src="<?=$hinh?>" alt=""></a>
-                        <div class="tt">
-                            <h5><?= $name ?></h5>
-                            
-                            <p>Giá gốc: <del><?=$sale?></del></p>
-                            <h3><?= $price?></h3>
-                        </div>
-                        <input type="button" value="Chi tiết">
-                    </div>    
-            <?php endforeach ?>
+        <?php
+            if(isset($dc))
+            foreach($dc as $d){
+                extract($d);
+                $sale = $price*9/10;
+                $hinh =$img_path.$img;
+                $linksp = "index.php?act=sanphamct&idsp=".$id;    
+                echo'<div class="spnb2">
+                    <a href="<?=$linksp?>"><img src="<?=$hinh?>" alt=""></a>
+                    <div class="tt">
+                        <h5><?= $name ?></h5>
+                        
+                        <p>Giá gốc: <del><?=$sale?></del></p>
+                        <h3><?= $price?></h3>
+                    </div>
+                    <input type="button" value="Chi tiết">
+                </div> ';   
+            }
+        ?>
         </div>
     </div>
 </body>

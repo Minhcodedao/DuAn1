@@ -99,9 +99,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "giohang":
             include "./view/cart/viewcart.php";
             break;
-        case "nhan":
-            include "./view/menu/nhanbig.php";
-            break;
         case "daychuyen":
             include "./view/menu/daychuyen.php";
             break;
@@ -166,17 +163,32 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "daychuyen":
             if(isset($_GET['loai'])){
                 $loai= $_GET['loai'];
-                if(isset($_GET['sapxep'])){
-                    $sapxep= $_GET['sapxep'];
-                }else{
-                    $sapxep ="";
-                }
-                
             }else{
                 $loai="";
             }
-            $dc = locsp($loai,"");
+            if(isset($_GET['name'])){
+                $name= $_GET['name'];
+            }else{
+                $name="";
+            }
+
+            $dc = locsp($loai,$name);
             include "./view/menu/daychuyen.php";
+            break;
+        case "nhan":
+            if(isset($_GET['loai'])){
+                $loai= $_GET['loai'];
+            }else{
+                $loai="";
+            }
+            if(isset($_GET['name'])){
+                $name= $_GET['name'];
+            }else{
+                $name="";
+            }
+            
+            $dc = locsp($loai,$name);
+            include "./view/menu/nhanbig.php";
             break;
         case "timkiem":
                 include "./view/timkiem.php";
