@@ -27,15 +27,15 @@
         <div class="loc">
             <h4>Loại sản phẩm:</h4>
             <ul class="loc_sp">
-                <li><a href="">Dây Chuyền Vàng</a></li>
-                <li><a href="">Dây Chuyền  Kim Cương</a></li>
+                <li><a href="index.php?act=daychuyen&loai=DCV">Vàng</a></li>
+                <li><a href="index.php?act=daychuyen&loai=DCKC">Kim Cương</a></li>
              
             </ul>
         </div>
         <div class="menu_than">
-            <?php foreach($nhan as $nhan): ?>
+            <?php foreach($dc as $dc): ?>
                 <?php
-                    extract($nhan);
+                    extract($dc);
                     $sale = $price*9/10;
                     $hinh =$img_path.$img;
                     $linksp = "index.php?act=sanphamct&idsp=".$id;

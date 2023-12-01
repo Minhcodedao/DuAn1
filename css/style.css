@@ -462,6 +462,7 @@
     justify-content: space-around;
     border: 0.5px solid red;
     margin-top: 10px;
+    padding: 3px 0;
 }
 .more_img{
     width: 32%;

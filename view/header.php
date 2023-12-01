@@ -81,8 +81,8 @@
                     </li>
                     <li><a href="index.php?act=daychuyen"><h5>DÂY CHUYỀN </h5></a>
                         <ul class="sub_menu">
-                        <li><a href="index.php?act=daychuyennam"><h5>Nam</h5></a></li>
-                            <li><a href="#"><h5>Nữ</h5></a></li>
+                        <li><a href="index.php?act=daychuyen&loai=DCV"><h5>Vàng</h5></a></li>
+                            <li><a href="index.php?act=daychuyen&loai=DCKC"><h5>Kim Cương</h5></a></li>
                            
                         </ul>
                     </li>

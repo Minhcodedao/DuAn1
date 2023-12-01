@@ -164,6 +164,18 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "./view/cart/billconfirm.php";
             break; 
         case "daychuyen":
+            if(isset($_GET['loai'])){
+                $loai= $_GET['loai'];
+                if(isset($_GET['sapxep'])){
+                    $sapxep= $_GET['sapxep'];
+                }else{
+                    $sapxep ="";
+                }
+                
+            }else{
+                $loai="";
+            }
+            $dc = locsp($loai,"");
             include "./view/menu/daychuyen.php";
             break;
         case "timkiem":

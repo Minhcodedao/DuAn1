@@ -65,7 +65,17 @@ function delete_sanpham($id){
     pdo_execute($sql);
 }
 // xóa sản phẩm xóa luôn cả bình luận thông qua idpro
-
+ function locsp($loai,$sapxep){
+    $sql = 'SELECT * FROM sanpham WHERE 1';
+    if($loai!=""){
+        $sql.= 'masp like "'.$loai.'"';
+    }
+    if($sapxep!=""){
+        $sql.= 'oder by id "'.$sapxep.'"';
+    }
+    $sp = pdo_query($sql);
+    return $sp;
+ }
 
 
 
