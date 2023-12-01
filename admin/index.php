@@ -207,6 +207,21 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listbill = loadall_bill("",0);
             include "donhang/list.php";
             break;
+        case "suabill":
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $listbill = loadone_bill($_GET['id']);
+            }
+            include "donhang/update.php";
+            break;
+        case "updatebill":
+            if (isset($_POST['capnhapbill']) && ($_POST['capnhapbill'])) {
+                $id = $_POST['id'];
+                $bill_status = $_POST['bill_status'];
+                update_bill($id, $bill_status);
+            }
+            $listbill = loadall_bill("",0);
+            include "donhang/list.php";
+            break;
             
         case "addtk":
             // Kiểm tra xem nút submit đã được nhấn chưa

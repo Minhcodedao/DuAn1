@@ -13,10 +13,18 @@ function delete_bill($id){
   pdo_execute($sql);
 }
 // update bill
-function update_bill($id,$iduser,$bill_name,$bill_tel,$bill_email,$bill_address,$bill_status,$total,$ngaydathang){
-    $sql = "UPDATE bill SET iduser='$iduser',bill_name='$bill_name',bill_tel='$bill_tel',bill_email='$bill_email',bill_address='$bill_address',bill_status='$bill_status',total='$total',ngaydathang='$ngaydathang' WHERE id=$id";
-    pdo_execute($sql);
+// update bill cho phép update mỗi trạng thái của bill
+function update_bill($id,$bill_status){
+  $sql = "UPDATE bill SET bill_status=$bill_status WHERE id=$id";
+  pdo_execute($sql);
 }
+// load one bill
+function loadone_bill($id){
+  $sql = "SELECT * FROM bill WHERE id=$id";
+  $bill = pdo_query_one($sql);
+  return $bill;
+}
+
 
 
 
