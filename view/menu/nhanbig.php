@@ -39,14 +39,13 @@
                     $sale = $price*9/10;
                     $hinh =$img_path.$img;
                     $linksp = "index.php?act=sanphamct&idsp=".$id;
-                ?>     
+                ?>
                     <div class="spnb2">
                         <a href="<?=$linksp?>"><img src="<?=$hinh?>" alt=""></a>
                         <div class="tt">
                             <h5><?= $name ?></h5>
-                            
                             <p>Giá gốc: <del><?=$sale?></del></p>
-                            <h3><?= $price?></h3>
+                            <h3><?= $price ?></h3>
                         </div>
                         <input type="button" value="Chi tiết">
                     </div>    

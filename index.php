@@ -63,7 +63,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $pass= $_POST['pass'];
                 $tel= $_POST['tel'];
                 $address= $_POST['address'];
-                insert_taikhoan($email,$user,$pass,$tel,$address);
+                insert_taikhoan($user,$pass,$email,$address,$tel);
                 $thongbao = "Đã đăng ký thành công! Vui lòng đăng nhập để thực hiện các chức năng khác!";
             }
             include "./view/taikhoan/dangky.php";
@@ -84,13 +84,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break; 
         case "thanhtoan":
             include "./view/cart/thanhtoan.php";
-            break;
-        case "bongtai":
-          
-            include "./view/menu/bongtai.php";
-            break;
-        case "vongtay":
-            include "./view/menu/vongtay.php";
             break;
         case 'thoat':
             session_unset();
@@ -134,7 +127,13 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "view/cart/thanhtoan.php";
             break;
         case 'mybill':
-            $listbill = loadall_bill("",0);
+            if(isset($_SESSION['user'])){
+                $iduser = $_SESSION['user']['id'];
+            }
+            else{
+                $iduser = 0;
+            }
+            $listbill = loadall_bill("",$iduser);
             include "view/cart/mybill.php";
             break;
         case 'billconfirm':
@@ -157,7 +156,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
             }
             $bill = loadone_bill($idbill);
-            $billct = loadall_cart($idbill);
+            $billct = loadall_cart($iduser);
             include "./view/cart/billconfirm.php";
             break; 
         case "daychuyen":
@@ -189,6 +188,13 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             
             $dc = locsp($loai,$name);
             include "./view/menu/nhanbig.php";
+            break;
+        case "bongtai":
+        
+            include "./view/menu/bongtai.php";
+            break;
+        case "vongtay":
+            include "./view/menu/vongtay.php";
             break;
         case "timkiem":
                 include "./view/timkiem.php";

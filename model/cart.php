@@ -24,7 +24,7 @@
 
         $sql = "SELECT * FROM bill WHERE 1";
         if($iduser>0) $sql.=" AND iduser=".$iduser;
-        if($kyw!="") $sql.=" AND id LIKE '%".$kyw."'";
+        if($kyw!="") $sql.=" AND id LIKE '%".$kyw."%'";
         $sql.=" ORDER BY id DESC";
         $listbill = pdo_query($sql);
         return $listbill;
@@ -34,6 +34,7 @@
         $bill = pdo_query($sql);
         return $bill;
     }
+
     function loadall_cart_count($idbill){
         $sql = "SELECT * FROM cart WHERE idbill =".$idbill;
         $bill = pdo_query($sql);

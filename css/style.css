@@ -503,12 +503,15 @@
 .ct_button{
     width: 100%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
 }
 .buynow{
     background-color: red;
     color: white;
-    width: 47%;
+    width: 45%;
     height: 40px;
     margin-right: 5%;
     border: none;
@@ -517,7 +520,7 @@
 .addtocart{
     background-color: rgb(171, 164, 164);
     color: rgb(0, 0, 0);
-    width: 47%;
+    width: 45%;
     height: 40px;
     border: none;
 }
@@ -538,6 +541,17 @@
     margin-left: 5px;
 }
 
+.sldh{
+    width: 200px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.sldh input{
+    width: 30px;
+}
+.sldh label{
+    margin-right: 10px;
+}
 .camket{
     width: 100%;
     margin: 0 auto;

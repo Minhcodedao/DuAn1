@@ -30,21 +30,21 @@
         <div class="ct_tt">
           <div class="ct_text">
             <h3><?= $name ?></h3>
-            <p<?= $masp ?></p>
-            <h2 class="gia"><?= $price ?></h2>
+            <p><?= $masp ?></p>
+            <h2 class="gia">$<?= $price ?></h2>
             <p>*Giá có thể thay đổi tùy thuộc vào kích thước và trọng lượng thực tế của sản phẩm.Vui lòng gọi 1800 1168 để được hỗ trợ.</p>
             <p class="mb">Mô tả: <?= $mota ?></p>
 
-
             <form action="index.php?act=addtocart" method="post">
+              <div class="sldh">
+                <label>Số lượng</label>
+                <input type="number" name="soluong" min=1 value="1">
+              </div>
               <input type="hidden" name="id" value="<?= $id ?>">
               <input type="hidden" name="name" value="<?= $name ?>">
               <input type="hidden" name="image" value="<?= $img ?>">
               <input type="hidden" name="masp" value="<?= $masp ?>">
               <input type="hidden" name="price" value="<?= $price ?>">
-              <input type="submit" value="">
-
-
               <hr class="mb">
               <div class="ct_button">
                 <button class="buynow">Mua Ngay</button>
