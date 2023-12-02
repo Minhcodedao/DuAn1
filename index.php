@@ -105,7 +105,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $masp= $_POST['masp'];
                 $image= $_POST['image'];
                 $price= $_POST['price'];
-                $soluong = 1 ;
+                $soluong = $_POST['soluong'];
                 $ttien = $soluong * $price;
                 $spadd = [$id,$name,$masp,$image,$price,$soluong,$ttien];
                 array_push($_SESSION['mycart'],$spadd);
@@ -186,7 +186,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $name="";
             }
             
-            $dc = locsp($loai,$name);
+            $nhan = locsp($loai,$name);
             include "./view/menu/nhanbig.php";
             break;
         case "bongtai":
@@ -202,10 +202,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "xoabill":
             if(isset($_GET['id'])&&($_GET['id']>0)){
                 $id = $_GET['id'];
-                $sql = "DELETE FROM bill WHERE id=".$id;
-                pdo_execute($sql);
-                $sql2 = "DELETE FROM cart WHERE idbill=".$id;
-                pdo_execute($sql2);
+                xoabill($id);
                 header('location: index.php?act=mybill');
             }
             break;

@@ -61,7 +61,13 @@
         }  
         echo'<p>ok</p>';
     }
+    function delete_cart($id){
+        $sql = "DELETE FROM cart WHERE idbill=".$id;
+        pdo_execute($sql);
+        return pdo_execute($sql);
+    }
     function xoabill($id){
+        delete_cart($id);
         $sql = "DELETE FROM bill WHERE id=".$id;
         return pdo_execute($sql);
     }
