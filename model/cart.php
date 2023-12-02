@@ -61,6 +61,10 @@
         }  
         echo'<p>ok</p>';
     }
+    function xoabill($id){
+        $sql = "DELETE FROM bill WHERE id=".$id;
+        return pdo_execute($sql);
+    }
     function get_ttdh($n){
         switch($n){
             case 0 :

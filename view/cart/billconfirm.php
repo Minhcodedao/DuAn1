@@ -59,7 +59,7 @@
       </div>
     </div>
   
-    <a href="index.php?act=mybill"><button>XEM THONG TIN ĐƠN HÀNG</button></a>
+    <a href="index.php?act=mybill"><button> ĐƠN HÀNG CỦA BẠN </button></a>
   </div>
 </body>
 </html>

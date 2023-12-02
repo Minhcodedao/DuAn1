@@ -199,6 +199,16 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "timkiem":
                 include "./view/timkiem.php";
                 break;
+        case "xoabill":
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                $id = $_GET['id'];
+                $sql = "DELETE FROM bill WHERE id=".$id;
+                pdo_execute($sql);
+                $sql2 = "DELETE FROM cart WHERE idbill=".$id;
+                pdo_execute($sql2);
+                header('location: index.php?act=mybill');
+            }
+            break;
         default:
             include "./view/home.php";
             break;
