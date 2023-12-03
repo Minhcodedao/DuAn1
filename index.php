@@ -74,7 +74,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $email = $_POST['email'];
                 $checkemail = checkemail($email);
                 if(is_array($checkemail)){
-                    $thongbao = "Mật khẩu của bạn là:".$checkemail['pass'];
+                    $thongbao = "Mật khẩu của bạn là: ".$checkemail['pass'];
                 }else{
                     $thongbao = "Email này không tồn tại!";
                 }
@@ -181,8 +181,13 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }else{
                 $name="";
             }
-
-            $dc = locsp($loai,$name);
+            if(isset($_GET['sapxep']) && ($_GET['sapxep'])){
+                $sx = $_GET['sx'];
+            }else{
+                $sx = 1;
+            }
+            
+            $dc = locsp($loai,$name,$sx);
             include "./view/menu/daychuyen.php";
             break;
         case "nhan":
@@ -196,8 +201,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }else{
                 $name="";
             }
+            $sx = $_POST['sx'];
             
-            $nhan = locsp($loai,$name);
+            $nhan = locsp($loai,$name,$sx);
             include "./view/menu/nhanbig.php";
             break;
         case "bongtai":

@@ -15,12 +15,15 @@
         <div class="mot">
             <div><h3>SẢN PHẨM NHẪN</h3></div>
             <div class="sapxep">
-                <label for="">Sắp xếp theo</label>
-                <select name="sapxep" id="">
-                    <option value="1">Tất cả sản phẩm</option>
-                    <option value="2">Giá thấp đến cao</option>
-                    <option value="3">Giá cao đến thấp</option>
-                </select>
+                <form action="index.php?act=nhan" method="post">
+                    <select name="sx" id="">
+                        <option value="1">Tất cả sản phẩm</option>
+                        <option value="2">Giá thấp đến cao</option>
+                        <option value="3">Giá cao đến thấp</option>
+                        <option value="4">Theo lượt xem</option>
+                    </select>
+                    <input type="submit" value="Sắp xếp">
+                </form>
             </div>
         </div>
         <hr class="mb">
