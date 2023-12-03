@@ -217,9 +217,13 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 header('location: index.php?act=mybill');
             }
             break;
+        case "gioithieu":
+            include "./view/gioithieu.php";
+            break;
         default:
             include "./view/home.php";
             break;
+
     }
 }else{
     include "./view/home.php";
