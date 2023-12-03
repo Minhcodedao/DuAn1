@@ -865,147 +865,140 @@
 
 .mg {
     margin: 20px auto;
-  }
+}
   
-  .bill {
+.bill {
     width: 70%;
-    
     height: 800px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+}
   
-  .camon {
+.camon {
     width: 100%;
-    
     height: 100px;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0 20px;
-    border-bottom: 2px solid #ccc;  
-  }
+}
   
-  .camon h3 {
-    color: #cb1c1c;
-  }
-  .camon button {
-    height: 40px;
-    width: 200px;
-    font-size: large;
-    font-weight: bold;
-    background-color: red;
+.camon h3 {
+    color: #fff;
+    margin-left: 300px;
+}
+.camon button{
     border: none;
-    color: #f9f9f9;
-    
-    
-  }
-  
-  .thanbill {
+    background-color: red;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+.btb{
+    width: 70%;
+    text-align: center;
+}
+.btb button{
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+.thanbill {
     width: 90%;
     margin: 0 auto;
-
     height: 500px;
     display: flex;
     border-radius: 10px;
     overflow: hidden;
-  }
+}
   
-  .ttbill {
+.ttbill {
     width: 45%;
     margin-right: 5%;
     margin-left: 5%;
     padding: 20px;
- 
-  }
+    background-color: #fffbfb; /* Light Coral color */
+}
   
-  .ttdh,
-  .ttnd {
+.ttdh,
+.ttnd {
     width: 100%;
     margin-bottom: 20px;
-    
+    background-color: #ffffff;
     padding: 10px;
     border-radius: 5px;
-  }
+}
   
-  .ttdh h4,
-  .ttnd h4,
-  .mathang h4 {
+.ttdh h4,
+.ttnd h4,
+.mathang h4 {
     margin-bottom: 10px;
-  }
+}
   
-
-
+.mathang {
+    width: 50%;
+    background-color: #fffcfc; /* Light Red color */
+    padding: 20px;
+    border-radius: 10px;
+}
   
-  .sanpham {
+.sanpham {
     margin-bottom: 20px;
     padding: 10px;
-   
+    background-color: #f2f2f2;
     border-radius: 5px;
     display: flex;
     align-items: center;
-  }
+}
   
-  .sanpham img {
+.sanpham img {
     width: 100px;
     height: 100px;
     margin-right: 20px;
     object-fit: cover;
     border-radius: 5px;
-  }
+}
   
-  .sanpham .sp-info {
+.sanpham .sp-info {
     flex: 1;
-  }
+}
   
-  .sanpham p {
+.sanpham p {
     margin: 5px 0;
-  }
-  .mathang{
+}
+  
+.mathang{
     border-bottom: 2px solid #ccc;
     width: 45%;
  
-  }
-  .thanbill_mg{
+}
+.thanbill_mg{
     width: 50%;
     margin-left: 48%;
     margin-top: -194px;
-  }
-  .ttnd{
+}
+.ttnd{
     border-bottom: 2px solid #ccc;
     width: 400px;
   
-  }
-  .ttnd p{
-    font-size: large;
+}
+.ttnd p{
+    font-size: 0.9vw;
    line-height: 30px;
- font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Arial;
     
 
 
-  }
-  .ttnd ,.tt1 >h4{
-    font-size: larger;
+}
+.ttnd ,.tt1 >h4{
+    font-size: medium;
     
+}
+.tt1 p {
+    font-size: 0.9vw;
+    line-height: 30px;
+    font-family: Arial;
 
-
-  }
-  .tt1{
-    border-bottom: 2px solid #ccc;
-    width: 400px;
-    
-  }
-  
-  .tt1 p {
-    font-size: large;
-   line-height: 30px;
- font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-
-
-  }
-
-
-  
-  
+}

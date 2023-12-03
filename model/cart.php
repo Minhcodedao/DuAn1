@@ -59,7 +59,6 @@
             $tong+=$ttien;
             $i+=1;
         }  
-        echo'<p>ok</p>';
     }
     function delete_cart($id){
         $sql = "DELETE FROM cart WHERE idbill=".$id;

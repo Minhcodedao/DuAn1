@@ -167,7 +167,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
             }
             $bill = loadone_bill($idbill);
-            $billct = loadall_cart($iduser);
+            $billct = loadall_cart($idbill);
             include "./view/cart/billconfirm.php";
             break; 
         case "daychuyen":

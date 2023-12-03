@@ -20,13 +20,7 @@
       <a href="index.php"><button> Về trang chủ</button></a>
       <h3>CẢM ƠN QUÝ KHÁCH ĐÃ ĐẶT HÀNG</h3>
     </div>
-    <div class="mathang">
-      <h4>THÔNG TIN MẶT HÀNG</h4>
-      <!-- Các sản phẩm -->
-      <?php bill_chi_tiet($billct) ?>
-      <!-- Thêm các sản phẩm khác nếu cần -->
-    </div>
-    <div class="thanbill_mg">
+    <div class="thanbill mg">
       <div class="ttbill">
         <div class="ttdh">
           <h4>THÔNG TIN ĐẶT HÀNG</h4>
@@ -57,9 +51,13 @@
           </div>
         </div>
       </div>
+      <div class="mathang">
+        <h4>THÔNG TIN MẶT HÀNG</h4>
+        <?php bill_chi_tiet($billct) ?>
+      </div>
     </div>
   
-    <a href="index.php?act=mybill"><button> ĐƠN HÀNG CỦA BẠN </button></a>
+    <div class="btb mg"><a href="index.php?act=mybill"><button> ĐƠN HÀNG CỦA BẠN </button></a></div>
   </div>
 </body>
 </html>
