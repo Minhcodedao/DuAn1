@@ -115,7 +115,7 @@
         </h4>
       </div>
       <br>
-      <a href="" style="color: red; text-decoration: none;">
+      <a href="index.php?act=quenmk" style="color: red; text-decoration: none;">
         Quên mật khẩu?
       </a>
       <hr class="mb" style="margin-top: 15px;">
