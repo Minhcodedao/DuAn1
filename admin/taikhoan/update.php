@@ -16,7 +16,7 @@ if (isset($_GET['id']) && ($_GET['id'] > 0)) {
     <!-- Form thêm tài khoản -->
     <div class="form1">
         <form action="index.php?act=updatetk" method="post" enctype="multipart/form-data">
-            <h2>Thêm Tài Khoản</h2>
+            <h2>Sửa Tài Khoản</h2>
             <table class="add">
                 <!-- Các trường nhập liệu -->
                 <tr>
