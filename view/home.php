@@ -88,8 +88,8 @@
             <img src="" alt="">
             <div class="sp">
                 <?php
-                    foreach($dstop10 as $sp){
-                        extract($sp);
+                    foreach($dstop10 as $sp2){
+                        extract($sp2);
                         $hinh =$img_path.$img;
                         $linksp = "index.php?act=sanphamct&idsp=".$id;
                         echo '

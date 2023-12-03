@@ -110,7 +110,7 @@
                     <td><select name="iddm" id="">
                             <?php
                             foreach ($listdanhmuc as $danhmuc) {
-                                if ($danhmuc['id'] == $danhmuc['name']) $s = "selected";
+                                if ($danhmuc['id'] == $iddm) $s = "selected";
                                 else $s = "";
                                 echo '<option value="' . $danhmuc['id'] . '" ' . $s . '>' . $danhmuc['name'] . '</option>';
                             };

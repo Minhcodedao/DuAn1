@@ -82,8 +82,8 @@
                     </li>
                     <li><a href="index.php?act=daychuyen"><h5>DÂY CHUYỀN</h5></a>
                         <ul class="sub_menu">
-                            <li><a href="index.php?act=daychuyen&loai=DCV&name=Dây"><h5>Vàng</h5></a></li>
                             <li><a href="index.php?act=daychuyen&loai=DCKC&name=day"><h5>Kim Cương</h5></a></li>
+                            <li><a href="index.php?act=daychuyen&loai=DCDM&name=day"><h5>Ngọc Trai</h5></a></li>
                            
                         </ul>
                     </li>

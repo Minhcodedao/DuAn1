@@ -15,6 +15,7 @@ $dsdm = loadall_danhmuc();
 $dstop10 =loadall_sanpham_top10();
 $dstop5 =loadall_sanpham_top5();
 $nhan = select_nhan();
+$daychuyen = select_dc();
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
@@ -91,9 +92,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break; 
         case "giohang":
             include "./view/cart/viewcart.php";
-            break;
-        case "daychuyen":
-            include "./view/menu/daychuyen.php";
             break;
         case "dongho":
             include "./view/menu/dongho.php";

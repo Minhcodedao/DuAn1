@@ -27,31 +27,29 @@
         <div class="loc">
             <h4>Loại sản phẩm:</h4>
             <ul class="loc_sp">
-                <li><a href="index.php?act=daychuyen&loai=DCV">Vàng</a></li>
-                <li><a href="index.php?act=daychuyen&loai=DCKC">Kim Cương</a></li>
-                <li><a href="index.php?act=daychuyen&loai=DCKC">Đá Màu</a></li>
-             
+                <li><a href="index.php?act=nhan&loai=DCKC"><h5>Kim Cương</h5></a></li>
+                <li><a href="index.php?act=nhan&loai=DCDM"><h5>Đá Màu</h5></a></li>
+                <li><a href="index.php?act=nhan&loai=DCDM"><h5>Ngọc Trai</h5></a></li>
             </ul>
         </div>
         <div class="menu_than">
         <?php
-            if(isset($dc)){
-                foreach($dc as $d){
-                    extract($d);
-                    $sale = $price*9/10;
-                    $hinh =$img_path.$img;
-                    $linksp = "index.php?act=sanphamct&idsp=".$id;    
-                    echo'<div class="spnb2">
-                        <a href="<?=$linksp?>"><img src="<?=$hinh?>" alt=""></a>
-                        <div class="tt">
-                            <h5><?= $name ?></h5>
-                            
-                            <p>Giá gốc: <del><?=$sale?></del></p>
-                            <h3><?= $price?></h3>
-                        </div>
-                        <input type="button" value="Chi tiết">
-                    </div> ';   
-                }
+            foreach($dc as $d){
+                extract($d);
+                $sale = $price*11/10;
+                $hinh =$img_path.$img;
+                $linksp = "index.php?act=sanphamct&idsp=".$id;
+                echo '
+                <div class="spnb mb">
+                    <a href="'.$linksp.'"><img src="'.$hinh.'" alt=""></a>
+                    <div class="tt">
+                        <h5>'.$name.'</h5>
+                        
+                        <p>Giá gốc: <del>'.$sale.'</del></p>
+                        <h3>'.$price.'</h3>
+                    </div>
+                    <a href="'.$linksp.'"><input type="button" value="Chi tiết"></a>
+                </div>';
             }
         ?>
         </div>

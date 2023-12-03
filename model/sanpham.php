@@ -5,20 +5,16 @@ function loadsp_kc(){
     return  $listsanpham;
 }
 function loadall_sanpham_top10(){
-    $sql="select * from sanpham where 1 order by luotxem desc limit 5,10";
+    $sql="select * from sanpham order by luotxem desc limit 5,5";
     $listsanpham=pdo_query($sql);
     return $listsanpham;
 }
 function loadall_sanpham_top5(){
-    $sql="select * from sanpham where 1 order by luotxem desc limit 0,5";
+    $sql="select * from sanpham order by luotxem desc limit 0,5";
     $listsanpham=pdo_query($sql);
     return $listsanpham;
 }
-function select_nhan(){
-    $sql = "SELECT * FROM sanpham WHERE name like '%nhan%'";
-    $nhan = pdo_query($sql);
-    return $nhan;
-}
+
 function loadall_sanpham($keyw="",$iddm=0){
     $sql="select * from sanpham where trangthai = 0 ";
     // where 1 tức là nó đúng
@@ -65,15 +61,7 @@ function delete_sanpham($id){
     pdo_execute($sql);
 }
 // xóa sản phẩm xóa luôn cả bình luận thông qua idpro
- function locsp($loai,$name){
-    if($loai!=""){
-        $sql = "SELECT * FROM sanpham WHERE masp like '%".$loai."%'";
-    }else{
-        $sql = "SELECT * FROM sanpham WHERE name like '%".$name."%' ";
-    }
-    $dc = pdo_query($sql);
-    return $dc;
- }
+
 
 
 
@@ -105,4 +93,29 @@ function loadall_image(){
     $listimg  = pdo_query($sql);
     return $listimg;
 }
+
+// MENU
+function select_nhan(){
+    $sql = "SELECT * FROM sanpham WHERE name like '%nhan%'";
+    $nhan = pdo_query($sql);
+    return $nhan;
+}
+function select_dc(){
+    $sql = "SELECT * FROM sanpham WHERE name like '%chuyen%'";
+    $nhan = pdo_query($sql);
+    return $nhan;
+}
+
+function locsp($loai,$name){
+    if($loai!=""){
+        $sql = "SELECT * FROM sanpham WHERE masp like '%".$loai."%'";
+    }else{
+        $sql = "SELECT * FROM sanpham WHERE name like '%".$name."%' ";
+    }
+    $dc = pdo_query($sql);
+    return $dc;
+ }
+
+
+
 ?>
