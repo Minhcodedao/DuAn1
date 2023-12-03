@@ -16,6 +16,10 @@ if (isset($_POST['timkiem'])) {
 
     echo '<head>';
     echo '<style>
+    h1{
+        color: red;
+        text-align: center;
+    }
             .search-results {
                 display: flex;
                 flex-wrap: wrap;
@@ -40,7 +44,7 @@ if (isset($_POST['timkiem'])) {
           </style>';
     echo '</head>';
     echo '<body>';
-
+    echo '<h1>Từ khoá bạn tìm là: "' . htmlspecialchars($keyword, ENT_QUOTES) . '"</h1>';
     echo '<div class="search-results">';
     foreach ($result as $row) {
         extract($row);
