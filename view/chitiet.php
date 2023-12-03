@@ -8,32 +8,31 @@
 </head>
   <body>
     <div class="container">
-      <?php 
-        extract($onesp);
-        $img=$img_path.$img;
-      ?>
-      <div class="chitiet">
-        <div class="ct_img">
-          <div class="khung">
-            <img src="<?= $img ?>" alt="">
+    <?php 
+      extract($onesp);
+      $img=$img_path.$img;
+    ?>
+    <div class="chitiet">
+      <div class="ct_img">
+        <div class="khung" id="mainImage">
+          <img src="<?= $img ?>" alt="Main Image">
+        </div>
+        <div class="more">
+          <div class="more_img" onclick="changeImage('./image/nhancuoi_v1.jpg')">
+            <img src="./image/nhancuoi_v1.jpg" alt="Thumbnail 1">
           </div>
-          <div class="more">
-            <div class="more_img">
-              <img src="./image/nhancuoi_v1.jpg" alt="">
-            </div>
-            <div class="more_img">
-              <img src="./image/daychuyendamau1.jpg" alt="">
-            </div>
-            
+          <div class="more_img" onclick="changeImage('./image/daychuyendamau1.jpg')">
+            <img src="./image/daychuyendamau1.jpg" alt="Thumbnail 2">
           </div>
         </div>
-        <div class="ct_tt">
-          <div class="ct_text">
-            <h3><?= $name ?></h3>
-            <p><?= $masp ?></p>
-            <h2 class="gia">$<?= $price ?></h2>
-            <p>*Giá có thể thay đổi tùy thuộc vào kích thước và trọng lượng thực tế của sản phẩm.Vui lòng gọi 1800 1168 để được hỗ trợ.</p>
-            <p class="mb">Mô tả: <?= $mota ?></p>
+      </div>
+      <div class="ct_tt">
+        <div class="ct_text">
+          <h3><?= $name ?></h3>
+          <p><?= $masp ?></p>
+          <h2 class="gia">$<?= $price ?></h2>
+          <p>*Giá có thể thay đổi tùy thuộc vào kích thước và trọng lượng thực tế của sản phẩm.Vui lòng gọi 1800 1168 để được hỗ trợ.</p>
+          <p class="mb">Mô tả: <?= $mota ?></p>
 
             <form action="index.php?act=addtocart" method="post">
               <div class="sldh">
@@ -119,6 +118,9 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
+          function changeImage(src) {
+      document.getElementById('mainImage').children[0].src = src;
+    }
           $(document).ready(function() {
                $("#binhluan").load("view/binhluan.php", {idpro: <?= $id ?>});
           });
