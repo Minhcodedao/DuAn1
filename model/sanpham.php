@@ -106,11 +106,25 @@ function select_dc(){
     return $nhan;
 }
 
-function locsp($loai,$name){
+function locsp($loai,$name,$sx){
+    $sql = "SELECT * FROM sanpham WHERE 1";
+    $sql .=" and iddm =26";
     if($loai!=""){
-        $sql = "SELECT * FROM sanpham WHERE masp like '%".$loai."%'";
+        $sql.=" and masp like '%".$loai."%'";
     }else{
-        $sql = "SELECT * FROM sanpham WHERE name like '%".$name."%' ";
+        $sql.=" and name like '%".$name."%' ";
+    }
+    if($sx ==1){
+        $sql.=" ";
+    }
+    if($sx ==2){
+        $sql.=" order by price ASC";
+    }
+    if($sx ==3){
+        $sql.=" order by price DESC";
+    }
+    if($sx ==4){
+        $sql.=" order by lượt xem DESC";
     }
     $dc = pdo_query($sql);
     return $dc;
