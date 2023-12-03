@@ -1,14 +1,15 @@
-<!-- <?php
-        if (is_array($sanpham)) {
-            extract($sanpham);
-        }
-        $hinhpath = "../upload/" . $img;
-        if (is_file($hinhpath)) {
-            $hinh = "<img src='" . $hinhpath . "' height='80'>";
-        } else {
-            $hinh = "no photto";
-        }
-        ?> -->
+<?php
+    if (is_array($sanpham)) {
+        extract($sanpham);
+    }
+    $hinhpath = "../upload/" . $img;
+    if (is_file($hinhpath)) {
+        $hinh = "<img src='" . $hinhpath . "' height='80'>";
+    } else {
+        $hinh = "no photo";
+    }
+?>
+
 <br>
 <html lang="en">
 
@@ -99,12 +100,16 @@
                     <td>Mã sản phẩm</td>
                     <td><input type="text" name="masp" id="" value="<?php echo $masp ?>"></td>
                 </tr>
-                <tr>
-                    <td>Ảnh sản phẩm</td>
-                    <td><input type="file" name="img" id="">
-                        <?php echo $img ?>
-                    </td>
-                </tr>
+                <<tr>
+    <td>Ảnh sản phẩm</td>
+    <td>
+        <?php echo $hinh; // Hiển thị ảnh cũ ?>
+        <input type="file" name="img" id="">
+        <!-- Hiển thị tên file ảnh hiện tại -->
+        <div>Image: <?php echo $img; ?></div>
+    </td>
+</tr>
+
                 <tr>
                     <td>Loại sản phẩm</td>
                     <td><select name="iddm" id="">
