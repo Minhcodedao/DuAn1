@@ -22,6 +22,7 @@
 
         h1 {
             color: #333;
+            margin-left: 40%;
         }
 
         p {
@@ -41,6 +42,9 @@
 
         a:hover {
             text-decoration: underline;
+        }
+        strong{
+            margin-left: 25%;
         }
     </style>
 </head>
@@ -65,6 +69,9 @@ Luôn tâm niệm, một thương hiệu tốt không chỉ là tài sản vô g
 <strong>CÔNG TY CỔ PHẦN TẬP ĐOÀN VÀNG BẠC ĐÁ QUÝ 6 Diamond</strong></p>
 
 <p style="text-align: justify;">Trụ sở: Số 1 Trịnh Văn Bô Nam Từ Niêm Hà Nội<br>
+Điện thoại: 0981506864<br>
+Email: <a href="mailto:
+
 
 </body>
 </html>

@@ -1,3 +1,10 @@
+<?php
+if (isset($thongbao2)) {
+    echo $thongbao2;
+}
+// Phần còn lại của mã HTML cho trang đăng nhập
+?>
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
