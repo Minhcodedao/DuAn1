@@ -29,5 +29,7 @@
     </table>
     <button> <a href="index.php?act=bdososp">Biểu đồ thông kê sản phẩm</a></button>
     <button> <a href="index.php?act=spbanchay">Thống kê sản phẩm bán chạy</a></button>
-    <button> <a href="index.php?act=spbce">Thống kê sản phẩm bán tồn kho</a></button>
+    <button> <a href="index.php?act=sptonkho">Thống kê sản phẩm bán tồn kho</a></button>
+    <!-- doanh thu -->
+    <button> <a href="index.php?act=doanhthu">Thống kê doanh thu</a></button>
 </div>

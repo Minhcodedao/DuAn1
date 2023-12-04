@@ -284,13 +284,18 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
              header("location:../index.php");
             exit;
         case "spbanchay":
-            $listspbc = loadall_spbc();
+            $listspbc = load_top10_sanpham_banchay();
             include "thongke/spbanchay.php";
             break;
         case "sptonkho":
-            $listspbc = loadall_spbc();
+            $listsptonkho = load_sptonkho();
             include "thongke/sptonkho.php";
             break;
+        case "doanhthu":
+            $listdoanhthu = load_doanhthu();
+            include "thongke/doanhthu.php";
+            break;
+     
             
     }
 } else {

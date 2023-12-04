@@ -2,31 +2,33 @@
 <div class="tb">
     <table border="1">
         
-    <!-- function load_sptonkho(){
-    $sql = "SELECT s.id,s.name,s.img FROM sanpham s WHERE NOT EXISTS ( SELECT 1 FROM cart c WHERE c.idpro = s.id)";
-    return pdo_query($sql);
-} -->
+        <!-- function load_top10_sanpham_banchay(){
+        $sql=  " SELECT idpro,img,name, COUNT(idpro) AS total_quantity FROM cart GROUP BY idpro, img, name ORDER BY total_quantity DESC LIMIT 10";
+        return pdo_query($sql);
+            
+        } từ đây viết cho in cho tôi các thôn tin ra
+        -->
         <tr>
             <th>STT</th>
             <th> ID SẢN PHẨM</th>
             <th>ẢNH</th>
             <th>TÊN SẢN PHẨM</th>
-            <th> GIÁ</th>
+            <th> SỐ LƯỚNG SẢN PHẨM ĐÃ BÁN</th>
         </tr>
         <?php
-        $listsptonkho = load_sptonkho();
+        $listspbc = load_top10_sanpham_banchay();
         $i = 1;
-        foreach (  $listsptonkho as   $listsptonkho) {
-            extract( $listsptonkho);
+        foreach ($listspbc as $item) {
+            extract($item);
             
             echo "<tr>";
             echo "<td>$i</td>";
-            echo "<td>$id</td>";
+            echo "<td>$idpro</td>";
             echo "<td><img src='./upload/$img' height='80'></td>";
 
           
             echo "<td>$name</td>";
-            echo "<td>$price</td>";
+            echo "<td>$total_quantity</td>";
             echo "</tr>";
             $i++;
         }
@@ -40,6 +42,5 @@
     <button> <a href="index.php?act=sptonkho">Thống kê sản phẩm bán tồn kho</a></button>
     <!-- doanh thu -->
     <button> <a href="index.php?act=doanhthu">Thống kê doanh thu</a></button>
-</div>
 
 

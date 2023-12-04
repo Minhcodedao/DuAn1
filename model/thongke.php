@@ -26,14 +26,26 @@ function loadall_thongke_sanham_dm_gg()
 
 
 // thông kê các sản phẩm được mua nhiều nhất
-function loadall_spbc(){
-    $sql = "SELECT sp.id, sp.name, COUNT(*) as soluong_mua
-            FROM sanpham sp
-            JOIN bill bd ON sp.id = bd.idsp
-            GROUP BY sp.id, sp.name
-            ORDER BY soluong_mua DESC";
-    $listspbc= pdo_query($sql);
-    return $listspbc;
-
+ function load_top10_sanpham_banchay(){
+$sql=  " SELECT idpro,img,name, COUNT(idpro) AS total_quantity FROM cart GROUP BY idpro, img, name ORDER BY total_quantity DESC LIMIT 10";
+return pdo_query($sql);
+}
+ function load_sptonkho(){
+    $sql = "SELECT s.id,s.name,s.img ,s.price FROM sanpham s WHERE NOT EXISTS ( SELECT 1 FROM cart c WHERE c.idpro = s.id)";
+    return pdo_query($sql);
+}
+function load_doanhthu(){
+    $sql = "SELECT ngaydathang, SUM(total) AS doanhthu
+    FROM bill
+    GROUP BY ngaydathang;
+    ";
+    return pdo_query($sql);
+}
+function load_doanhthu_gg(){
+    // tông doanh thu 
+    $sql = "SELECT SUM(total) AS doanhthu
+    FROM bill
+    ";
+    return pdo_query($sql);
 }
 ?>
