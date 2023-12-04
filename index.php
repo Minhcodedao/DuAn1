@@ -163,7 +163,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case 'billct':
             if(isset($_GET['id'])&&($_GET['id']>0)){
                 $id = $_GET['id'];
-                $bill = select_cart($id);
+                $bill = select_cart($id);//
             }
             include "view/cart/billct.php";
             break;
