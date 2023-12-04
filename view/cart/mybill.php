@@ -55,21 +55,30 @@
     padding: 5px;
     background-color: #ddd;
 }
+.nut{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    
+}
+.nut a{
+    width: 50%;
+}
 .mybill div:nth-child(2) table tr td{
 
     border: 1px solid #ddd;
     padding: 5px;
 }
 .huy_don{
-    
-        width: 100%;
-        height: 30px;
-        background-color: red;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
+    width: 80px;
+    height: 30px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
 
 
 
@@ -83,12 +92,12 @@
         <div class="">
             <table>
             <tr>
-                <th>MÃ ĐƠN HÀNG</th>
-                <th> Tên sản phẩm </th>
-                <th>NGÀY ĐẶT HÀNG</th>
-                <th>SỐ LƯỢNG MẶT HÀNG</th>
-                <th>TỔNG GIÁ TRỊ ĐƠN HÀNG</th>
-                <th>TÌNH TRẠNG ĐƠN HÀNG</th>
+                <th>Mã đơn hàng</th>
+                <th>Người mua</th>
+                <th>Ngày đặt hàng</th>
+                <th>Số mặt hàng</th>
+                <th>Giá trị đươn hàng</th>
+                <th>Tình trạng đơn hàng</th>
                 <th>Thao Tác </th>
 
 
@@ -99,6 +108,7 @@
                         extract($bill);
                         // hủy đơn hàng
                         $xoabill = "index.php?act=xoabill&id=" . $id;
+                        $billct = "index.php?act=billct&id=" . $id;
                         
                         $ttdh= get_ttdh($bill['bill_status']);
                         $countsp = loadall_cart_count($bill['id']);
@@ -106,14 +116,14 @@
                             <tr>
 
                                 <td>DAM_'.$bill['id'].'</td>
-                                <td> </td>
+                                <td>'.$bill['bill_name'].'</td>
                                 <td>'.$bill['ngaydathang'].'</td>
                                 <td>'.$countsp.'</td>
-                                <td>'.$bill['total'].'</td>
+                                <td>$'.$bill['total'].'</td>
                                 <td>'.$ttdh.'</td>
-                                <td><a href="'.$xoabill.'">
-                                <input class="huy_don" type="button" value="Hủy Đơn">
-                                </a>
+                                <td class="nut">
+                                    <a href="'.$xoabill.'"><input class="huy_don" type="button" value="Hủy Đơn"></a>
+                                    <a href="'.$billct.'"><input class="huy_don" type="button" value="Chi tiết"></a>
                                 </td>
                             
 

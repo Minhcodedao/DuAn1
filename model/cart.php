@@ -34,6 +34,11 @@
         $bill = pdo_query($sql);
         return $bill;
     }
+    function select_cart($id){
+        $sql = "SELECT * FROM cart WHERE idbill =".$id;
+        $bill = pdo_query($sql);
+        return $bill;
+    }
 
     function loadall_cart_count($idbill){
         $sql = "SELECT * FROM cart WHERE idbill =".$idbill;

@@ -109,6 +109,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "dongho":
             include "./view/menu/dongho.php";
             break;
+
+
+        // CART
         case 'addtocart':
             if(isset($_POST['addtocart']) && ($_POST['addtocart'])){
                 $id= $_POST['id'];
@@ -136,6 +139,20 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
         case 'bill':
             include "view/cart/thanhtoan.php";
+            break;
+        case 'billct':
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                $id = $_GET['id'];
+                $bill = select_cart($id);
+            }
+            include "view/cart/billct.php";
+            break;
+        case "xoabill":
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                $id = $_GET['id'];
+                xoabill($id);
+                header('location: index.php?act=mybill');
+            }
             break;
         case 'mybill':
             if(isset($_SESSION['user'])){
@@ -170,6 +187,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $billct = loadall_cart($idbill);
             include "./view/cart/billconfirm.php";
             break; 
+
+        
+            // MENU
         case "daychuyen":
             if(isset($_GET['loai'])){
                 $loai= $_GET['loai'];
@@ -216,13 +236,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "timkiem":
                 include "./view/timkiem.php";
                 break;
-        case "xoabill":
-            if(isset($_GET['id'])&&($_GET['id']>0)){
-                $id = $_GET['id'];
-                xoabill($id);
-                header('location: index.php?act=mybill');
-            }
-            break;
         case "gioithieu":
             include "./view/gioithieu.php";
             break;
