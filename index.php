@@ -221,8 +221,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }else{
                 $name="";
             }
-            if(isset($_GET['sapxep']) && ($_GET['sapxep'])){
-                $sx = $_GET['sx'];
+            if(isset($_POST['sapxep']) && ($_POST['sapxep'])){
+                $sx = $_POST['sx'];
             }else{
                 $sx = 1;
             }
@@ -241,7 +241,11 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }else{
                 $name="";
             }
-            $sx = $_POST['sx'];
+            if(isset($_POST['sx'])){
+                $sx = $_POST['sx'];
+            }else{
+                $sx = 0;
+            }
             
             $nhan = locsp($loai,$name,$sx);
             include "./view/menu/nhanbig.php";

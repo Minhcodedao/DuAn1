@@ -124,7 +124,7 @@ function locsp($loai,$name,$sx){
         $sql.=" order by price DESC";
     }
     if($sx ==4){
-        $sql.=" order by lượt xem DESC";
+        $sql.=" order by luotxem DESC";
     }
     $dc = pdo_query($sql);
     return $dc;
