@@ -26,4 +26,12 @@
         ?>
         
     </table>
+    <?php
+    if(isset($thongbaox)){
+        echo $thongbaox;
+    }
+
+    ?>
+
+    
 </div>

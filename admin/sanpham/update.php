@@ -137,6 +137,13 @@
 
         </form>
     </div>
+    <?php
+    if(isset($thongbaoud)){
+        echo $thongbaoud;
+    }
+
+    ?>
+
 
 </body>
 

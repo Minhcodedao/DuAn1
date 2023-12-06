@@ -103,6 +103,13 @@
             <a href="index.php?act=listsp"> Danh Sách</a>
         </div>
     </div>
+    <?php
+    if(isset($thongbaoud)){
+        echo $thongbaoud;
+    }
+
+    ?>
+
 
 </body>
 

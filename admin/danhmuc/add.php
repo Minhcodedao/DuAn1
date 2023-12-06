@@ -34,7 +34,14 @@
             <a href="index.php?act=listdm">Danh Sách</a>
         </div>
     </div>
+    <?php
+    if(isset($thongbao)){
+        echo $thongbao;
+    }
+
+    ?>
 
 </body>
+
 
 </html>

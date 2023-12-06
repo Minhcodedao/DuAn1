@@ -123,7 +123,13 @@
             </div>
 
         </form>
+
     </div>
+    <?php
+    if (isset($thongbao)) {
+        echo $thongbao;
+    }
+    ?>
 
 </body>
 

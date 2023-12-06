@@ -28,7 +28,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             if ($_GET['id'] > 0) {
                 $id = $_GET['id'];
                 delete_danhmuc($id);
-                $thongbao = "xóa thành công";
+                $thongbaox = "xóa thành công";
             }
             $listdanhmuc = loadall_danhmuc();
             include "danhmuc/list.php";
@@ -51,7 +51,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $id = $_POST['id'];
                 $name = $_POST['name'];
                 update_danhmuc($id, $name);
-                $thongbao = "cập nhật thành công";
+                $thongbaoud = "cập nhật thành công";
             }
             $listdanhmuc = loadall_danhmuc();
             include "danhmuc/list.php";
@@ -138,9 +138,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 $id = $_GET['id'];
                 delete_sanpham($id);
-                $thongbao = "xóa thành công";
+                $thongbaox = "xóa thành công";
             }
             $listsanpham = loadall_sanpham();
+
             include "sanpham/list.php";
             break;
         case "suasp":
@@ -165,6 +166,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 } else {
                 }
                 update_sanpham($id, $iddm, $name, $masp, $price, $mota, $img);
+                $thongbaoud = "cập nhật thành công";
             }
             $listdanhmuc = loadall_danhmuc();
             $listsanpham = loadall_sanpham();
