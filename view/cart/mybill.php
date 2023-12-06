@@ -96,7 +96,7 @@
                 <th>Người mua</th>
                 <th>Ngày đặt hàng</th>
                 <th>Số mặt hàng</th>
-                <th>Giá trị đươn hàng</th>
+                <th>Giá trị đơn hàng</th>
                 <th>Tình trạng đơn hàng</th>
                 <th>Thao Tác </th>
 

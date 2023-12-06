@@ -158,7 +158,15 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "view/cart/viewcart.php";
             break;
         case 'bill':
-            include "view/cart/thanhtoan.php";
+            // nếu k đăng nhập k co mua và hiện ra thông báo
+            if(!isset($_SESSION['user'])){
+                $thongbaomh = "Bạn chưa đăng nhập! Vui lòng đăng nhập để mua hàng!";
+                include "view/taikhoan/dangnhap.php";
+            }
+            else{
+
+                include "view/cart/thanhtoan.php";
+            }
             break;
         case 'billct':
             if(isset($_GET['id'])&&($_GET['id']>0)){

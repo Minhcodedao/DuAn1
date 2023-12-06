@@ -308,11 +308,20 @@
     color: white;
     border: none;
 }
+
     </style>
 </head>
 
 <body>
     <div class="tong">
+    <div class="tbao">
+            <?php
+            if(isset($thongbaomh)){
+                echo $thongbaomh;
+            }
+            ?>
+
+        </div>
 
         <div class="infhb">
             <div class="title-h2">
