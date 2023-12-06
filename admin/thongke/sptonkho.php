@@ -22,7 +22,7 @@
             echo "<tr>";
             echo "<td>$i</td>";
             echo "<td>$id</td>";
-            echo "<td><img src='./upload/$img' height='80'></td>";
+            echo "<td><img src='../upload/$img' height='80'></td>";
 
           
             echo "<td>$name</td>";

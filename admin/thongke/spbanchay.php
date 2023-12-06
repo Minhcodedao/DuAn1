@@ -24,7 +24,7 @@
             echo "<tr>";
             echo "<td>$i</td>";
             echo "<td>$idpro</td>";
-            echo "<td><img src='./upload/$img' height='80'></td>";
+            echo "<td><img src='.$img' height='80'></td>";
             echo "<td>$name</td>";
             echo "<td>$total_quantity</td>";
             echo "</tr>";
