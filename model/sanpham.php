@@ -75,24 +75,6 @@ function update_sanpham($id,$iddm,$name, $masp,$price,$mota,$img){
 
     pdo_execute($sql);
 }
-function update_image($id,$image){
-   
-    $sql="update image set image1='".$image."' where id=".$id;
-    // echo $sql;die;
-    
-    pdo_execute($sql);
-}
-
-function load_image($id){
-    $sql= "SELECT * FROM image WHERE id=".$id;
-    $img  = pdo_query_one($sql);
-    return $img;
-}
-function loadall_image(){
-    $sql= "SELECT * FROM image";
-    $listimg  = pdo_query($sql);
-    return $listimg;
-}
 
 // MENU
 function select_nhan(){
@@ -108,7 +90,6 @@ function select_dc(){
 
 function locsp($loai,$name,$sx){
     $sql = "SELECT * FROM sanpham WHERE 1";
-    $sql .=" and iddm =26";
     if($loai!=""){
         $sql.=" and masp like '%".$loai."%'";
     }else{

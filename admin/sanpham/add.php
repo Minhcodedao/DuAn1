@@ -119,7 +119,6 @@
             <input class="sb" type="submit" name="themmoi" value="Thêm">
             <div class="sc">
                 <a href="index.php?act=listsp"> Danh Sách</a>
-                <a href=" index.php?act=addimage"> Thêm Ảnh</a>
             </div>
 
         </form>

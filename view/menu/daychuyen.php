@@ -8,50 +8,54 @@
 </head>
 <body>
     <div class="banner mb">
-        <img src="./image/banner_dc.jpg" alt="">
+        <img src="./image/banner-cat-nhan.jpg" alt="">
     </div>
     <div class="menuclick">
         
         <div class="mot">
-            <div><h3>SẢN PHẨM DÂY CHUYỀN</h3></div>
+            <div><h3>SẢN PHẨM NHẪN</h3></div>
             <div class="sapxep">
-                <label for="">Sắp xếp theo</label>
-                <select name="sapxep" id="">
-                    <option value="">Tất cả sản phẩm</option>
-                    <option value="">Giá thấp đến cao</option>
-                    <option value="">Giá cao đến thấp</option>
-                </select>
+                <form action="index.php?act=daychuyen" method="post">
+                    <select name="sx" id="">
+                        <option value="1">Tất cả sản phẩm</option>
+                        <option value="2">Giá thấp đến cao</option>
+                        <option value="3">Giá cao đến thấp</option>
+                        <option value="4">Theo lượt xem</option>
+                    </select>
+                    <input type="submit" value="Sắp xếp">
+                </form>
             </div>
         </div>
         <hr class="mb">
         <div class="loc">
             <h4>Loại sản phẩm:</h4>
             <ul class="loc_sp">
-                <li><a href="index.php?act=nhan&loai=DCKC"><h5>Kim Cương</h5></a></li>
-                <li><a href="index.php?act=nhan&loai=DCDM"><h5>Đá Màu</h5></a></li>
-                <li><a href="index.php?act=nhan&loai=DCDM"><h5>Ngọc Trai</h5></a></li>
+                <li><a href="index.php?act=daychuyen&loai=DCV"><h5>Vàng</h5></a></li>
+                <li><a href="index.php?act=daychuyen&loai=DCKC"><h5>Kim Cương</h5></a></li>
+                <li><a href="index.php?act=daychuyen&loai=DCDM"><h5>Đá Màu</h5></a></li>
             </ul>
         </div>
         <div class="menu_than">
-        <?php
-            foreach($dc as $d){
-                extract($d);
-                $sale = $price*11/10;
-                $hinh =$img_path.$img;
-                $linksp = "index.php?act=sanphamct&idsp=".$id;
-                echo '
-                <div class="spnb mb">
-                    <a href="'.$linksp.'"><img src="'.$hinh.'" alt=""></a>
-                    <div class="tt">
-                        <h5>'.$name.'</h5>
-                        
-                        <p>Giá gốc: <del>'.$sale.'</del></p>
-                        <h3>'.$price.'</h3>
-                    </div>
-                    <a href="'.$linksp.'"><input type="button" value="Chi tiết"></a>
-                </div>';
-            }
-        ?>
+            <?php
+                foreach($dc as $c){
+                    extract($c);
+                    $sale = $price*11/10;
+                    $hinh =$img_path.$img;
+                    $linksp = "index.php?act=sanphamct&idsp=".$id;
+                    echo '
+                    <div class="spnb mb">
+                        <a href="'.$linksp.'"><img src="'.$hinh.'" alt=""></a>
+                        <div class="tt">
+                            <h5>'.$name.'</h5>
+                            
+                            <p>Giá gốc: <del>$'.$sale.'</del></p>
+                            <h3>$'.$price.'</h3>
+                        </div>
+                        <a href="'.$linksp.'"><input type="button" value="Chi tiết"></a>
+                    </div>';
+                }
+
+            ?>
         </div>
     </div>
 </body>

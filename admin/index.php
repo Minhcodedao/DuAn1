@@ -39,13 +39,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             include "danhmuc/update.php";
             break;
-        case "suaimg":
-            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                $qlimg = load_image($_GET['id']);
-            }
-            $listimg = loadall_image();
-            include "sanpham/updateimg.php";
-            break;
         case "updatedm":
             if (isset($_POST['capnhap']) && ($_POST['capnhap'])) {
                 $id = $_POST['id'];
@@ -56,33 +49,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdanhmuc = loadall_danhmuc();
             include "danhmuc/list.php";
             break;
-        case "updateimg":
-            if (isset($_POST['suaanh']) && ($_POST['suaanh'])) {
-                $id = $_POST['id'];
-                $image1 = $_POST['image1'];
-                if($_FILES['image1']['size'] > 0) {
-                    $image1 = $_FILES['image1']['name'];
-                    // $image2 = $_FILES['image2']['name'];
-                    $target_dir = "../upload/";
-                    $target_file1 = $target_dir . basename($_FILES['image1']['name']);
-                    // $target_file2 = $target_dir . basename($_FILES['image2']['name']);
-                }
-               
-                if (move_uploaded_file($_FILES["image1"]["tmp_name"], $target_file1)) {
-                } else {
-                    echo "Sorry, there was an error uploading your file1.";
-                }
-                // if (move_uploaded_file($_FILES["image2"]["tmp_name"], $target_file2)) {
-                // } else {
-                //     echo "Sorry, there was an error uploading your file2.";
-                // }
-                update_image($id, $image1);
-            }
-            $listimage = loadall_image();
-            $listsp = loadall_sanpham();
-            include "sanpham/listimg.php";
-            break;
-
         case "addsp":
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $iddm = $_POST['iddm'];
@@ -102,33 +68,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             $listdanhmuc = loadall_danhmuc();
             include "sanpham/add.php";
-            break;
-        case "addimage":
-            if (isset($_POST['addanh']) && ($_POST['addanh'])) {
-                $idpro = $_POST['idpro'];
-                $image1 = $_FILES['img1']['name'];
-                $image2 = $_FILES['img2']['name'];
-                $target_dir = "../upload/";
-                $target_file1 = $target_dir . basename($_FILES['img1']['name']);
-                $target_file2 = $target_dir . basename($_FILES['img2']['name']);
-                if (move_uploaded_file($_FILES["img1"]["tmp_name"], $target_file1)) {
-                } else {
-                    echo "Sorry, there was an error uploading your file1.";
-                }
-                if (move_uploaded_file($_FILES["img2"]["tmp_name"], $target_file2)) {
-                } else {
-                    echo "Sorry, there was an error uploading your file2.";
-                }
-                insert_image($image1, $image2, $idpro);
-                $thongbao = "Thêm thành công";
-            }
-
-            $listsp = loadall_sanpham();
-            include "sanpham/addimage.php";
-            break;
-        case "listimg":
-            $listimage = loadall_image();
-            include "sanpham/listimg.php";
             break;
         case "listsp":
             $listsanpham = loadall_sanpham();

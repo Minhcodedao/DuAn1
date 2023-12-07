@@ -83,14 +83,15 @@
                     <li><a href="index.php?act=daychuyen"><h5>DÂY CHUYỀN</h5></a>
                         <ul class="sub_menu">
                             <li><a href="index.php?act=daychuyen&loai=DCKC&name=day"><h5>Kim Cương</h5></a></li>
-                            <li><a href="index.php?act=daychuyen&loai=DCDM&name=day"><h5>Ngọc Trai</h5></a></li>
+                            <li><a href="index.php?act=daychuyen&loai=DCDM&name=day"><h5>Đá Nàu</h5></a></li>
+                            <li><a href="index.php?act=daychuyen&loai=DCNT&name=day"><h5>Ngọc Trai</h5></a></li>
                            
                         </ul>
                     </li>
                     <li><a href="index.php?act=dongho"><h5>ĐỒNG HỒ</h5></a>
                         <ul class="sub_menu">
-                        <li><a href="index.php?act=daychuyennam"><h5>Nam</h5></a></li>
-                            <li><a href="#"><h5>Nữ</h5></a></li>
+                            <li><a href="index.php?act=dongho&loai=DHNA&name=dongho"><h5>Nam</h5></a></li>
+                            <li><a href="index.php?act=dongho&loai=DHNU&name=dongho"><h5>Nữ</h5></a></li>
                            
                         </ul>
                     </li>

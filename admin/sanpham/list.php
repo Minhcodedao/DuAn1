@@ -35,14 +35,13 @@
                         <td>' . $id . '</td>
                         <td>' . $name . '</td>
                         <td>' . $hinh . '</td>
-                        <td>' . $price . '</td>
+                        <td>$' . $price . '</td>
                         <td>' . $masp . '</td>
                         <td>' . $mota . '</td>
                         <td>'.$loai['name'].'</td>
                         <td>
                             <a href="' . $suasp . '"><input class="custom-icons2" type="button" value="Sửa"></a>  
                             <a href="' . $xoasp . '"><input class="custom-icons3" type="button" value="Xóa" onclick="return confirm (\'Bạn có muốn xóa sản phẩm không ? \')"></a>
-                            <a href="' . $addimage . '"><input class="custom-icons2" type="button" value="Thêm Ảnh"></a>
                         </td>
                     </tr>';    
             }?>

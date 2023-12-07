@@ -14,8 +14,6 @@ $spkc = loadsp_kc();
 $dsdm = loadall_danhmuc();
 $dstop10 =loadall_sanpham_top10();
 $dstop5 =loadall_sanpham_top5();
-$nhan = select_nhan();
-$daychuyen = select_dc();
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
@@ -29,7 +27,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             if(isset($_GET['idsp']) && ($_GET['idsp']>0)){
                 $id = $_GET['idsp'];
                 $onesp = loadone_sanpham($id);
-                $imgsp = load_image($id);
                 extract($onesp);
                 $sp_cung_loai=load_sanpham_cungloai($id,$iddm);
                 include "view/chitiet.php";
@@ -125,9 +122,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break; 
         case "giohang":
             include "./view/cart/viewcart.php";
-            break;
-        case "dongho":
-            include "./view/menu/dongho.php";
             break;
 
 
@@ -227,9 +221,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             if(isset($_GET['name'])){
                 $name= $_GET['name'];
             }else{
-                $name="";
+                $name="day";
             }
-            if(isset($_POST['sapxep']) && ($_POST['sapxep'])){
+            if(isset($_POST['sx'])){
                 $sx = $_POST['sx'];
             }else{
                 $sx = 1;
@@ -247,7 +241,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             if(isset($_GET['name'])){
                 $name= $_GET['name'];
             }else{
-                $name="";
+                $name="nhan";
             }
             if(isset($_POST['sx'])){
                 $sx = $_POST['sx'];
@@ -258,12 +252,25 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $nhan = locsp($loai,$name,$sx);
             include "./view/menu/nhanbig.php";
             break;
-        case "bongtai":
-        
-            include "./view/menu/bongtai.php";
-            break;
-        case "vongtay":
-            include "./view/menu/vongtay.php";
+        case "dongho":
+            if(isset($_GET['loai'])){
+                $loai= $_GET['loai'];
+            }else{
+                $loai="";
+            }
+            if(isset($_GET['name'])){
+                $name= $_GET['name'];
+            }else{
+                $name="ho";
+            }
+            if(isset($_POST['sx'])){
+                $sx = $_POST['sx'];
+            }else{
+                $sx = 0;
+            }
+            
+            $dongho = locsp($loai,$name,$sx);
+            include "./view/menu/dongho.php";
             break;
         case "timkiem":
                 include "./view/timkiem.php";
