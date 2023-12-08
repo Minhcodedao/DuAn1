@@ -106,7 +106,7 @@
                     }
                 ?>    
             </div>
-            <a href="#" class="btn mb">Xem thêm</a>
+            <a href="index.php?act=nhan" class="btn mb">Xem thêm</a>
 
             <h2>TRANG SỨC KIM CƯƠNG</h2>
             <hr class="mb">

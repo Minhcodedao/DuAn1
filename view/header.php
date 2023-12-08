@@ -59,7 +59,14 @@
                             </ul>
                         </li>
                         <li>
-                            <a class="center" href="index.php?act=giohang"> <img src="image/cart.jpg">Giỏ hàng</a>
+                            <?php
+                                if(isset($_SESSION['mycart']) && is_array($_SESSION['mycart'])) {
+                                    $csp = count($_SESSION['mycart']);
+                                }else{
+                                    $csp = 0;
+                                }
+                            ?>
+                            <a class="center" href="index.php?act=giohang"> <img src="image/cart.jpg">Giỏ hàng(<?= $csp?>)</a>
                         </li>
                     </ul>
                     <form class="timkiem" action="index.php?act=timkiem" method="post">

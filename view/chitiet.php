@@ -107,7 +107,7 @@
           <div class="candong">
             <img src="./image/icon_tix.png" alt="">
             <p>Đơn hàng thành công sẽ được gửi về email & sms của quý khách</p>
-          </div>
+          </div> 
         </div>
       </div>
     
@@ -135,7 +135,7 @@
         <hr class="mb">
         <div class="sp">
           <?php
-              foreach($dstop5 as $sp){
+              foreach($spcl as $sp){
                   extract($sp);
                   $hinh =$img_path.$img;
                   $sale = $price*11/10;

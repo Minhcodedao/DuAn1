@@ -28,7 +28,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $id = $_GET['idsp'];
                 $onesp = loadone_sanpham($id);
                 extract($onesp);
-                $sp_cung_loai=load_sanpham_cungloai($id,$iddm);
+                $spcl=load_sanpham_cungloai($id,$iddm);
                 include "view/chitiet.php";
             }else{
                 include "./view/home.php";

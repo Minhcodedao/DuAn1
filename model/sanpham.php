@@ -1,6 +1,6 @@
 <?php
 function loadsp_kc(){
-    $sql="select * from sanpham where name like '%kc%' order by luotxem desc limit 0,5";
+    $sql="select * from sanpham where masp like '%KC%' order by luotxem desc limit 0,5";
     $listsanpham=pdo_query($sql);
     return  $listsanpham;
 }
@@ -34,6 +34,11 @@ function loadone_sanpham($id){
     return $result;
 }
 function load_sanpham_cungloai($id, $iddm){
+    $sql = "select * from sanpham where iddm = $iddm and id <> $id order by id desc limit 5,5";
+    $result = pdo_query($sql);
+    return $result;
+}
+function spcungloai($id, $iddm){
     $sql = "select * from sanpham where iddm = $iddm and id <> $id";
     $result = pdo_query($sql);
     return $result;
@@ -105,7 +110,7 @@ function locsp($loai,$name,$sx){
         $sql.=" order by price DESC";
     }
     if($sx ==4){
-        $sql.=" order by luotxem DESC";
+        $sql.=" order by id DESC";
     }
     $dc = pdo_query($sql);
     return $dc;

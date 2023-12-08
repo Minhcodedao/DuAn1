@@ -20,7 +20,7 @@
                         <option value="1">Tất cả sản phẩm</option>
                         <option value="2">Giá thấp đến cao</option>
                         <option value="3">Giá cao đến thấp</option>
-                        <option value="4">Theo lượt xem</option>
+                        <option value="4">Sản phẩm mới nhất</option>
                     </select>
                     <input type="submit" value="Sắp xếp">
                 </form>

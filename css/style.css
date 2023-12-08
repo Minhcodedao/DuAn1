@@ -683,6 +683,15 @@
     padding: 5px;
     margin: 10px 0 0 10px;
     border-radius: 3px;
+    margin-bottom: 10px;
+}
+.btc input{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    margin: 10px 0 0 10px;
+    border-radius: 3px;
 }
 .spcart{
     width: 95%;
@@ -722,6 +731,12 @@
 }
 .counter h4{
     margin-left: 40px;
+}
+.price p{
+    margin-left: 10px;
+}
+.counter p{
+    margin-left: 10px;
 }
 /* Style for the hóa đơn section */
 .hoadon {

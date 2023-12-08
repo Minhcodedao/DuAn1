@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,12 +20,36 @@
                     <?php
                         $tong = 0;
                         $i=0;
+                        if (empty($_SESSION['mycart'])) {
+                            $dellall = "Bạn chưa thêm sản phẩm nào vào giỏ hàng";
+                        } else {
+                            $dellall = "<a href='index.php?act=delcart'><input type='button' value='XÓA GIỎ HÀNG'></a>";
+                        }
                         foreach($_SESSION['mycart'] as $cart){
                             $hinh = $cart[3];
                             $ttien = $cart[4]*$cart[5];
                             $tong+=$ttien;
-                            $xoasp = '<a href="index.php?act=delcart&idcart='.$i.'"><button>Xoa</button></a>';
-
+                            $xoasp = '<a href="index.php?act=delcart&idcart='.$i.'"><button>Xóa</button></a>';
+                            
+                            if (strpos($cart[2], 'KC') !== false) {
+                                $cl = "Kim Cương";
+                            }elseif (strpos($cart[2], 'V') !== false) {
+                                $cl = "Vàng";
+                            }
+                            elseif (strpos($cart[2], 'DM') !== false) {
+                                $cl = "Đá Màu";
+                            }
+                            elseif (strpos($cart[2], 'NT') !== false) {
+                                $cl = "Ngọc Trai";
+                            }
+                            elseif (strpos($cart[2], 'DH') !== false) {
+                                $cl = "Hợp Kim";
+                            }
+                            
+                            else {
+                                // Xử lý khi không khớp với các quy tắc đã cho
+                                $cl = "Không khớp quy luật";
+                            }
                             echo'
                             <div class="spcart">
                                 <div class="imgcart">
@@ -32,18 +57,18 @@
                                     </div>
                                     <div class="ttcart">
                                         <h3>'.$cart[1].'</h3>
-                                        <p>'.$cart[2].'</p>
+                                        <p>Mã sản phẩm: '.$cart[2].'</p>
                                         <?php $i=1 ?>
                                         <div class="counter">
                                             <label for=""><h4 style="margin-left: 0px;">Số lượng:</h4> </label>
                                             <span style="width: 20px;background-color: red;color: white; text-align: center; margin-left: 10px;" >'.$cart[5].'</span>
-                                            <h4>Chất liệu :</h4><p> Vàng</p>
-                                            <p><h4>Giá tiền:</h4>'.$cart[4].'</p>
+                                            <h4>Chất liệu:</h4><p>'.$cl.'</p>
+                                            <h4>Giá tiền:</h4><p>$'.$cart[4].'</p>
                                         </div>
                                         <div class="price">
-                                            <p><h4>Thành tiền:</h4>'.$ttien.'</p>
+                                            <h4>Thành tiền: </h4><p>$'.$ttien.'</p>
                                         </div>
-                                        <div class="btcart">
+                                        <div class="btcart2">
                                             '.$xoasp.'
                                         </div>
                                         
@@ -54,8 +79,9 @@
                                 $i+=1;
                         }
                     ?>
-                    <a href="index.php?act=delcart"><input type="button" value="XÓA GIỎ HÀNG"></a>
-                    
+                    <div class="btc">
+                        <?php echo $dellall ?>
+                    </div>
                 
             </div>
         </div>
