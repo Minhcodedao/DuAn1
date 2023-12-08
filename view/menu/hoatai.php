@@ -15,7 +15,7 @@
         <div class="mot">
             <div><h3>SẢN PHẨM NHẪN</h3></div>
             <div class="sapxep">
-                <form action="index.php?act=daychuyen" method="post">
+                <form action="index.php?act=hoatai" method="post">
                     <select name="sx" id="">
                         <option value="1">Tất cả sản phẩm</option>
                         <option value="2">Giá thấp đến cao</option>
@@ -30,14 +30,13 @@
         <div class="loc">
             <h4>Loại sản phẩm:</h4>
             <ul class="loc_sp">
-                <li><a href="index.php?act=daychuyen&loai=DCNT"><h5>Ngọc Trai</h5></a></li>
-                <li><a href="index.php?act=daychuyen&loai=DCKC"><h5>Kim Cương</h5></a></li>
-                <li><a href="index.php?act=daychuyen&loai=DCDM"><h5>Đá Màu</h5></a></li>
+                <li><a href="index.php?act=hoatai&loai=HTDM"><h5>Đá Màu</h5></a></li>
+                <li><a href="index.php?act=hoatai&loai=HTKC"><h5>Kim Cương</h5></a></li>
             </ul>
         </div>
         <div class="menu_than">
             <?php
-                foreach($dc as $c){
+                foreach($ht as $c){
                     extract($c);
                     $sale = $price*11/10;
                     $hinh =$img_path.$img;

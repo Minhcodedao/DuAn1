@@ -8,49 +8,52 @@
 </head>
 <body>
     <div class="banner mb">
-        <img src="./image/banner_dh.jpg" alt="">
+        <img src="./image/banner_dc.jpg" alt="">
     </div>
     <div class="menuclick">
         
         <div class="mot">
-            <div><h3>SẢN PHẨM VÒNG TAY</h3></div>
+            <div><h3>SẢN PHẨM NHẪN</h3></div>
             <div class="sapxep">
-                <label for="">Sắp xếp theo</label>
-                <select name="sapxep" id="">
-                    <option value="">Tất cả sản phẩm</option>
-                    <option value="">Giá thấp đến cao</option>
-                    <option value="">Giá cao đến thấp</option>
-                </select>
+                <form action="index.php?act=vongtay" method="post">
+                    <select name="sx" id="">
+                        <option value="1">Tất cả sản phẩm</option>
+                        <option value="2">Giá thấp đến cao</option>
+                        <option value="3">Giá cao đến thấp</option>
+                        <option value="4">Theo lượt xem</option>
+                    </select>
+                    <input type="submit" value="Sắp xếp">
+                </form>
             </div>
         </div>
         <hr class="mb">
         <div class="loc">
             <h4>Loại sản phẩm:</h4>
             <ul class="loc_sp">
-                <li><a href="">Nhẫn Vàng</a></li>
-                <li><a href="">Nhẫn Kim Cương</a></li>
-                <li><a href="">Nhẫn Đá Màu</a></li>
+                <li><a href="index.php?act=vongtay&loai=VTV"><h5>Vàng</h5></a></li>
             </ul>
         </div>
         <div class="menu_than">
-            <?php foreach($nhan as $nhan): ?>
-                <?php
-                    extract($nhan);
-                    $sale = $price*9/10;
+            <?php
+                foreach($vt as $c){
+                    extract($c);
+                    $sale = $price*11/10;
                     $hinh =$img_path.$img;
                     $linksp = "index.php?act=sanphamct&idsp=".$id;
-                ?>     
-                    <div class="spnb2">
-                        <a href="<?=$linksp?>"><img src="<?=$hinh?>" alt=""></a>
+                    echo '
+                    <div class="spnb mb">
+                        <a href="'.$linksp.'"><img src="'.$hinh.'" alt=""></a>
                         <div class="tt">
-                            <h5><?= $name ?></h5>
+                            <h5>'.$name.'</h5>
                             
-                            <p>Giá gốc: <del><?=$sale?></del></p>
-                            <h3><?= $price?></h3>
+                            <p>Giá gốc: <del>$'.$sale.'</del></p>
+                            <h3>$'.$price.'</h3>
                         </div>
-                        <input type="button" value="Chi tiết">
-                    </div>    
-            <?php endforeach ?>
+                        <a href="'.$linksp.'"><input type="button" value="Chi tiết"></a>
+                    </div>';
+                }
+
+            ?>
         </div>
     </div>
 </body>

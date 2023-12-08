@@ -40,7 +40,6 @@
                     <li><a href=" index.php?act=listsp">Sản Phẩm</a></li>
                     <li><a href="index.php?act=dstk">Tài Khoản</a></li>
                     <li><a href="index.php?act=dsbl">Bình Luận</a></li>
-                    <li><a href="index.php?act=listimg">Image</a></li>
                     <li><a href="?act=dsdh">Đơn Hàng</a></li>
                     <li><a href="?act=thongke">Thống Kê</a></li>
 

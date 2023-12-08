@@ -90,21 +90,22 @@
                     </li>
                     <li><a href="index.php?act=dongho"><h5>ĐỒNG HỒ</h5></a>
                         <ul class="sub_menu">
-                            <li><a href="index.php?act=dongho&loai=DHNA&name=dongho"><h5>Nam</h5></a></li>
-                            <li><a href="index.php?act=dongho&loai=DHNU&name=dongho"><h5>Nữ</h5></a></li>
+                            <li><a href="index.php?act=dongho&loai=DHNA&name=dong"><h5>Nam</h5></a></li>
+                            <li><a href="index.php?act=dongho&loai=DHNU&name=dong"><h5>Nữ</h5></a></li>
                            
                         </ul>
                     </li>
-                    <li><a href="index.php?act=bongtai"><h5>BÔNG TAI</h5></a>
+                    <li><a href="index.php?act=hoatai"><h5>HOA TAI</h5></a>
                         <ul class="sub_menu">
-                        <li><a href="#"><h5>Nam</h5></a></li>
-                            <li><a href="#"><h5>Nữ</h5></a></li>
+                            <li><a href="index.php?act=hoatai&loai=HTDM&name=tai"><h5>Đá Màu</h5></a></li>
+                            <li><a href="index.php?act=hoatai&loai=HTKC&name=tai"><h5>Kim Cương</h5></a></li>
+                           
                         </ul>
                     </li>
                     <li><a href="index.php?act=vongtay"><h5>VÒNG TAY</h5></a>
                         <ul class="sub_menu">
-                        <li><a href="#"><h5>Nam</h5></a></li>
-                            <li><a href="#"><h5>Nữ</h5></a></li>
+                            <li><a href="index.php?act=vongtay&loai=VTV&name=tay"><h5>Vàng</h5></a></li>
+                           
                         </ul>
                     </li>
                     <li><a href="#"><h5>TIN TỨC</h5></a></li>

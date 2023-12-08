@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="banner mb">
-        <img src="./image/banner-cat-nhan.jpg" alt="">
+        <img src="./image/banner_dh.jpg" alt="">
     </div>
     <div class="menuclick">
         

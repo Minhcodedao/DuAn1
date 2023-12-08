@@ -261,7 +261,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             if(isset($_GET['name'])){
                 $name= $_GET['name'];
             }else{
-                $name="ho";
+                $name="đồng";
             }
             if(isset($_POST['sx'])){
                 $sx = $_POST['sx'];
@@ -271,6 +271,46 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             
             $dongho = locsp($loai,$name,$sx);
             include "./view/menu/dongho.php";
+            break;
+        case "hoatai":
+            if(isset($_GET['loai'])){
+                $loai= $_GET['loai'];
+            }else{
+                $loai="";
+            }
+            if(isset($_GET['name'])){
+                $name= $_GET['name'];
+            }else{
+                $name="tai";
+            }
+            if(isset($_POST['sx'])){
+                $sx = $_POST['sx'];
+            }else{
+                $sx = 0;
+            }
+            
+            $ht = locsp($loai,$name,$sx);
+            include "./view/menu/hoatai.php";
+            break;
+        case "vongtay":
+            if(isset($_GET['loai'])){
+                $loai= $_GET['loai'];
+            }else{
+                $loai="";
+            }
+            if(isset($_GET['name'])){
+                $name= $_GET['name'];
+            }else{
+                $name="tay";
+            }
+            if(isset($_POST['sx'])){
+                $sx = $_POST['sx'];
+            }else{
+                $sx = 0;
+            }
+            
+            $vt = locsp($loai,$name,$sx);
+            include "./view/menu/vongtay.php";
             break;
         case "timkiem":
                 include "./view/timkiem.php";
