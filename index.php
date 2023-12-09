@@ -317,6 +317,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "gioithieu":
             include "./view/gioithieu.php";
             break;
+        case "tintuc":
+            include "./view/tintuc.php";
+            break;
         default:
             include "./view/home.php";
             break;

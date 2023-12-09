@@ -125,7 +125,7 @@
                            
                         </ul>
                     </li>
-                    <li><a href="#"><h5>TIN TỨC</h5></a></li>
+                    <li><a href="index.php?act=tintuc"><h5>TIN TỨC</h5></a></li>
                     <li><a href="index.php?act=contact"><h5>LIÊN HỆ</h5></a></li>
                     <li><a href="?act=gioithieu"><h5>GIỚI THIỆU</h5></a></li>
                 
