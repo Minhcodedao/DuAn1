@@ -93,7 +93,7 @@ th:last-child{
     <div class="mybill">
         <div class="">ĐƠN HÀNG CỦA BẠN</div>
         <div class="">
-            <table>
+            <table style="text-align: center;">
             <tr>
                 <th>Mã đơn hàng</th>
                 <th>Người mua</th>
@@ -116,7 +116,16 @@ th:last-child{
                             $hd = '<a href="'.$xoabill.'"><input class="huy_don" type="button" value="Hủy Đơn"></a>';
                         }else{
                             $hd= "";
+                            
                         }
+
+                        if($bill_status=="5"){
+                            $huy = '<input class="huy_don" type="button" value="Đã hủy">';
+                        }
+                        else{
+                            $huy = '<a href="'.$billct.'"><input class="huy_don" type="button" value="Chi tiết"></a>';
+                        }
+                        
                         $ttdh= get_ttdh($bill['bill_status']);
                         $countsp = loadall_cart_count($bill['id']);
                         echo'
@@ -130,7 +139,7 @@ th:last-child{
                                 <td>'.$ttdh.'</td>
                                 <td class="nut">
                                     '.$hd.'
-                                    <a href="'.$billct.'"><input class="huy_don" type="button" value="Chi tiết"></a>
+                                    '.$huy.'
                                 </td>
                             
 

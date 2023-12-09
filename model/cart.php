@@ -72,7 +72,7 @@
     }
     function xoabill($id){
         delete_cart($id);
-        $sql = "DELETE FROM bill WHERE id=".$id;
+        $sql = "UPDATE bill set bill_status =5 WHERE id=".$id;
         return pdo_execute($sql);
     }
     function get_ttdh($n){
@@ -91,6 +91,9 @@
                 break;
             case 4 :
                 $tt = "Bị hủy bởi người bán";
+                break;
+            case 5 :
+                $tt = "Bị hủy bởi người mua";
                 break;
             default :
                 $tt = "Đơn hàng mới";
