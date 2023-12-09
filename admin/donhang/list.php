@@ -85,15 +85,24 @@
                 $bill_status = $bill['bill_status'];
                 if ($bill['bill_status'] == 0) {
                     $bill_status = "Đơn Hàng Mới";
+                    $xoabill = "";
                 } elseif ($bill['bill_status'] == 1) {
                     $bill_status = "Đang Xử Lí";
+                    $xoabill = "";
                 } elseif ($bill['bill_status'] == 2) {
                     $bill_status = "Đang Giao";
+                    $xoabill = "";
                 } elseif ($bill['bill_status'] == 3) {
                     $bill_status = "Đã Giao";
+                    $xoabill = "";
+                }
+                elseif ($bill['bill_status'] == 5) {
+                    $bill_status = "Hủy bởi người mua";
+                    $xoabill = "<a href='".$xoabill."'><input class='custom-icons3' type='button' value='Xóa'></a>";
                 }
                 else{
                     $bill_status = "Đã Hủy";
+                    $xoabill = "<a href='".$xoabill."'><input class='custom-icons3' type='button' value='Xóa'></a>";
                 }
 
                 echo "<tr>
@@ -106,7 +115,7 @@
                     <td>$bill_status</td>
                     <td>
                         <a href='$suabill'><input class='custom-icons2' type='button' value='Sửa'></a>
-                        <a href='$xoabill'><input class='custom-icons3' type='button' value='Xóa'></a>
+                        $xoabill
                     
                 </tr>";
             }
