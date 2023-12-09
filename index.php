@@ -89,7 +89,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "./view/taikhoan/quenmk.php";
             break; 
             case 'dangnhap':
-            
                 if (isset($_SESSION['thongbao_dangky'])) {
                     echo $_SESSION['thongbao_dangky'];
                     // Xóa thông báo sau khi hiển thị
@@ -228,7 +227,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }else{
                 $sx = 1;
             }
-            
+            $sale = 0.9;
             $dc = locsp($loai,$name,$sx);
             include "./view/menu/daychuyen.php";
             break;
@@ -248,7 +247,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }else{
                 $sx = 0;
             }
-            
+            $sale = 0.9;
             $nhan = locsp($loai,$name,$sx);
             include "./view/menu/nhanbig.php";
             break;
@@ -268,7 +267,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }else{
                 $sx = 0;
             }
-            
+            $sale = 0.9;
             $dongho = locsp($loai,$name,$sx);
             include "./view/menu/dongho.php";
             break;
@@ -288,7 +287,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }else{
                 $sx = 0;
             }
-            
+            $sale = 0.9;
             $ht = locsp($loai,$name,$sx);
             include "./view/menu/hoatai.php";
             break;
@@ -308,7 +307,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }else{
                 $sx = 0;
             }
-            
+            $sale = 0.9;
             $vt = locsp($loai,$name,$sx);
             include "./view/menu/vongtay.php";
             break;

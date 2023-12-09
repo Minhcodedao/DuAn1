@@ -100,7 +100,7 @@
                     <td>Mã sản phẩm</td>
                     <td><input type="text" name="masp" id="" value="<?php echo $masp ?>"></td>
                 </tr>
-                <<tr>
+                <tr>
     <td>Ảnh sản phẩm</td>
     <td>
         <?php echo $hinh; // Hiển thị ảnh cũ ?>

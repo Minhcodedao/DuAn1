@@ -37,7 +37,6 @@
             <?php
                 foreach($vt as $c){
                     extract($c);
-                    $sale = $price*11/10;
                     $hinh =$img_path.$img;
                     $linksp = "index.php?act=sanphamct&idsp=".$id;
                     echo '
@@ -46,10 +45,12 @@
                         <div class="tt">
                             <h5>'.$name.'</h5>
                             
-                            <p>Giá gốc: <del>$'.$sale.'</del></p>
-                            <h3>$'.$price.'</h3>
+                            <p>Giá gốc: <del>$'.$price.'</del></p>
+                            <h3>$'.$price*$sale.'</h3>
                         </div>
+                        <div class="discount-corner"></div>
                         <a href="'.$linksp.'"><input type="button" value="Chi tiết"></a>
+                        
                     </div>';
                 }
 

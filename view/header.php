@@ -37,25 +37,35 @@
                                 <?php
                                     if(isset($_SESSION['user'])){
                                         echo "Xin chào: ".$_SESSION['user']['user'];
+                                        if(isset($_SESSION['user'])&& ($_SESSION['user']['role']==1)){
+                                            $tk = '
+                                                 <li><a href="index.php?act=mybill"><h5>Đơn hàng của tôi</h5></a></li>
+                                                 <li><a href="admin/index.php"><h5>Đăng nhập admin</h5></a></li>
+                                                 <li><a href="index.php?act=thoat"><h5>Đăng xuất</h5></a></li>
+                                                 
+                                             ';
+                                         }if(isset($_SESSION['user'])&& ($_SESSION['user']['role']==0)){
+                                            $tk = '
+                                                 <li><a href="index.php?act=mybill"><h5>Đơn hàng của tôi</h5></a></li>
+                                                 <li><a href="index.php?act=thoat"><h5>Đăng xuất</h5></a></li>
+                                             '; 
+                                         }
                                     }else{
                                         echo "Tài khoản";
+                                
+                                        $tk = '
+                                            <li><a href="index.php?act=dangnhap"><h5>Đăng nhập</h5></a></li>
+                                            <li><a href="index.php?act=dangky"><h5>Đăng ký</h5></a></li>
+                                        ';
+                                        
                                     }
+
+                                    
+                                   
                                 ?>
                             </a>
                             <ul class="sub_menu2">
-                                <li><a href="index.php?act=dangnhap"><h5>Đăng nhập</h5></a></li>
-                                <li><a href="index.php?act=dangky"><h5>Đăng ký</h5></a></li>
-                                <li><a href="index.php?act=mybill"><h5>Đơn hàng của tôi</h5></a></li>
-                                <li><a href="index.php?act=thoat"><h5>Đăng xuất</h5></a></li>
-                                <li>
-                                    <?php
-                                        if(isset($_SESSION['user'])&& ($_SESSION['user']['role']==1)){
-                                            echo '<a href="admin/index.php"><h5>Đăng nhập admin</h5></a>';
-                                        }else{
-                                            echo '<h5>Role : 0</h5>';
-                                        }
-                                    ?>
-                                </li>
+                                <?php echo $tk ?>
                             </ul>
                         </li>
                         <li>

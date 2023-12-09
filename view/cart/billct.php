@@ -42,20 +42,22 @@
         if(is_array($bill)){
             echo '<table>';
             echo '<tr>';
-            echo '<th>Mã Đơn</th>';
+            echo '<th>Mã sp</th>';
             echo '<th>Tên sp</th>';
             echo '<th>Ảnh sp</th>';
             echo '<th>Giá sp</th>';
+            echo '<th>Số lượng</th>';
          
             echo '</tr>';
             
             foreach($bill as $b){
                 extract($b);
                 echo '<tr>';
-                echo '<td>'.$idbill.'</td>';
+                echo '<td>'.$idpro.'</td>';
                 echo '<td>'.$name.'</td>';
                 echo '<td><img src="'.$img.'" alt=""></td>';
-                echo '<td>'.$price.'</td>';
+                echo '<td>$'.$price.'</td>';
+                echo '<td>'.$soluong.'</td>';
                
                 echo '</tr>';
             }

@@ -81,13 +81,16 @@
                 $tt = "Đơn hàng mới";
                 break;
             case 1 :
-                $tt = "Đơn xử lí";
+                $tt = "Đang xử lí";
                 break;
             case 2 :
-                $tt = "Đơn giao hàng";
+                $tt = "Đang giao hàng";
                 break;
             case 3 :
                 $tt = "Hoàn tất";
+                break;
+            case 4 :
+                $tt = "Bị hủy bởi người bán";
                 break;
             default :
                 $tt = "Đơn hàng mới";

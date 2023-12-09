@@ -64,21 +64,20 @@
                     foreach($dstop5 as $sp){
                         extract($sp);
                         $hinh =$img_path.$img;
-                        $sale = $price*11/10;
+                        $sale = 0.9;
                         $linksp = "index.php?act=sanphamct&idsp=".$id;
                         echo '
                         <div class="spnb mb">
-                            <a href="'.$linksp.'">
-                                <img src="'.$hinh.'" alt="">
-                                
-                            </a>
+                            <a href="'.$linksp.'"><img src="'.$hinh.'" alt=""></a>
                             <div class="tt">
                                 <h5>'.$name.'</h5>
                                 
-                                <p>Giá gốc: <del>$'.$sale.'</del></p>
-                                <h3>$'.$price.'</h3>
+                                <p>Giá gốc: <del>$'.$price.'</del></p>
+                                <h3>$'.$price*$sale.'</h3>
                             </div>
+                            <div class="discount-corner"></div>
                             <a href="'.$linksp.'"><input type="button" value="Chi tiết"></a>
+                            
                         </div>';
                     }
                 ?>
@@ -90,19 +89,22 @@
                 <?php
                     foreach($dstop10 as $sp2){
                         extract($sp2);
+                        $sale = 0.9;
                         $hinh =$img_path.$img;
                         $linksp = "index.php?act=sanphamct&idsp=".$id;
                         echo '
-                        <div class="spnb mb">
-                            <a href="'.$linksp.'"><img src="'.$hinh.'" alt=""></a>
-                            <div class="tt">
-                                <h5>'.$name.'</h5>
-                                
-                                <p>Giá gốc: <del>'.$sale.'</del></p>
-                                <h3>'.$price.'</h3>
-                            </div>
-                            <a href="'.$linksp.'"><input type="button" value="Chi tiết"></a>
-                        </div>';
+                    <div class="spnb mb">
+                        <a href="'.$linksp.'"><img src="'.$hinh.'" alt=""></a>
+                        <div class="tt">
+                            <h5>'.$name.'</h5>
+                            
+                            <p>Giá gốc: <del>$'.$price.'</del></p>
+                            <h3>$'.$price*$sale.'</h3>
+                        </div>
+                        <div class="discount-corner"></div>
+                        <a href="'.$linksp.'"><input type="button" value="Chi tiết"></a>
+                        
+                    </div>';
                     }
                 ?>    
             </div>
@@ -117,7 +119,7 @@
                 <?php
                     foreach($spkc as $kc){
                         extract($kc);
-                        $sale = $price*9/10;
+                        $sale = 0.9;
                         $hinh =$img_path.$img;
                         $linksp = "index.php?act=sanphamct&idsp=".$id;
                         echo '
@@ -126,10 +128,12 @@
                             <div class="tt">
                                 <h5>'.$name.'</h5>
                                 
-                                <p>Giá gốc: <del>'.$sale.'</del></p>
-                                <h3>'.$price.'</h3>
+                                <p>Giá gốc: <del>$'.$price.'</del></p>
+                                <h3>$'.$price*$sale.'</h3>
                             </div>
+                            <div class="discount-corner"></div>
                             <a href="'.$linksp.'"><input type="button" value="Chi tiết"></a>
+                            
                         </div>';
                     }
 

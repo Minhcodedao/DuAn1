@@ -381,12 +381,28 @@
     justify-content: space-around;
 }
 .spnb{
+    position: relative;
     width: 21%;
     height: 320px;
     border: 1px solid cadetblue;
     text-align: center;
     background-color: white;
-    margin: 10px
+    margin: 10px;
+    overflow: hidden;
+}
+.discount-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url('../image/sale.jpg');
+    background-size: 100% 100%;
+    color: white; /* Màu chữ */
+    padding: 5px 10px; /* Kích thước viền và nội dung */
+    z-index: 1; /* Đảm bảo hiển thị phía trên sản phẩm */
+    width: 50px; /* Điều chỉnh kích thước chiều rộng */
+    height: 40px; /* Điều chỉnh kích thước chiều cao */
+    text-align: center; /* Căn giữa nội dung */
+    box-sizing: border-box; /* Bảo toàn kích thước tổng thể của phần giảm giá */
 }
 .spnb input{
     color: white;
@@ -417,6 +433,8 @@
 .tt h3{
     color: red;
 }
+
+
 .btn {
   display: inline-block;
   padding: 8px 16px;
@@ -898,7 +916,7 @@
 }
   
 .camon h3 {
-    color: #fff;
+    color: #181818;
     margin-left: 300px;
 }
 .camon button{

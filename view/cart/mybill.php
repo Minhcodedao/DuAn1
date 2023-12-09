@@ -78,6 +78,9 @@
     border-radius: 5px;
     cursor: pointer;
 }
+th:last-child{
+    text-align: center;
+}
 
 
 
@@ -109,7 +112,11 @@
                         // hủy đơn hàng
                         $xoabill = "index.php?act=xoabill&id=" . $id;
                         $billct = "index.php?act=billct&id=" . $id;
-                        
+                        if($bill_status=="0"){
+                            $hd = '<a href="'.$xoabill.'"><input class="huy_don" type="button" value="Hủy Đơn"></a>';
+                        }else{
+                            $hd= "";
+                        }
                         $ttdh= get_ttdh($bill['bill_status']);
                         $countsp = loadall_cart_count($bill['id']);
                         echo'
@@ -122,7 +129,7 @@
                                 <td>$'.$bill['total'].'</td>
                                 <td>'.$ttdh.'</td>
                                 <td class="nut">
-                                    <a href="'.$xoabill.'"><input class="huy_don" type="button" value="Hủy Đơn"></a>
+                                    '.$hd.'
                                     <a href="'.$billct.'"><input class="huy_don" type="button" value="Chi tiết"></a>
                                 </td>
                             
