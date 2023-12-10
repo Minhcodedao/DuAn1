@@ -31,3 +31,44 @@
     <!-- doanh thu -->
     <button><a href="index.php?act=doanhthu">Thống kê doanh thu</a></button>
 </div>
+<!-- Thư viện Chart.js từ CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="doanhthuChart" width="200" height="50"></canvas>
+<script>
+// Lấy dữ liệu từ PHP và chuyển đổi nó thành mảng JavaScript
+var doanhThuData = <?php echo json_encode($items); ?>;
+
+// Lấy thẻ canvas
+var ctx = document.getElementById('doanhthuChart').getContext('2d');
+
+// Tạo một mảng chứa ngày và doanh thu từ dữ liệu PHP
+var labels = doanhThuData.map(function(item) {
+    return item.ngaydathang;
+});
+
+var revenues = doanhThuData.map(function(item) {
+    return item.doanhthu;
+});
+
+// Tạo biểu đồ
+var doanhThuChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: labels,
+        datasets: [{
+            label: 'Doanh thu',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            data: revenues,
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
