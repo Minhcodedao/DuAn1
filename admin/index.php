@@ -146,6 +146,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
             // tài khoản
         case "dstk":
+            $listtk = loadall_taikhoan();
             include "taikhoan/list.php";
             break;
             // đơn hàng
