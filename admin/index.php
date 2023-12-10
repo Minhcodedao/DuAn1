@@ -88,8 +88,16 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             include "masale/list.php";
             break;
-        case "listsp":
-            $listsanpham = loadall_sanpham();
+        case 'listsp':
+            if (isset($_POST['listok']) && ($_POST['listok'])) {
+                $kyw = $_POST['kyw'];
+                $iddm = $_POST['iddm'];
+            } else {
+                $kyw = '';
+                $iddm = 0;
+            }
+            $listdanhmuc = loadall_danhmuc();
+            $listsanpham = loadall_sanpham2($kyw, $iddm);
             include "sanpham/list.php";
             break;
         case "xoasp":

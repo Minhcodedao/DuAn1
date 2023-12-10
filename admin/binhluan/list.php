@@ -39,7 +39,7 @@
                         <td>' . $idpro . '</td>
                         <td>' . $ngaybinhluan . '</td>
                         <td>
-                          <a href="' . $xoabl . '"><input  class="custom-icons3 type="button" value="Xóa"></a></td>
+                          <a href="'.$xoabl.'"><input  class="custom-icons3 type="button" value="Xóa"></a></td>
                     </tr>
                         ';
             }

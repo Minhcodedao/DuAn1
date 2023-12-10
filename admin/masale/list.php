@@ -5,7 +5,7 @@
             <th>NỘI DUNG</th>
             <th>NGÀY TẠO</th>
             <th>NGÀY HẾT HẠN</th>
-            <th>SỐ LƯỢNG GIẢM</th>
+            <th>SỐ LƯỢNG GIẢM (%)</th>
             <th>
                 <a href="index.php?act=addma"><input class="custom-icons2" type="button" name="them" value="Thêm"></a></td>
                 <!--thêm ảnh láy theo idpro  -->

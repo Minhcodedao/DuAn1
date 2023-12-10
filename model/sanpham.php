@@ -28,6 +28,19 @@ function loadall_sanpham($keyw="",$iddm=0){
     $listsanpham=pdo_query($sql);
     return  $listsanpham;
 }
+function loadall_sanpham2($keyw="",$iddm=0){
+    $sql="select * from sanpham where trangthai = 0 ";
+    // where 1 tức là nó đúng
+    if($keyw!=""){
+        $sql.=" and name like '%".$keyw."%'";
+    }
+    if($iddm>0){
+        $sql.=" and iddm ='".$iddm."'";
+    }
+    $sql.=" order by id desc";
+    $listsanpham=pdo_query($sql);
+    return  $listsanpham;
+}
 function loadone_sanpham($id){
     $sql = "select * from sanpham where id = $id";
     $result = pdo_query_one($sql);

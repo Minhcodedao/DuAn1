@@ -1,4 +1,4 @@
-<form action="" method="POST" style="margin-top: 50px;">
+<form action="" method="POST" style="margin-top: 70px;">
     <input type="text" name="kyw">
     <select name="iddm">
         <option value="0" selected>Tất cả</option>
