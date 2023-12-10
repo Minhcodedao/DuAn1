@@ -1,3 +1,16 @@
+<form action="" method="POST" style="margin-top: 50px;">
+    <input type="text" name="kyw">
+    <select name="iddm">
+        <option value="0" selected>Tất cả</option>
+        <?php
+        foreach ($listdanhmuc as $danhmuc) {
+            extract($danhmuc);
+            echo ' <option value="'.$id.'">'.$name.'</option>';
+        }
+        ?>
+    </select>
+    <input type="submit" name="listok" value="Go">
+</form>
 <div class="tb">
     <table border="1">
         <tr>
