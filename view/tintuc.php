@@ -94,14 +94,20 @@
 
         <article>
             <h2>Khuyến Mãi Đặc Biệt</h2>
-            <img src="./upload/donghonam2.jpg" alt="Trang sức 2">
-            <p>Đồng hồ không chỉ là công cụ đo giờ mà còn là biểu tượng của sự quyến rũ và lịch lãm. Thị trường đồng hồ đang ngày càng đa dạng với nhiều thương hiệu nổi tiếng giới thiệu những mẫu thiết kế độc đáo. Từ đồng hồ cơ cấp cao với cơ chế phức tạp đến đồng hồ thông minh kết nối với điện thoại di động, người ta có nhiều lựa chọn để thể hiện cái tôi của mình.</p>
+            <img src="./image/sale.jpg" alt="Trang sức 2">
+            <p>
+                Khám Phá Thế Giới Trang Sức Tại 6 Diamond - Làm Nổi Bật Vẻ Đẹp Của Bạn!
+
+                Chào mừng bạn đến với 6 Diamond  , điểm đến của những tác phẩm trang sức đẳng cấp và sang trọng. Tại đây, chúng tôi tự hào giới thiệu bộ sưu tập đa dạng với những mẫu nhẫn, dây chuyền, bông tai, và vòng cổ tinh tế, chất lượng hàng đầu.
+                <br>
+                Nhân dịp tháng 12, chúng tôi mang đến ưu đãi đặc biệt cho quý khách hàng. Sử dụng mã giảm giá <strong>CHAOTHANG12</strong>  khi thanh toán để nhận ngay 10% giảm giá trên đơn hàng của bạn. Hãy là người đầu tiên khám phá bộ sưu tập mới và chọn lựa những món trang sức tinh tế để tôn lên vẻ đẹp của bạn!
+            </p>
             <a href="index.php?act=dongho">Xem Chi Tiết</a>
         </article>
 
         <article>
             <h2>Trang Sức Độc Đáo</h2>
-            <img src="./upload/daychuyen5.png" alt="Trang sức 3">
+            <img src="./image/daychuyendamau3.jpg" alt="Trang sức 3">
             <p>Dây chuyền không chỉ là phụ kiện trang sức mà còn là điểm nhấn tinh tế cho vẻ ngoại hình. Từ dây chuyền dài với các hạt độc đáo đến chuỗi ngọc lấp lánh, mỗi chiếc dây chuyền đều có thể làm tăng thêm sự quyến rũ cho bất kỳ bộ trang phục nào. Ngoài ra, dây chuyền còn là biểu tượng của sự may mắn và bảo vệ trong nhiều nền văn hóa trên thế giới.</p>
             <a href="index.php?act=daychuyen">Xem Chi Tiết</a>
         </article>

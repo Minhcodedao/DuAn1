@@ -40,5 +40,49 @@
     <button> <a href="index.php?act=sptonkho">Thống kê sản phẩm bán tồn kho</a></button>
     <!-- doanh thu -->
     <button> <a href="index.php?act=doanhthu">Thống kê doanh thu</a></button>
+    <!-- Thư viện Chart.js từ CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="spbanchayChart" width="200" height="50"></canvas>
+<script>
+// Lấy dữ liệu từ PHP và chuyển đổi nó thành mảng JavaScript
+var spbanchayData = <?php echo json_encode($listspbc); ?>;
+
+// Lấy thẻ canvas
+var spbanchayCtx = document.getElementById('spbanchayChart').getContext('2d');
+
+// Tạo một mảng chứa tên sản phẩm và số lượng đã bán từ dữ liệu PHP
+var spbanchayLabels = spbanchayData.map(function(item) {
+    return item.name;
+});
+
+var spbanchayQuantities = spbanchayData.map(function(item) {
+    return item.total_quantity;
+});
+
+// Tạo biểu đồ cột
+var spbanchayChart = new Chart(spbanchayCtx, {
+    type: 'bar',
+    data: {
+        labels: spbanchayLabels,
+        datasets: [{
+            label: 'Số lượng đã bán',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            data: spbanchayQuantities,
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true,
+                stepSize: 1, // Chỉ hiển thị số nguyên
+            }
+        }
+    }
+});
+</script>
+
+
 
 
