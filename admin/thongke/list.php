@@ -18,9 +18,9 @@
                 <td><?= $i++ ?></td>
                 <td><?= $name ?></td>
                 <td><?= $soluong ?></td>
-                <td><?= number_format($min) ?> VNĐ</td>
+                <td><?= number_format($min) ?> $</td>
 
-                <td><?= number_format($max) ?> VNĐ</td>
+                <td><?= number_format($max) ?> $</td>
             </tr>
         <?php } ?>
 
