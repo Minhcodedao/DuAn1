@@ -8,14 +8,13 @@
         /* Container for buyer information and order details */
         .tong {
             margin: 0 auto;
-            padding: 20px;
             background-color: #f9f9f9;
             display: flex;
 
         }
 
         .infhb {
-            max-width: 50%;
+            max-width: 40%;
             margin: 0 auto;
             padding: 20px;
             background-color: #f9f9f9;
@@ -62,8 +61,8 @@
 
         /* Cart details */
         .cart-rghta {
-            max-width: 45%;
-            margin: 20px auto;
+            max-width: 60%;
+            margin: 10px auto;
             padding: 20px;
             background-color: #f9f9f9;
             border-radius: 8px;
@@ -98,10 +97,9 @@
         }
 
         .cartrght p {
-            font-size: 18px;
+            font-size: 12px;
             font-weight: bold;
             margin-bottom: 10px;
-
         }
 
         .cartrght>p {
@@ -264,7 +262,7 @@
 }
 .ttcart{
     margin-top: 0px;
-    margin-left: 10px;
+    margin-left: 30px;
     width: 73%;
     background-color: #f9f9f9;
 }
@@ -292,7 +290,9 @@
 }
 /* ok */
 
-
+.masp p{
+    font-size: 0.5vw;
+}
 
 .dat_hang {
     margin-top: 20px;
@@ -321,6 +321,7 @@
             }
             ?>
             <?php
+            $giam =0;
             if(isset($sale)){
                 foreach($listma as $ma){
                     if($sale === $ma['noidung']){
@@ -435,7 +436,9 @@
                                 </div>
                                 <div class="ttcart">
                                     <h3>'.$cart[1].'</h3>
-                                    <p>'.$cart[2].'</p>
+                                    <div class="maspc">
+                                        <p>Mã sản phẩm: '.$cart[2].'</p>
+                                    </div>
                                     <?php $i=1 ?>
                                     <div class="counter">
                                         <label for=""><h4 style="margin-left: 0px;">Số lượng:</h4> </label>

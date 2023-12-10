@@ -35,9 +35,26 @@
             height: auto;
             border-radius: 4px;
         }
+        .qv{
+            width: 90px;
+            list-style-type: none;
+            margin-bottom: 15px;
+            background-color: red;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            padding: 1px;
+        }
+        .qv a{
+            text-decoration: none;
+            color: white;
+        }
     </style>
 </head>
 <body>
+    <div class="qv">
+        <a href="index.php?act=mybill">< Quay về</a>
+    </div>
     <?php
         if(is_array($bill)){
             echo '<table>';

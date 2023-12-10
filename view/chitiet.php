@@ -46,14 +46,11 @@
               <input type="hidden" name="price" value="<?= $price ?>">
               <hr class="mb">
               <div class="ct_button">
-                <button class="buynow">Mua Ngay</button>
+                
+                <input class="addtocart" type="submit" value="Mua ngay" name="addtocart">
                 <input class="addtocart" type="submit" value="Thêm vào giỏ hàng" name="addtocart">
               </div>
             </form>
-            <div class="chat">
-              <img src="./image/icon-chat-voi-tu-van-vien.png" alt="">
-              <h4>Liên Hệ Với Tư Vấn Viên</h>
-            </div>
           </div>
           
         </div>
@@ -112,7 +109,7 @@
       </div>
     
       <hr style="width: 85%; margin: 0 auto; margin-bottom: 5px;">
-      <h2 style="margin-left: 7%; width: 200px;">ĐÁNH GIÁ</h2>
+      <h2 style="margin-left: 7%; width: 200px;">BÌNH LUẬN</h2>
       <p style="margin-left:7%; width: 200px; margin-top: 10px;">Nhập đánh giá của bạn</p>
       <div class="binhluan mb">
 

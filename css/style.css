@@ -525,18 +525,16 @@
     justify-content: space-between;
 
 }
-.buynow{
-    background-color: red;
-    color: white;
+.addtocart{
+    background-color: rgb(255, 30, 30);
+    color: rgb(255, 255, 255);
     width: 45%;
     height: 40px;
-    margin-right: 5%;
     border: none;
-    box-shadow: 2px black inset;
 }
-.addtocart{
-    background-color: rgb(171, 164, 164);
-    color: rgb(0, 0, 0);
+.addtocart:hover{
+    background-color: rgb(255, 211, 211);
+    color: rgb(236, 0, 0);
     width: 45%;
     height: 40px;
     border: none;
