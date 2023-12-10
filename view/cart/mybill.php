@@ -55,19 +55,22 @@
     padding: 5px;
     background-color: #ddd;
 }
+.mybill div:nth-child(2) table tr td{
+    
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+th:last-child{
+    text-align: center;
+}
 .nut{
     width: 100%;
     text-align: center;
     display: flex;
-    
+  
 }
 .nut a{
     width: 50%;
-}
-.mybill div:nth-child(2) table tr td{
-
-    border: 1px solid #ddd;
-    padding: 5px;
 }
 .huy_don{
     width: 80px;
@@ -78,9 +81,8 @@
     border-radius: 5px;
     cursor: pointer;
 }
-th:last-child{
-    text-align: center;
-}
+
+
 
 
 
@@ -102,6 +104,10 @@ th:last-child{
                 <th>Giá trị đơn hàng</th>
                 <th>Tình trạng đơn hàng</th>
                 <th>Thao Tác </th>
+                <th>
+                    Chi tiết
+                </th>
+          
 
 
             </tr>
@@ -137,10 +143,8 @@ th:last-child{
                                 <td>'.$countsp.'</td>
                                 <td>$'.$bill['total'].'</td>
                                 <td>'.$ttdh.'</td>
-                                <td class="nut">
-                                    '.$hd.'
-                                    '.$huy.'
-                                </td>
+                                <td>'.$hd.'</td>
+                                <td>'.$huy.'</td>
                             
 
                                 
