@@ -51,7 +51,7 @@
 <body>
 <div class="txt-dvkh2">
                         <h1>Giới thiệu chung</h1>
-                        <p style="text-align: justify;">Trang sức 6 Diamond tự hào là thương hiệu Quốc gia Việt Nam. Với hệ thống phân phối trải dài từ Bắc vào Nam, sự đa dạng về chủng loại, độc đáo về kiểu dáng, dẫn đầu về xu hướng, nhiều sự lựa chọn về mức giá đã đang và sẽ chiếm được sự tin tưởng và yêu mến của khách hàng trên toàn quốc.</p>
+                        <p style="text-align: justify;">Trang sức 6 Diamond tự hào là thương hiệu quốc gia Việt Nam. Với hệ thống phân phối trải dài từ Bắc vào Nam, sự đa dạng về chủng loại, độc đáo về kiểu dáng, dẫn đầu về xu hướng, nhiều sự lựa chọn về mức giá đã đang và sẽ chiếm được sự tin tưởng và yêu mến của khách hàng trên toàn quốc.</p>
 
 <p style="text-align: justify;">Nét tinh xảo lấp lánh của các sản phẩm được chế tác tại 6 Diamond dưới bàn tay của người thợ kim hoàn Việt Nam tài ba kết hợp với dây chuyền sản xuất theo công nghệ tiên tiến hiện đại đã tạo nên các sản phẩm trang sức DOJI chất lượng vượt trội cùng kiểu dáng thời trang, làm thăng hoa nét duyên dáng, vẻ quý phái, sự lịch lãm cho quý khách hàng, dù trong bất cứ hoàn cảnh nào.&nbsp;</p>
 
