@@ -115,7 +115,18 @@ function locsp($loai,$name,$sx){
     $dc = pdo_query($sql);
     return $dc;
  }
-
-
+ function listma(){
+    $sql = "SELECT * FROM masale";
+    $nhan = pdo_query($sql);
+    return $nhan;
+ }
+ function insert_masale($noidung, $ngaytao, $ngayhet,$sale){
+    $sql="insert into masale(noidung,ngaytao,ngayhet,sale) values('$noidung','$ngaytao','$ngayhet','$sale')";
+    pdo_execute($sql);
+}
+function delete_masale($id){
+    $sql="delete from masale where id=".$id;
+    pdo_execute($sql);
+}
 
 ?>

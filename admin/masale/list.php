@@ -1,30 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Mã giảm giá</title>
-</head>
-<body>
-    <div id="discount-code">
-        <!-- Hiển thị mã giảm giá ở đây -->
-        Mã giảm giá: ABC123 (20% OFF)
-    </div>
+<div class="tb">
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>NỘI DUNG</th>
+            <th>NGÀY TẠO</th>
+            <th>NGÀY HẾT HẠN</th>
+            <th>SỐ LƯỢNG GIẢM</th>
+            <th>
+                <a href="index.php?act=addma"><input class="custom-icons2" type="button" name="them" value="Thêm"></a></td>
+                <!--thêm ảnh láy theo idpro  -->
+            </th>
 
-    <script>
-        // Kiểm tra thời gian hết hạn của mã giảm giá
-        const discountCode = document.getElementById('discount-code');
+            <?php
+            foreach ($listma as $ma) {
+                extract($ma);
+                $xoasp = "index.php?act=xoama&id=" . $id;
+                echo '
+                    <tr>
+                        <td>' . $id . '</td>
+                        <td>' . $noidung . '</td>
+                        <td>' . $ngaytao . '</td>
+                        <td>' . $ngayhet . '</td>
+                        <td>' . $sale . '</td>
+                        <td>
+                            <a href="' . $xoasp . '"><input class="custom-icons3" type="button" value="Xóa" onclick="return confirm (\'Bạn có muốn xóa sản phẩm không ? \')"></a>
+                        </td>
+                    </tr>';    
+            }?>
+         
+    </table>
+    <?php
+    if(isset($thongbaox)){
+        echo $thongbaox;
+    }
 
-        // Thời gian hết hạn của mã giảm giá (điều chỉnh theo định dạng ngày tháng năm)
-        const expirationDate = new Date('2023-12-31'); // Ví dụ: Ngày hết hạn là 31/12/2023
+    ?>
 
-        // Lấy thời gian hiện tại
-        const currentDate = new Date();
-
-        // So sánh thời gian hiện tại với thời gian hết hạn của mã
-        if (currentDate > expirationDate) {
-            // Nếu thời gian hiện tại lớn hơn thời gian hết hạn, ẩn mã giảm giá đi
-            discountCode.style.display = 'none';
-        }
-    </script>
-</body>
-</html>
+</div>

@@ -320,6 +320,20 @@
                 echo $thongbaomh;
             }
             ?>
+            <?php
+            if(isset($sale)){
+                foreach($listma as $ma){
+                    if($sale === $ma['noidung']){
+                        $giam = $ma['sale'];
+                    }
+                }
+            }
+            else{
+                $giam = 0;
+            }
+            
+            
+            ?>
 
         </div>
 
@@ -398,7 +412,7 @@
                 <div style="text-align: center; margin-top: 20px;" class="dat_hang">
                     <a href="index.php?act=billconfirm"><input type="submit" name="dongydathang" value="ĐẶT MUA"></a>
                 </div>
-            </form>
+            
 
 
         </div>
@@ -436,8 +450,12 @@
                             </div>';
                             $i+=1;
                     }
+                    
                 ?>
-
+                <?php
+                    $thanhtien = $tong-($tong*($giam/100));
+                ?>
+                    <input type="hidden" name="tongdonhang" value="<?= $thanhtien ?>">
                 </div>
                 <div class="lsttttrans">
                     <div id="VoucherApplyHtml" style="font-size: 0.8vw;">
@@ -453,21 +471,24 @@
                             <p>Vận chuyển:</p>
                             <p>Miễn phí vận chuyển</p>
                         </div>
-                        <div class="it-cartr">
-                            <p>Thành tiền:<span>(Đã bao gồm VAT)</span></p>
-                            <p>$<?= $tong ?></p>
-                        </div>
+                        
                     </div>
                     <div class="it-cartr frm-vou">
                         <p>Mã giảm giá/Quà tặng</p>
-                        <div class="form-group">
-                            <input type="text" id="VorcherCode" class="valid">
-                            <button id="VorcherCodeSubmit" data-allow="0" type="button">Áp dụng</button>
-                        </div>
+                        <?php
+                            
+                            echo '-'.$giam.'%';
+
+                        ?>
                     </div>
+                    <div class="it-cartr">
+                             
+                            <p>Thành tiền:<span>(Đã bao gồm VAT)</span></p>
+                            <p>$<?= $thanhtien ?></p>
+                        </div>
                 </div>
             </div>
-
+</form>
             <div class="lst-support">
                 <div class="supprt">
                     <div class="img-supprt">

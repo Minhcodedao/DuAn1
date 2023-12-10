@@ -42,6 +42,7 @@
                     <li><a href="index.php?act=dsbl">Bình Luận</a></li>
                     <li><a href="?act=dsdh">Đơn Hàng</a></li>
                     <li><a href="?act=thongke">Thống Kê</a></li>
+                    <li><a href="?act=listmasale">DisCount</a></li>
 
 
                 </ul>

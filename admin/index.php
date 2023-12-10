@@ -6,8 +6,9 @@ include "../model/binhluan.php";
 include "../model/thongke.php";
 include "../model/taikhoan.php";
 include "../model/bill.php";
-
 include "header.php";
+
+$listma = listma();
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
@@ -69,6 +70,24 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdanhmuc = loadall_danhmuc();
             include "sanpham/add.php";
             break;
+        case "addma":
+            if (isset($_POST['addma']) && ($_POST['addma'])) {
+                $noidung = $_POST['noidung'];
+                $ngaytao = $_POST['ngaytao'];
+                $ngayhet = $_POST['ngayhet'];
+                $sale = $_POST['sale'];
+                insert_masale($noidung, $ngaytao, $ngayhet,$sale);
+                $thongbao = "Thêm thành công";
+            }
+            include "masale/add.php";
+            break;
+        case "xoama":
+            if ($_GET['id'] > 0) {
+                $id = $_GET['id'];
+                delete_masale($id);
+            }
+            include "masale/list.php";
+            break;
         case "listsp":
             $listsanpham = loadall_sanpham();
             include "sanpham/list.php";
@@ -127,8 +146,12 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
             // tài khoản
         case "dstk":
-            $listtk = loadall_taikhoan();
             include "taikhoan/list.php";
+            break;
+            // đơn hàng
+        case "listmasale":
+            $listtk = loadall_taikhoan();
+            include "masale/list.php";
             break;
             // đơn hàng
         case "dsdh":

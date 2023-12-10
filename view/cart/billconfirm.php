@@ -46,7 +46,7 @@
           <div class="tt2">
             <p>Mã đơn hàng: DH_<?= $bill['id']?></p>
             <p>Ngày đặt hàng:  <?= $bill['ngaydathang']?></p>
-            <p >Tổng đơn hàng: <?= $bill['total']?> VND</p>
+            <p >Tổng đơn hàng(đã giảm): $<?= $bill['total']?></p>
             <p>Phương thức thanh toán: <?= $tt ?></p>
           </div>
         </div>

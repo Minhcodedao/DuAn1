@@ -86,17 +86,19 @@
             </div>
         </div>
         <div class="hoadon">
-            <h4>Tổng tiền</h4>
-            <div class="dong">
-                <p>Tạm tính</p><h5><?= $tong ?></h5>
-            </div>
-            <hr>
-            <div class="dong">
-                <p>Vận chuyển</p><h5>Miễn phí vận chuyển</h5>
-            </div>
-            <p>Mã giảm giá/quà tặng</p>
-            <input type="text" name="magg">
-            <a href="index.php?act=bill"><input type="button" value="TIẾN HÀNH ĐẶT HÀNG"></a>
+            <form action="index.php?act=bill" method="post">
+                <h4>Tổng tiền</h4>
+                <div class="dong">
+                    <p>Tạm tính</p><h5><?= $tong ?></h5>
+                </div>
+                <hr>
+                <div class="dong">
+                    <p>Vận chuyển</p><h5>Miễn phí vận chuyển</h5>
+                </div>
+                <p>Mã giảm giá/quà tặng</p>
+                <input type="text" name="magg">
+                <a href="index.php?act=bill"><input type="submit" value="TIẾN HÀNH ĐẶT HÀNG"></a>
+            </form>
 
             
         </div>

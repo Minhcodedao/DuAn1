@@ -11,6 +11,7 @@ include "./global.php";
 if(!isset($_SESSION['mycart'])) $_SESSION['mycart']=[];
 
 $spkc = loadsp_kc();
+$listma = listma();
 $dsdm = loadall_danhmuc();
 $dstop10 =loadall_sanpham_top10();
 $dstop5 =loadall_sanpham_top5();
@@ -157,7 +158,12 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 include "view/taikhoan/dangnhap.php";
             }
             else{
-
+                if(isset($_POST['magg'])&&($_POST['magg']>0)){
+                    $sale = $_POST['magg'];
+                }
+                else{
+                    $sale = 0;
+                }
                 include "view/cart/thanhtoan.php";
             }
             break;
@@ -195,7 +201,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $tel= $_POST['tel'];
                 $pttt= $_POST['pttt'];
                 $ngaydathang= date('h:i:sa d/m/Y');
-                $tongdonhang=tongdonhang();
+                $tongdonhang=$_POST['tongdonhang'];
                 $idbill = insert_bill($iduser,$name,$email,$address,$tel,$pttt,$ngaydathang,$tongdonhang);
                 // insert into cart : $session['mycart'] & idbill
                 foreach($_SESSION['mycart'] as $cart){
