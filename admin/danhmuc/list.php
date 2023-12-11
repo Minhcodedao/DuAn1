@@ -19,17 +19,14 @@
                     <td>'.$name.'</td>
                     <td>
                         <a href="'.$suadm.'"><input  class="custom-icons2" type="button" value="Sửa"></a>
-                        <a href="'.$xoadm.'"><input  class="custom-icons3" type="button" value="Xóa"></a>
+                        <a href="'.$xoadm.'"><input onclick="return confirm (\'Bạn có muốn xóa sản phẩm không ? \')"  class="custom-icons3" type="button" value="Xóa"></a>
                     </td>
                 </tr>';
             }
         ?>
         
     </table>
-    <?php
-    if(isset($thongbaox)){
-        echo $thongbaox;
-    }
+     <?php
 
     ?>
 
